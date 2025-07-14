@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from scipy.sparse import vstack, csr_matrix
 import seaborn as sns
 
 # -----------------------------------------------Data Preprocessing-----------------------------------------------
@@ -287,9 +288,11 @@ def vectorize_part_descriptions(df_data):
 
     # print(tfidf_matrix)
 
-    print(tfidf.get_feature_names_out())
+    print(tfidf.get_feature_names_out(), len(tfidf.get_feature_names_out()))
 
     df_tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_out())
+
+    print(df_tfidf)
     
     # plot_histogram_tf_idf(df_tfidf, 'TF_IDF_values')
 
@@ -301,11 +304,21 @@ def vectorize_part_descriptions(df_data):
     #     for index, row in group_df.iterrows():
     #         print(f"  Description: {row['Fuse Material']}")
 
-    material_vectors = {}
+    # Obtain a single vector that represents each material (e.g., "ceramic", "glass") by averaging the TF-IDF vectors of all part descriptions that belong to that material
+    material_vectors = {}   # dictionary for storing the vectors to every material
     for material, group in df_grouped:
         idxs = group.index
         avg_vector = tfidf_matrix[idxs].mean(axis=0)  # average vector across rows
+        avg_vector = csr_matrix(avg_vector)  # Convert to 2D sparse matrix
         material_vectors[material] = avg_vector
+
+    print(material_vectors['ceramic'])
+
+    # Convert to a matrix of material vectors
+    materials = list(material_vectors.keys())
+    mat_vectors = vstack([material_vectors[m] for m in materials])
+    
+    print(mat_vectors.shape)
 
 
     print("...Completed vectorization.\n")
@@ -314,33 +327,19 @@ def vectorize_part_descriptions(df_data):
 
     print("Similarity analysis...")
 
-    cosine_sim = cosine_similarity(tfidf_matrix) # computes the cosine of the angle between each pair of TF-IDF vectors
-    # identifies which descriptions are most alike
+    cosine_sim = cosine_similarity(mat_vectors) # computes the cosine of the angle between each pair of mat_vectors represented by mean TF-IDF across all descriptions
+    # Represents a similarity matrix [i][j] with similarity score between material i and material j
 
-    # Store indices of top 5 similar items for each row
-    top_n = 5
-    similarities = []
+    top_k = {}
+    for i, mat in enumerate(materials):
+        sims = list(enumerate(cosine_sim[i]))
+        sims_sorted = sorted(sims, key=lambda x: x[1], reverse=True)
+        top_5 = [materials[j] for j, score in sims_sorted[1:6]]
+        top_k[mat] = top_5
 
-    for idx, row in enumerate(cosine_sim):
-        # Get indices of top 5 most similar items (excluding itself)
-        similar_indices = np.argsort(row)[::-1][1:top_n+1]
-        similarities.append(similar_indices)
-
-    # Convert to DataFrame if needed
-    similar_df = pd.DataFrame(similarities, columns=[f"Alternative_{i+1}" for i in range(top_n)])
-
-    for i in range(top_n):
-        similar_df[f"Alternative_{i+1}_Desc"] = similar_df[f"Alternative_{i+1}"].apply(lambda x: df_data['PART_DESCRIPTION'].iloc[x])
-
-    # Check 
-    query = df_data['PART_DESCRIPTION'].iloc[135]
-
-    query_vec = tfidf.transform([query])
-    query_sim = cosine_similarity(query_vec, tfidf_matrix)
-
-    top_matches = query_sim[0].argsort()[::-1][1:6]
-    for idx in top_matches:
-        print(df_data['PART_DESCRIPTION'].iloc[idx])
+    print("\Results: Top 5 most similar materials")
+    for material, similar_materials in top_k.items():
+        print(f"{material} -> {', '.join(similar_materials)}")
 
 
 if __name__ == "__main__":
