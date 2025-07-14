@@ -4,14 +4,14 @@
 # Date: 2025-07-14
 #
 # main:
-# > Main script for data preprocessing and training the algorithm.
+# > Main script for data preprocessing and unsupervised similarity matching.
 # ----------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------Import Python libraries---------------------------------------------
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import seaborn as sns
 
@@ -42,7 +42,7 @@ def load_data():
     # 1.0. Get Fuse Material list + Histogramm plot
     fuse_material_list = df_data['Fuse Material'].dropna().unique()
     
-    plot_histogram(df_data['Fuse Material'])
+    plot_histogram(df_data['Fuse Material'], 'fuse_material_histogram')
     
     # 1.1. Identify Indexes with missing Fuse Materials
     invalid_fuse_materials = ~df_data['Fuse Material'].isin(fuse_material_list)
@@ -53,10 +53,10 @@ def load_data():
     def infer_fuse_material(row):
         if pd.isna(row['Fuse Material']):
             description = str(row['PART_DESCRIPTION'])
-            for mat in fuse_material_list:
-                if mat in description:
-                    print(f"   Missing Fuse Material in PART_ID:{row['PART_ID']} -> Filled with information from PART_DESCRIPTION: Fuse Material = {mat}")
-                    return mat
+            for material in fuse_material_list:
+                if material in description:
+                    print(f"   Missing Fuse Material in PART_ID:{row['PART_ID']} -> Filled with information from PART_DESCRIPTION: Fuse Material = {material}")
+                    return material
             return np.nan  # Still missing if no match found
         else:
             return row['Fuse Material']  # Already filled
@@ -64,7 +64,8 @@ def load_data():
     # Apply the function to each row
     df_data['Fuse Material'] = df_data.apply(infer_fuse_material, axis=1)
 
-    plot_histogram(df_data['Fuse Material'])
+    print(df_data.shape)
+    print(df_data.iloc[:100, 0:11])
 
     # 1.3. Check if Part Description misses Material information and add this if its given in 'Fuse Materials'
     # Function to add fuse material if missing
@@ -72,72 +73,75 @@ def load_data():
         material = row['Fuse Material']
         description = row['PART_DESCRIPTION']
         if material in fuse_material_list:
-            # Check if any material from the full list is already in the description
-            if not any(mat in description for mat in fuse_material_list):
-                # Append the material if none found
-                new_description = description + material
-                print(f"   Missing material information in PART_DESCRIPTION in PART_ID:{row['PART_ID']} -> Filled with information from Fuse Material: PART_DESCRIPTION = {new_description}")
-                return new_description
+            if not pd.isna(description) or str(description).strip() == '':
+                # Check if any material from the full list is already in the description
+                if not any(mat in description for mat in fuse_material_list):
+                    # Append the material if none found
+                    new_description = description + ', ' + material
+                    print(f"   Missing material information in PART_DESCRIPTION in PART_ID:{row['PART_ID']} -> Filled with information from Fuse Material:\n    PART_DESCRIPTION = {new_description}")
+                    return new_description
+                return description
+            else:
+                return description
         else:
             return description
 
     df_data['PART_DESCRIPTION'] = df_data.apply(add_material_if_missing, axis=1)
-    
-    # 1.3. Identify Indexes with missing Part Descriptions
-    missing_mask = df_data['PART_DESCRIPTION'].isna() | (df_data['PART_DESCRIPTION'].str.strip() == '')
 
-    missing_indexes = df_data[missing_mask].index
+   
+    # # 1.3. Identify Indexes with missing Part Descriptions
+    # missing_mask = df_data['PART_DESCRIPTION'].isna() | (df_data['PART_DESCRIPTION'].str.strip() == '')
+
+    # missing_indexes = df_data[missing_mask].index
 
     # 1.4. Extract Part Description from other Data in that row so that it looks similar to other Part descriptions
     # Extract information and omit redundancy
     
-    # Generate Pseudo-descriptions with rule-based approach (SHould be sufficient for the similarity task - for more accurate descriptions: Use kNN or TF-IDF)
-    def generate_description(row):
-        if pd.isna(row['PART_DESCRIPTION']) or str(row['PART_DESCRIPTION']).strip() == '':
-            # Extract fields, fallback to default or blank if missing
-            acting = str(row.get('Acting', '')).strip()
-            current = str(row.get('Rated Current (A)', '')).replace('A', '').strip()
-            voltage = str(row.get('Rated Voltage (V)', '') or row.get('Maximum AC Voltage Rating', '')).replace('V', '').strip()
-            mounting = str(row.get('Mounting', '')).strip()
-            fuse_size = str(row.get('Fuse Size', '')).strip()
-            material = str(row.get('Fuse Material', '')).strip()
+    # # Generate Pseudo-descriptions with rule-based approach (SHould be sufficient for the similarity task - for more accurate descriptions: Use kNN or TF-IDF)
+    # def generate_description(row):
+    #     if pd.isna(row['PART_DESCRIPTION']) or str(row['PART_DESCRIPTION']).strip() == '':
+    #         # Extract fields, fallback to default or blank if missing
+    #         acting = str(row.get('Acting', '')).strip()
+    #         current = str(row.get('Rated Current (A)', '')).replace('A', '').strip()
+    #         voltage = str(row.get('Rated Voltage (V)', '') or row.get('Maximum AC Voltage Rating', '')).replace('V', '').strip()
+    #         mounting = str(row.get('Mounting', '')).strip()
+    #         fuse_size = str(row.get('Fuse Size', '')).strip()
+    #         material = str(row.get('Fuse Material', '')).strip()
 
-            # Ensure values are not empty
-            current = current + 'A' if current else ''
-            voltage = voltage + 'V' if voltage else ''
-            acting = acting if acting else 'Fuse'
-            mounting = mounting if mounting else ''
-            fuse_size = fuse_size if fuse_size else ''
-            material = material if material else ''
+    #         # Ensure values are not empty
+    #         current = current + 'A' if current else ''
+    #         voltage = voltage + 'V' if voltage else ''
+    #         acting = acting if acting else 'Fuse'
+    #         mounting = mounting if mounting else ''
+    #         fuse_size = fuse_size if fuse_size else ''
+    #         material = material if material else ''
 
-            # Build description
-            parts = [
-                "Fuse",
-                acting,
-                current,
-                voltage,
-                mounting,
-                "Cartridge",
-                fuse_size,
-                material,
-                "Electric Fuse"
-            ]
+    #         # Build description
+    #         parts = [
+    #             "Fuse",
+    #             acting,
+    #             current,
+    #             voltage,
+    #             mounting,
+    #             "Cartridge",
+    #             fuse_size,
+    #             material,
+    #             "Electric Fuse"
+    #         ]
 
-            # Filter out empty strings and join
-            return ', '.join([p for p in parts if p])
-        else:
-            return row['PART_DESCRIPTION']
+    #         # Filter out empty strings and join
+    #         return ', '.join([p for p in parts if p])
+    #     else:
+    #         return row['PART_DESCRIPTION']
     
-    df_data['PART_DESCRIPTION'] = df_data.apply(generate_description, axis=1)
-
-    # 2. Train the TFDFT + similarity function
-    # Train/Validation/Test set
-    # 2.1 lower all strings
+    # df_data['PART_DESCRIPTION'] = df_data.apply(generate_description, axis=1)
 
 
-    return df_data
 
-def plot_histogram(df):
+
+    return df_data, fuse_material_list
+
+def plot_histogram(df, type):
     
     # Count values including NaN
     value_counts = df.value_counts(dropna=False)
@@ -153,7 +157,7 @@ def plot_histogram(df):
 
     # Save or show
     plt.tight_layout()
-    plt.savefig("./plots/fuse_material_histogram.png", dpi=300)
+    plt.savefig(f"./plots/{type}.png", dpi=300)
     plt.show()
     plt.close(fig)
 
@@ -218,194 +222,125 @@ def plot_histogram(df):
 
 #     return df_data
 
-# def analyze_feature_types(df, exclude_cols=[], periodic_nominals=[]):
-#     feature_types = {}
-#     for col in df.columns:
-#         if col in exclude_cols:
-#             continue
-#         if pd.api.types.is_numeric_dtype(df[col]):
-#             feature_types[col] = 'numerical'
-#         elif isinstance(df[col], pd.CategoricalDtype) or df[col].dtype == object:
-#             feature_types[col] = 'categorical'
-#         else:
-#             feature_types[col] = 'unknown'
-#     return feature_types
 
-# def plot_categorical_histograms(df, feature_types):
+def plot_histogram_tf_idf(df, type):
+    
+    # Sum TF-IDF scores of each term over all documents
+    tfidf_sums = df.sum(axis=0)
 
-#     categorical_cols = [col for col, ftype in feature_types.items() if ftype.startswith('categorical')]
-#     n_cols = 3  # Number of subplots per row
-#     n = len(categorical_cols)
-#     n_rows = (n + n_cols - 1) // n_cols
+    # Sort terms by descending total TF-IDF
+    top_50 = tfidf_sums.sort_values(ascending=False).head(50)
 
-#     fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
-#     axes = axes.flatten()
-
-#     for i, col in enumerate(categorical_cols):
-#         df[col].value_counts(dropna=False).plot(kind='bar', ax=axes[i], label=col, color='darkblue', edgecolor='black')
-#         axes[i].tick_params(axis='x', rotation=45)
-#         # axes[i].set_xlabel('Value')
-#         axes[i].set_ylabel('Count')
-#         axes[i].legend(loc='upper right')
-
-#     # Hide any unused subplots
-#     for j in range(i + 1, len(axes)):
-#         fig.delaxes(axes[j])
-
-#     plt.tight_layout()
-#     plt.savefig('./plots/categorical_histograms.png', dpi=300)
-#     plt.close(fig)
-
-# def transform_numerical_nans(df, numerical_cols):
-#     min_values = {}
-#     max_values = {}
-#     nan_values = {}
-#     for col in numerical_cols:
-#         min_values[col] = df[col].min()
-#         max_values[col] = df[col].max()
-#         nan_values[col] = min_values[col] - (max_values[col] - min_values[col]) /10
-#         df[col] = df[col].fillna(nan_values[col])  # Fill NaNs with a placeholder value for plotting 
-
-#     return df, min_values, max_values, nan_values
-
-# def plot_numerical_histograms(df, feature_types):
-
-#     numerical_cols = [col for col, ftype in feature_types.items() if ftype == 'numerical']
-#     n_cols = 3  # Number of subplots per row
-#     n = len(numerical_cols)
-#     n_rows = (n + n_cols - 1) // n_cols
-
-#     fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
-#     axes = axes.flatten()
-
-#     for i, col in enumerate(numerical_cols):
-#         df[col].hist(ax=axes[i], bins=30, label=col, color='darkblue', edgecolor='black')
-#         # axes[i].set_xlabel('Value')
-#         axes[i].set_ylabel('Count')
-#         axes[i].legend(title=f'NaN={df[col].isnull().sum()}', loc='upper right')
-
-#     # Hide any unused subplots
-#     for j in range(i + 1, len(axes)):
-#         fig.delaxes(axes[j])
-
-#     plt.tight_layout()
-#     plt.savefig(f'./plots/numerical_histograms.png', dpi=300)
-#     plt.close(fig) 
-
-# def plot_categorical_id_stripplots(df, feature_types):
-#     """
-#     For each categorical column, plot a strip plot (or scatter) with:
-#     - x-axis: value of the categorical column
-#     - y-axis: id
-#     """
-
-#     categorical_cols = [col for col, ftype in feature_types.items() if ftype == 'categorical']
-#     n_cols = 3  # Number of subplots per row
-#     n = len(categorical_cols)
-#     n_rows = (n + n_cols - 1) // n_cols
-
-#     fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
-#     axes = axes.flatten()
-
-#     for col in categorical_cols:
-#         df[col] = df[col].fillna('nan')
-
-#     for i, col in enumerate(categorical_cols):
-#         sns.stripplot(x=df.index, y=df[col], ax=axes[i], alpha=0.7, jitter=True, color='darkblue')
-#         axes[i].set_ylabel(col)
-#         axes[i].tick_params(axis='x')
-
-#     # Hide any unused subplots
-#     for j in range(i + 1, len(axes)):
-#         fig.delaxes(axes[j])
-
-#     plt.tight_layout()
-#     plt.savefig('./plots/categorical_stripplot.png', dpi=300)
-#     plt.close(fig) 
-
-# def plot_numerical_id_scatter(df, feature_types):
-#     """
-#     For each numerical column, plot its value along 'id' on the x-axis.
-#     """
-
-#     numerical_cols = [col for col, ftype in feature_types.items() if ftype == 'numerical']
-#     n_cols = 3  # Number of subplots per row
-#     n = len(numerical_cols)
-#     n_rows = (n + n_cols - 1) // n_cols
-
-#     fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
-#     axes = axes.flatten()
-
-#     df, min_values, max_values, nan_values = transform_numerical_nans(df, numerical_cols)
-
-#     for i, col in enumerate(numerical_cols):
-#         # Highlight range around the NaN values
-#         buffer = (max_values[col] - min_values[col]) / 20
-#         nan_val = nan_values[col]
-#         axes[i].axhspan(nan_val - buffer, nan_val + buffer,
-#                         color='red', alpha=0.5, label='NaN')
-#         axes[i].scatter(df.index, df[col], alpha=0.7, color='darkblue', edgecolor='black')
-#         axes[i].set_xlabel('id')
-#         axes[i].set_ylabel(col)
-
-#     # Hide any unused subplots
-#     for j in range(i + 1, len(axes)):
-#         fig.delaxes(axes[j])
-
-#     plt.tight_layout()
-#     plt.savefig('./plots/numerical_scatter.png', dpi=300)
-#     plt.close(fig)
-
-
-# def vectorize_part_descriptions(df_data):
-
-#     # Vectorize the part descriptions
-#     print("Vectorize the part descriptions...")
-#     tfidf = TfidfVectorizer(stop_words='english')       # Computes: [Frequency of a term (TF) in a description] x [How rare the term is across all descriptions]
-#     tfidf_matrix = tfidf.fit_transform(df_data['PART_DESCRIPTION'].fillna(""))
-
-#     # print(tfidf_matrix)
-
-#     print(tfidf.get_feature_names_out())
-
-#     df_tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_out())
-#     print(df_tfidf)
-
-#     print("...Completed vectorization.\n")
-
-#     # print("...Data preprocessing completed and merged data saved to 'Training_merged.csv'.\n")
-
-#     print("Similarity analysis...")
-
-#     cosine_sim = cosine_similarity(tfidf_matrix)
-
-#     # Store indices of top 5 similar items for each row
-#     top_n = 5
-#     similarities = []
-
-#     for idx, row in enumerate(cosine_sim):
-#         # Get indices of top 5 most similar items (excluding itself)
-#         similar_indices = np.argsort(row)[::-1][1:top_n+1]
-#         similarities.append(similar_indices)
-
-#     # Convert to DataFrame if needed
-#     similar_df = pd.DataFrame(similarities, columns=[f"Alternative_{i+1}" for i in range(top_n)])
-
-#     for i in range(top_n):
-#         similar_df[f"Alternative_{i+1}_Desc"] = similar_df[f"Alternative_{i+1}"].apply(lambda x: df_data['PART_DESCRIPTION'].iloc[x])
-
-#     # Check 
-#     query = df_data['PART_DESCRIPTION'].iloc[135]
-
-#     query_vec = tfidf.transform([query])
-#     query_sim = cosine_similarity(query_vec, tfidf_matrix)
-
-#     top_matches = query_sim[0].argsort()[::-1][1:6]
-#     for idx in top_matches:
-#         print(df_data['PART_DESCRIPTION'].iloc[idx])
+    # Plot bar chart of top 20 terms
+    plt.figure(figsize=(12,6))
+    top_50.plot(kind='bar', color='lightgreen')
+    plt.title('Top 50 Terms by Total TF-IDF Score')
+    plt.ylabel('Sum of TF-IDF Scores Across Documents')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
 
 
 
+def model_sim_simple(df_data, fuse_material_list):
+    # Drop all samples without Part description which includes a Fuse material
+    def contains_material(row):
+        description = row['PART_DESCRIPTION']
+        if pd.isna(description) or str(description).strip() == '':
+            return False
+        if not any(mat in description for mat in fuse_material_list):
+            return False
+        return True
+    
+    # Create mask: True if PART_DESCRIPTION contains any fuse material
+    mask = df_data.apply(contains_material, axis=1)
+
+    # Drop samples using the mask
+    df_data = df_data[mask].reset_index(drop=True)
+
+    print(f'...Data shape after droping undefined samples: {df_data.shape}')
+
+    vectorize_part_descriptions(df_data)
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+def model_sim_filled(df_data):
+    return 0
+
+
+def vectorize_part_descriptions(df_data):
+
+    # Vectorize the part descriptions
+    print("Vectorize the part descriptions...")
+    tfidf = TfidfVectorizer(stop_words='english')       # Computes: [Frequency of a term (TF) in a description] x [How rare the term is across all descriptions]
+    tfidf_matrix = tfidf.fit_transform(df_data['PART_DESCRIPTION'].fillna(""))
+
+    # print(tfidf_matrix)
+
+    print(tfidf.get_feature_names_out())
+
+    df_tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_out())
+    
+    # plot_histogram_tf_idf(df_tfidf, 'TF_IDF_values')
+
+    print("...Group dataframe by materials")
+    # Group rows by material
+    df_grouped = df_data.groupby('Fuse Material')
+    # for group_name, group_df in df_data.groupby('Fuse Material'):
+    #     print(f"Material: {group_name}")
+    #     for index, row in group_df.iterrows():
+    #         print(f"  Description: {row['Fuse Material']}")
+
+    material_vectors = {}
+    for material, group in df_grouped:
+        idxs = group.index
+        avg_vector = tfidf_matrix[idxs].mean(axis=0)  # average vector across rows
+        material_vectors[material] = avg_vector
+
+
+    print("...Completed vectorization.\n")
+
+    # print("...Data preprocessing completed and merged data saved to 'Training_merged.csv'.\n")
+
+    print("Similarity analysis...")
+
+    cosine_sim = cosine_similarity(tfidf_matrix) # computes the cosine of the angle between each pair of TF-IDF vectors
+    # identifies which descriptions are most alike
+
+    # Store indices of top 5 similar items for each row
+    top_n = 5
+    similarities = []
+
+    for idx, row in enumerate(cosine_sim):
+        # Get indices of top 5 most similar items (excluding itself)
+        similar_indices = np.argsort(row)[::-1][1:top_n+1]
+        similarities.append(similar_indices)
+
+    # Convert to DataFrame if needed
+    similar_df = pd.DataFrame(similarities, columns=[f"Alternative_{i+1}" for i in range(top_n)])
+
+    for i in range(top_n):
+        similar_df[f"Alternative_{i+1}_Desc"] = similar_df[f"Alternative_{i+1}"].apply(lambda x: df_data['PART_DESCRIPTION'].iloc[x])
+
+    # Check 
+    query = df_data['PART_DESCRIPTION'].iloc[135]
+
+    query_vec = tfidf.transform([query])
+    query_sim = cosine_similarity(query_vec, tfidf_matrix)
+
+    top_matches = query_sim[0].argsort()[::-1][1:6]
+    for idx in top_matches:
+        print(df_data['PART_DESCRIPTION'].iloc[idx])
 
 
 if __name__ == "__main__":
@@ -413,7 +348,11 @@ if __name__ == "__main__":
     print("Task 2: Identifying alternative materials")
     print("-----------------------------------------------------------------------------\n")
     
-    df_data = load_data()
+    df_data, fuse_material_list = load_data()
+
+    model_sim_simple(df_data, fuse_material_list)
+
+    # model_sim_filled(df_data)
 
     # tfidf_matrix = vectorize_part_descriptions(df_data)
 
@@ -459,3 +398,142 @@ if __name__ == "__main__":
 # 7. Check for duplicates in the 'id' column which contain different data.
 # 8. Merge the datasets on the 'id' column.
 # 9. Check the shape and store the data into a csv file.
+
+
+def analyze_feature_types(df, exclude_cols=[], periodic_nominals=[]):
+    feature_types = {}
+    for col in df.columns:
+        if col in exclude_cols:
+            continue
+        if pd.api.types.is_numeric_dtype(df[col]):
+            feature_types[col] = 'numerical'
+        elif isinstance(df[col], pd.CategoricalDtype) or df[col].dtype == object:
+            feature_types[col] = 'categorical'
+        else:
+            feature_types[col] = 'unknown'
+    return feature_types
+
+def plot_categorical_histograms(df, feature_types):
+
+    categorical_cols = [col for col, ftype in feature_types.items() if ftype.startswith('categorical')]
+    n_cols = 3  # Number of subplots per row
+    n = len(categorical_cols)
+    n_rows = (n + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
+    axes = axes.flatten()
+
+    for i, col in enumerate(categorical_cols):
+        df[col].value_counts(dropna=False).plot(kind='bar', ax=axes[i], label=col, color='darkblue', edgecolor='black')
+        axes[i].tick_params(axis='x', rotation=45)
+        # axes[i].set_xlabel('Value')
+        axes[i].set_ylabel('Count')
+        axes[i].legend(loc='upper right')
+
+    # Hide any unused subplots
+    for j in range(i + 1, len(axes)):
+        fig.delaxes(axes[j])
+
+    plt.tight_layout()
+    plt.savefig('./plots/categorical_histograms.png', dpi=300)
+    plt.close(fig)
+
+def transform_numerical_nans(df, numerical_cols):
+    min_values = {}
+    max_values = {}
+    nan_values = {}
+    for col in numerical_cols:
+        min_values[col] = df[col].min()
+        max_values[col] = df[col].max()
+        nan_values[col] = min_values[col] - (max_values[col] - min_values[col]) /10
+        df[col] = df[col].fillna(nan_values[col])  # Fill NaNs with a placeholder value for plotting 
+
+    return df, min_values, max_values, nan_values
+
+def plot_numerical_histograms(df, feature_types):
+
+    numerical_cols = [col for col, ftype in feature_types.items() if ftype == 'numerical']
+    n_cols = 3  # Number of subplots per row
+    n = len(numerical_cols)
+    n_rows = (n + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
+    axes = axes.flatten()
+
+    for i, col in enumerate(numerical_cols):
+        df[col].hist(ax=axes[i], bins=30, label=col, color='darkblue', edgecolor='black')
+        # axes[i].set_xlabel('Value')
+        axes[i].set_ylabel('Count')
+        axes[i].legend(title=f'NaN={df[col].isnull().sum()}', loc='upper right')
+
+    # Hide any unused subplots
+    for j in range(i + 1, len(axes)):
+        fig.delaxes(axes[j])
+
+    plt.tight_layout()
+    plt.savefig(f'./plots/numerical_histograms.png', dpi=300)
+    plt.close(fig) 
+
+def plot_categorical_id_stripplots(df, feature_types):
+    """
+    For each categorical column, plot a strip plot (or scatter) with:
+    - x-axis: value of the categorical column
+    - y-axis: id
+    """
+
+    categorical_cols = [col for col, ftype in feature_types.items() if ftype == 'categorical']
+    n_cols = 3  # Number of subplots per row
+    n = len(categorical_cols)
+    n_rows = (n + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
+    axes = axes.flatten()
+
+    for col in categorical_cols:
+        df[col] = df[col].fillna('nan')
+
+    for i, col in enumerate(categorical_cols):
+        sns.stripplot(x=df.index, y=df[col], ax=axes[i], alpha=0.7, jitter=True, color='darkblue')
+        axes[i].set_ylabel(col)
+        axes[i].tick_params(axis='x')
+
+    # Hide any unused subplots
+    for j in range(i + 1, len(axes)):
+        fig.delaxes(axes[j])
+
+    plt.tight_layout()
+    plt.savefig('./plots/categorical_stripplot.png', dpi=300)
+    plt.close(fig) 
+
+def plot_numerical_id_scatter(df, feature_types):
+    """
+    For each numerical column, plot its value along 'id' on the x-axis.
+    """
+
+    numerical_cols = [col for col, ftype in feature_types.items() if ftype == 'numerical']
+    n_cols = 3  # Number of subplots per row
+    n = len(numerical_cols)
+    n_rows = (n + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4 * n_rows))
+    axes = axes.flatten()
+
+    df, min_values, max_values, nan_values = transform_numerical_nans(df, numerical_cols)
+
+    for i, col in enumerate(numerical_cols):
+        # Highlight range around the NaN values
+        buffer = (max_values[col] - min_values[col]) / 20
+        nan_val = nan_values[col]
+        axes[i].axhspan(nan_val - buffer, nan_val + buffer,
+                        color='red', alpha=0.5, label='NaN')
+        axes[i].scatter(df.index, df[col], alpha=0.7, color='darkblue', edgecolor='black')
+        axes[i].set_xlabel('id')
+        axes[i].set_ylabel(col)
+
+    # Hide any unused subplots
+    for j in range(i + 1, len(axes)):
+        fig.delaxes(axes[j])
+
+    plt.tight_layout()
+    plt.savefig('./plots/numerical_scatter.png', dpi=300)
+    plt.close(fig)
