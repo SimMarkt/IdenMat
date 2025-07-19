@@ -14,8 +14,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.sparse import vstack, csr_matrix
 
+from src.utils import plot_cosine_similarity_heatmap
+
 class SimilarityModel:
-    def __init__(self):
+    """SimilarityModel class for unsupervised similarity matching of materials."""
+    def __init__(self, Config):
+        self.Config = Config
+
+        self.path_results = self.Config.path + self.Config.data_path_results
+
         self.df_data = None
         self.fuse_material_list = None
         self.materials = None
@@ -23,6 +30,9 @@ class SimilarityModel:
         print("\nStarting material similarity matching...")
         
     def tf_idf(self, df_data, fuse_material_list):
+        """        
+        Create TF-IDF matrix for part descriptions.
+        """
 
         self.df_data = df_data
         self.fuse_material_list = fuse_material_list
@@ -45,8 +55,10 @@ class SimilarityModel:
 
         return tfidf_matrix
 
-
     def contains_material(self, row):
+        """        
+        Check if PART_DESCRIPTION contains any fuse material.
+        """
         description = row['PART_DESCRIPTION']
         if pd.isna(description) or str(description).strip() == '':
             return False
@@ -80,6 +92,9 @@ class SimilarityModel:
         return mat_vectors, materials
     
     def cosine_sim(self, mat_vectors, materials):
+        """        
+        Compute cosine similarity between material vectors.
+        """
 
         print("...Calculate cosine similarity")
 
@@ -92,6 +107,10 @@ class SimilarityModel:
             sims_sorted = sorted(sims, key=lambda x: x[1], reverse=True)
             top_5 = [materials[j] for j, score in sims_sorted[1:6]]
             top_k[mat] = top_5
+
+        print("...Plot similarity heat map")
+        sim_df = pd.DataFrame(cosine_sim, index=materials, columns=materials)
+        plot_cosine_similarity_heatmap(sim_df,self.path_results)
 
         print("...Results: Top 5 most similar materials")
         for material, similar_materials in top_k.items():
