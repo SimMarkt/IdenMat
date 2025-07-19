@@ -1,0 +1,101 @@
+# ----------------------------------------------------------------------------------------------------------------
+# Task 2: Identifying alternative materials
+# Author: Simon Markthaler
+# Date: 2025-07-19
+# Version: 0.0.1
+#
+# model:
+# > Provides the similarity model containing TF-IDF and cosine similarity.
+# ----------------------------------------------------------------------------------------------------------------
+
+import pandas as pd
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from scipy.sparse import vstack, csr_matrix
+
+class SimilarityModel:
+    def __init__(self):
+        self.df_data = None
+        self.fuse_material_list = None
+        self.materials = None
+
+        print("\nStarting material similarity matching...")
+        
+    def tf_idf(self, df_data, fuse_material_list):
+
+        self.df_data = df_data
+        self.fuse_material_list = fuse_material_list
+        # Drop all samples without Part description which includes a Fuse material
+        mask = self.df_data.apply(self.contains_material, axis=1)    # True if PART_DESCRIPTION contains any fuse material
+        self.df_data = self.df_data[mask].reset_index(drop=True)          # Drop the samples
+
+        print(f'...Data shape after droping undefined samples: {self.df_data.shape}')
+
+        # Vectorize the part descriptions
+        print("...Vectorize the part descriptions using TF-IDF")
+        tfidf = TfidfVectorizer(stop_words='english')       # Computes: [Frequency of a term (TF) in a description] x [How rare the term is across all descriptions]
+        tfidf_matrix = tfidf.fit_transform(self.df_data['PART_DESCRIPTION'].fillna(""))
+
+        # print(tfidf.get_feature_names_out())
+
+        # Print tdidf structure as a dataframe to the TUI
+        # df_tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_out())
+        # print(df_tfidf)
+
+        return tfidf_matrix
+
+
+    def contains_material(self, row):
+        description = row['PART_DESCRIPTION']
+        if pd.isna(description) or str(description).strip() == '':
+            return False
+        if not any(mat in description for mat in self.fuse_material_list):
+            return False
+        return True
+
+
+    def create_material_vectors(self, tfidf_matrix):
+        """
+        Create material vectors by averaging the TF-IDF vectors of all part descriptions that belong to each material.
+        """
+        print("...Group dataframe by materials")
+        # Group rows by material
+        df_grouped = self.df_data.groupby('Fuse Material')
+
+        # Obtain a single vector that represents each material (e.g., "ceramic", "glass") by averaging the TF-IDF vectors of all part descriptions that belong to that material
+        material_vectors = {}   # dictionary for storing the vectors to every material
+        for material, group in df_grouped:
+            idxs = group.index
+            avg_vector = tfidf_matrix[idxs].mean(axis=0)  # average vector across rows
+            avg_vector = csr_matrix(avg_vector)  # Convert to 2D sparse matrix
+            material_vectors[material] = avg_vector
+
+        # Convert to a matrix of material vectors
+        materials = list(material_vectors.keys())
+        mat_vectors = vstack([material_vectors[m] for m in materials])
+        
+        print("...Completed vectorization.")
+
+        return mat_vectors, materials
+    
+    def cosine_sim(self, mat_vectors, materials):
+
+        print("...Calculate cosine similarity")
+
+        cosine_sim = cosine_similarity(mat_vectors) # computes the cosine of the angle between each pair of mat_vectors
+        # Represents a similarity matrix [i][j] with similarity score between material i and material j
+
+        top_k = {}
+        for i, mat in enumerate(materials):
+            sims = list(enumerate(cosine_sim[i]))
+            sims_sorted = sorted(sims, key=lambda x: x[1], reverse=True)
+            top_5 = [materials[j] for j, score in sims_sorted[1:6]]
+            top_k[mat] = top_5
+
+        print("...Results: Top 5 most similar materials")
+        for material, similar_materials in top_k.items():
+            print(f"     {material} -> {', '.join(similar_materials)}")
+
+        print("\nFinished similarity matching.")
+        print("-----------------------------------------------------------------------------")

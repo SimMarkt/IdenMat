@@ -1,0 +1,13 @@
+# ----------------------------------------------------------------------------------------------------------------
+# Task 2: Identifying alternative materials
+# Author: Simon Markthaler
+# Date: 2025-07-19
+# Version: 0.0.1
+#
+# config:
+# > Contains the configuration of the project.
+# ----------------------------------------------------------------------------------------------------------------
+
+data_path_fuse : /data/Fuse.csv        # Data path to Fuse data set
+
+data_path_plot : /plots/fuse_material_histogram.png
