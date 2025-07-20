@@ -85,20 +85,20 @@ class SimilarityModel:
 
         # Convert to a matrix of material vectors
         materials = list(material_vectors.keys())
-        mat_vectors = vstack([material_vectors[m] for m in materials])
+        material_matrix = vstack([material_vectors[m] for m in materials])
         
         print("...Completed vectorization.")
 
-        return mat_vectors, materials
+        return material_matrix, materials
     
-    def cosine_sim(self, mat_vectors, materials):
+    def cosine_sim(self, material_matrix, materials):
         """        
         Compute cosine similarity between material vectors.
         """
 
         print("...Calculate cosine similarity")
 
-        cosine_sim = cosine_similarity(mat_vectors) # computes the cosine of the angle between each pair of mat_vectors
+        cosine_sim = cosine_similarity(material_matrix) # computes the cosine of the angle between each pair of mat_vectors
         # Represents a similarity matrix [i][j] with similarity score between material i and material j
 
         top_k = {}

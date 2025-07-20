@@ -5,7 +5,7 @@
 # Version: 0.0.1
 #
 # main:
-# > Main script unsupervised similarity matching of materials.
+# > Main script for unsupervised similarity matching of materials.
 # ----------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------Import Python libraries---------------------------------------------
@@ -14,11 +14,6 @@ import os
 from src.model import SimilarityModel
 from src.preprocessing import Preprocessing
 from src.utils import Configuration
-
-#TODO: Pyyaml in requirements auch in anderen
-#TODO: Describe how I used a GPT (Github Copilot) to analyse the column PART_DESCRIPTION for any materials not present in the material list
-#TODO: Delete second algorithm in BinClass
-
 
 if __name__ == "__main__":
     Config = Configuration()                                            # Load configuration
@@ -36,7 +31,7 @@ if __name__ == "__main__":
     tfidf_matrix = model.tf_idf(df_data, fuse_material_list)    
 
     # Create material vectors by averaging the TF-IDF vectors of all part descriptions that belong to each material
-    mat_vectors, materials = model.create_material_vectors(tfidf_matrix)
+    material_matrix, materials = model.create_material_vectors(tfidf_matrix)
 
     # Compute cosine similarity
-    model.cosine_sim(mat_vectors, materials)
+    model.cosine_sim(material_matrix, materials)
