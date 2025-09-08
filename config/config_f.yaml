@@ -8,7 +8,7 @@
 # > Contains the configuration of the project.
 # ----------------------------------------------------------------------------------------------------------------
 
-data_path_fuse : /data/Battery.csv        # Data path to Fuse data set
+data_path_fuse : /data/Fuse.csv        # Data path to Fuse data set
 
 data_path_plot : /plots/fuse_material_histogram.png   # Data path to Fuse material histogram plot
 data_path_nan : /plots/missing_value_barchart.png     # Data path to bar chart with the No. of missing values per column
