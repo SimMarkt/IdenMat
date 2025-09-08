@@ -34,7 +34,7 @@ class Configuration:
         print("Task 2: Identifying alternative materials")
         print("-----------------------------------------------------------------------------\n")
 
-def plot_histogram(df, path, title="Fuse Material Counts Histogram"):
+def plot_histogram(df, path, title="ELECTRODE_MATERIAL Counts Histogram"):
     """
     Plot a histogram of the counts of unique values in a DataFrame column.
     """
