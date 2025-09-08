@@ -34,7 +34,7 @@ class Preprocessing:
         """
         # Load the dataset
         print("...Load data")
-        df_data = pd.read_csv(self.path_fuse, delimiter=';', header=0)
+        df_data = pd.read_csv(self.path_fuse, delimiter=',', header=0)
 
         print(f'...Data shape: {df_data.shape}')
 
