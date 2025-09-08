@@ -36,8 +36,8 @@ class SimilarityModel:
 
         self.df_data = df_data
         self.fuse_material_list = fuse_material_list
-        # Drop all samples without Part description which includes a Fuse material
-        mask = self.df_data.apply(self.contains_material, axis=1)    # True if PART_DESCRIPTION contains any fuse material
+        # Drop all samples without Part description which includes a ELECTRODE_MATERIAL
+        mask = self.df_data.apply(self.contains_material, axis=1)    # True if PART_DESCRIPTION contains any ELECTRODE_MATERIAL
         self.df_data = self.df_data[mask].reset_index(drop=True)          # Drop the samples
 
         print(f'...Data shape after droping undefined samples: {self.df_data.shape}')
@@ -57,7 +57,7 @@ class SimilarityModel:
 
     def contains_material(self, row):
         """        
-        Check if PART_DESCRIPTION contains any fuse material.
+        Check if PART_DESCRIPTION contains any ELECTRODE_MATERIAL.
         """
         description = row['PART_DESCRIPTION']
         if pd.isna(description) or str(description).strip() == '':
@@ -73,7 +73,7 @@ class SimilarityModel:
         """
         print("...Group dataframe by materials")
         # Group rows by material
-        df_grouped = self.df_data.groupby('Fuse Material')
+        df_grouped = self.df_data.groupby('ELECTRODE_MATERIAL')
 
         # Obtain a single vector that represents each material (e.g., "ceramic", "glass") by averaging the TF-IDF vectors of all part descriptions that belong to that material
         material_vectors = {}   # dictionary for storing the vectors to every material

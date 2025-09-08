@@ -24,7 +24,7 @@ class Preprocessing:
         self.path_cor =self.Config.path + self.Config.data_path_cor
         self.path_plot = self.Config.path + self.Config.data_path_plot
 
-        self.fuse_material_list = None  # List with all fuse materials in the 'Fuse Material' column
+        self.fuse_material_list = None  # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
 
         print("Start data preprocessing...")
         
@@ -34,7 +34,7 @@ class Preprocessing:
         """
         # Load the dataset
         print("...Load data")
-        df_data = pd.read_csv(self.path_fuse, delimiter=';', header=0)
+        df_data = pd.read_csv(self.path_fuse, delimiter=',', header=0)
 
         print(f'...Data shape: {df_data.shape}')
 
@@ -54,34 +54,34 @@ class Preprocessing:
 
     def matching(self, df_data):
         """
-        Match 'Fuse Material' with 'PART_DESCRIPTION' and infer missing values.
+        Match 'ELECTRODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
         """
 
-        print("...Matching 'Fuse Materials' with 'PART_DESCRIPTION'")
+        print("...Matching 'ELECTRODE_MATERIALs' with 'PART_DESCRIPTION'")
 
         # Harmonize text data
-        df_data['Fuse Material'] = df_data['Fuse Material'].str.lower()
+        df_data['ELECTRODE_MATERIAL'] = df_data['ELECTRODE_MATERIAL'].str.lower()
         df_data['PART_DESCRIPTION'] = df_data['PART_DESCRIPTION'].str.lower()
         
-        self.fuse_material_list = df_data['Fuse Material'].dropna().unique()     # List with all fuse materials in the 'Fuse Material' column
+        self.fuse_material_list = df_data['ELECTRODE_MATERIAL'].dropna().unique()     # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
         
-        # Identify Indexes with missing fuse materials where 'PART_DESCRIPTION' contains material information
-        # Add these materials to the 'Fuse Material' column
-        df_data['Fuse Material'] = df_data.apply(self.infer_fuse_material, axis=1)
+        # Identify Indexes with missing electrode materials where 'PART_DESCRIPTION' contains material information
+        # Add these materials to the 'ELECTRODE_MATERIAL' column
+        df_data['ELECTRODE_MATERIAL'] = df_data.apply(self.infer_fuse_material, axis=1)
         # Preliminary investigations also analyzed the 'PART_DESCRIPTION' column for materials not present in the fuse_material_list using a GPT model.
-        # This was done to ensure that all relevant materials are captured, even if they are not explicitly listed in the 'Fuse Material' column.
+        # This was done to ensure that all relevant materials are captured, even if they are not explicitly listed in the 'ELECTRODE_MATERIAL' column.
 
-        # Visualize the distribution of inferred fuse materials
-        plot_histogram(df_data['Fuse Material'], self.path_plot)
+        # Visualize the distribution of inferred electrode materials
+        plot_histogram(df_data['ELECTRODE_MATERIAL'], self.path_plot)
 
-        # If 'PART_DESCRIPTION' is missing material details, supplement it using the inferred 'Fuse Material' values
+        # If 'PART_DESCRIPTION' is missing material details, supplement it using the inferred 'ELECTRODE_MATERIAL' values
         df_data['PART_DESCRIPTION'] = df_data.apply(self.add_material_if_missing, axis=1)
 
         # Identify Indexes with missing Part Descriptions
         missing_mask = df_data['PART_DESCRIPTION'].isna() | (df_data['PART_DESCRIPTION'].str.strip() == '')
 
-        condition = missing_mask & df_data['Fuse Material'].notna()
-        print(f"...Number of missing PART_DESCRIPTION values with non-missing Fuse Material: {condition.sum()}")  
+        condition = missing_mask & df_data['ELECTRODE_MATERIAL'].notna()
+        print(f"...Number of missing PART_DESCRIPTION values with non-missing ELECTRODE_MATERIAL: {condition.sum()}")  
 
         # Optional: If PART_DESCRIPTION is missing, generate a pseudo-description based on other fields (e.g. by a rule-based approach and concetation of relevant fields)
         # df_data['PART_DESCRIPTION'] = df_data.apply(self.rule_based_imputation, axis=1)
@@ -93,26 +93,26 @@ class Preprocessing:
     
     def infer_fuse_material(self, row):
         """
-        Infer missing 'Fuse Material' based on 'PART_DESCRIPTION'.
+        Infer missing 'ELECTRODE_MATERIAL' based on 'PART_DESCRIPTION'.
         """
-        # Check if the Part Description contains a Fuse Material of the Fuse Material List in the text of the missing material values -> Add it to Fuse Materials
-        if pd.isna(row['Fuse Material']):
+        # Check if the Part Description contains a ELECTRODE_MATERIAL of the ELECTRODE_MATERIAL List in the text of the missing material values -> Add it to ELECTRODE_MATERIALs
+        if pd.isna(row['ELECTRODE_MATERIAL']):
             description = str(row['PART_DESCRIPTION'])
             for material in self.fuse_material_list:
                 if material in description:
-                    print(f"     Missing 'Fuse Material' in PART_ID:{row['PART_ID']} -> Filled with information from 'PART_DESCRIPTION': 'Fuse Material' = {material}")
+                    print(f"     Missing 'ELECTRODE_MATERIAL' in PART_ID:{row['PART_ID']} -> Filled with information from 'PART_DESCRIPTION': 'ELECTRODE_MATERIAL' = {material}")
                     return material
             return np.nan  # Still missing if no match found
         else:
-            return row['Fuse Material']  # Already filled
+            return row['ELECTRODE_MATERIAL']  # Already filled
         
-            # Function to add fuse material if missing
+            # Function to add ELECTRODE_MATERIAL if missing
 
     def add_material_if_missing(self, row):
         """
-        Add fuse material to PART_DESCRIPTION if missing.
+        Add ELECTRODE_MATERIAL to PART_DESCRIPTION if missing.
         """
-        material = row['Fuse Material']
+        material = row['ELECTRODE_MATERIAL']
         description = row['PART_DESCRIPTION']
         if material in self.fuse_material_list:
             if not pd.isna(description) or str(description).strip() == '':
@@ -120,7 +120,7 @@ class Preprocessing:
                 if not any(mat in description for mat in self.fuse_material_list):
                     # Append the material if none found
                     new_description = description + ', ' + material
-                    print(f"     Missing material information in 'PART_DESCRIPTION' in PART_ID:{row['PART_ID']} -> Added information from 'Fuse Material' = {material}")
+                    print(f"     Missing material information in 'PART_DESCRIPTION' in PART_ID:{row['PART_ID']} -> Added information from 'ELECTRODE_MATERIAL' = {material}")
                     return new_description
                 return description
             else:
@@ -139,7 +139,7 @@ class Preprocessing:
             voltage = str(row.get('Rated Voltage (V)', '') or row.get('Maximum AC Voltage Rating', '')).replace('V', '').strip()
             mounting = str(row.get('Mounting', '')).strip()
             fuse_size = str(row.get('Fuse Size', '')).strip()
-            material = str(row.get('Fuse Material', '')).strip()
+            material = str(row.get('ELECTRODE_MATERIAL', '')).strip()
 
             # Ensure values are not empty
             current = current + 'A' if current else ''

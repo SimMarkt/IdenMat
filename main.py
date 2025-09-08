@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     df_data = Preproc.load_data()                                       # Load data set
 
-    df_data, fuse_material_list = Preproc.matching(df_data)             # Match 'Fuse Material' with 'PART_DESCRIPTION' and infer missing values.
+    df_data, fuse_material_list = Preproc.matching(df_data)             # Match 'ELECTRODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
 
     model = SimilarityModel(Config)                                     # Model for similarity analysis
 
