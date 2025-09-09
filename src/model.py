@@ -10,6 +10,7 @@ model:
 """
 
 import pandas as pd
+import numpy as np
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -33,7 +34,7 @@ class SimilarityModel:
 
         print("\nStarting material similarity matching...")
 
-    def tf_idf(self, df_data: pd.DataFrame, bat_material_list):
+    def tf_idf(self, df_data: pd.DataFrame, bat_material_list: np.ndarray) -> csr_matrix:
         """        
         Create TF-IDF matrix for part descriptions.
         :param df_data: DataFrame containing the cleaned data.

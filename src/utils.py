@@ -28,16 +28,20 @@ class Configuration:
         self.path = None
 
         self.print_init()
-        
+
     @staticmethod
     def print_init():
+        """Print initialization message."""
         print("\n-----------------------------------------------------------------------------")
-        print("Task 2: Identifying alternative materials")
+        print("ItenMat: Identifying alternative battery electrode materials")
         print("-----------------------------------------------------------------------------\n")
 
 def plot_histogram(df, path, title="ELECTRODE_MATERIAL Counts Histogram"):
     """
     Plot a histogram of the counts of unique values in a DataFrame column.
+    :param df: DataFrame column (Series) to plot.
+    :param path: Path to save the plot.
+    :param title: Title of the plot.
     """
     # Count values including NaN
     value_counts = df.value_counts(dropna=False)
@@ -56,6 +60,9 @@ def plot_histogram(df, path, title="ELECTRODE_MATERIAL Counts Histogram"):
 def plot_missing_value_count(df, path, title="Number of Missing (NaN) Values per Column"):
     """
     Plot a bar chart with the number of missing values per column.
+    :param df: DataFrame to analyze.
+    :param path: Path to save the plot.
+    :param title: Title of the plot.
     """
     nan_counts = df.isna().sum()
     nan_counts = nan_counts[nan_counts > 0]  # only show columns with NaNs
@@ -77,10 +84,14 @@ def plot_missing_value_count(df, path, title="Number of Missing (NaN) Values per
 def plot_cosine_similarity_heatmap(df, path, title="Cosine Similarity Heatmap"):
     """
     Plot a heatmap of cosine similarity values.
+    :param df: DataFrame containing cosine similarity values.
+    :param path: Path to save the plot.
+    :param title: Title of the plot.
     """
     # Plot heatmap
     plt.figure(figsize=(10, 8))
-    sns.heatmap(df, cmap='Blues', annot=True, fmt=".2f", square=True, cbar_kws={"label": "Cosine Similarity"})
+    sns.heatmap(df, cmap='Blues', annot=True, fmt=".2f", square=True,
+                cbar_kws={"label": "Cosine Similarity"})
     plt.title(title)
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
@@ -91,20 +102,18 @@ def plot_cosine_similarity_heatmap(df, path, title="Cosine Similarity Heatmap"):
 def plot_correlation_histogram(cramers_matrix, path, title="Cramér's V Heatmap (Categorical Associations)"):
     """
     Plot a heatmap of Cramér's V correlation.
+    :param cramers_matrix: Cramér's V correlation matrix.
+    :param path: Path to save the plot.
+    :param title: Title of the plot.
     """
 
     cramers_matrix = cramers_matrix.astype(float)
     # Plot the heatmap
     plt.figure(figsize=(14, 10))
-    sns.heatmap(cramers_matrix, annot=False, fmt=".2f", cmap='Blues', 
+    sns.heatmap(cramers_matrix, annot=False, fmt=".2f", cmap='Blues',
                 square=True, cbar_kws={"label": "Cramér's V"}, center=0, linewidths=0.5)
     plt.title(title)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.savefig(path, dpi=300)
     plt.close()
-
-
-
-
-

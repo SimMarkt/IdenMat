@@ -9,7 +9,7 @@ main:
 ----------------------------------------------------------------------------------------------------
 """
 
-# -------------------------------------Import Python libraries--------------------------------------
+# Import Python libraries
 import os
 
 from src.model import SimilarityModel
