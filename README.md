@@ -1,6 +1,15 @@
-# Task2: Identifying alternative materials
-
 IN PROGRESS ...
+
+
+
+
+
+
+
+
+# Identifying alternative materials
+
+
 
 This project focuses on identifying alternative fuse materials based on textual patterns in `PART_DESCRIPTION` using natural language processing (NLP) techniques. It leverages **TF-IDF vectorization** and **cosine similarity** to measure the relationship between materials and surrounding descriptive terms, with optional visualization and preprocessing strategies to improve data quality and interpretability.
 
@@ -9,7 +18,7 @@ This project focuses on identifying alternative fuse materials based on textual 
 ## Project Structure
 
 ```plaintext
-Task2_Identifying_alternative_materials/
+IdenMat/
 │
 ├── config/
 │   └── config.yaml                 # Configuration file with paths and model parameters
