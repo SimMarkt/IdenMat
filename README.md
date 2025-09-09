@@ -40,7 +40,7 @@ IdenMat/
 
 ## Overview
 
-The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddings for each material (e.g., "ceramic", "glass", "epoxy-coated") based on textual co-occurrence patterns. TF-IDF and cosine similarity are used to construct a similarity matrix, allowing the user to identify materials that are most closely associated with one another in practice.
+The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddings for each material (e.g., "Nickel Manganese Cobalt", "Lithium Iron Phosphate") based on textual co-occurrence patterns. TF-IDF and cosine similarity are used to construct a similarity matrix, allowing the user to identify materials that are most closely associated with one another in practice.
 
 ---
 

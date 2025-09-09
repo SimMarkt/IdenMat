@@ -33,7 +33,7 @@ class SimilarityModel:
 
         print("\nStarting material similarity matching...")
 
-    def tf_idf(self, df_data, bat_material_list):
+    def tf_idf(self, df_data: pd.DataFrame, bat_material_list):
         """        
         Create TF-IDF matrix for part descriptions.
         :param df_data: DataFrame containing the cleaned data.
@@ -92,7 +92,9 @@ class SimilarityModel:
         # Group rows by material
         df_grouped = self.df_data.groupby('ELECTRODE_MATERIAL')
 
-        # Obtain a single vector that represents each material (e.g., "ceramic", "glass") by averaging the TF-IDF vectors of all part descriptions that belong to that material
+        # Obtain a single vector that represents each material
+        # (e.g., "Nickel Manganese Cobalt", "Lithium Iron Phosphate")
+        # by averaging the TF-IDF vectors of all part descriptions that belong to that material
         material_vectors = {}   # dictionary for storing the vectors to every material
         for material, group in df_grouped:
             idxs = group.index
@@ -103,11 +105,11 @@ class SimilarityModel:
         # Convert to a matrix of material vectors
         materials = list(material_vectors.keys())
         material_matrix = vstack([material_vectors[m] for m in materials])
-        
+
         print("...Completed vectorization.")
 
         return material_matrix, materials
-    
+
     def cosine_sim(self, material_matrix, materials):
         """        
         Compute cosine similarity between material vectors.
@@ -115,8 +117,10 @@ class SimilarityModel:
 
         print("...Calculate cosine similarity")
 
-        cosine_sim = cosine_similarity(material_matrix) # computes the cosine of the angle between each pair of mat_vectors
-        # Represents a similarity matrix [i][j] with similarity score between material i and material j
+        # Compute the cosine of the angle between each pair of mat_vectors
+        cosine_sim = cosine_similarity(material_matrix)
+        # Represents a similarity matrix [i][j] with similarity score
+        # between material i and material j
 
         top_k = {}
         for i, mat in enumerate(materials):
