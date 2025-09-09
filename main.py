@@ -1,12 +1,13 @@
-# ----------------------------------------------------------------------------------------------------------------
-# Task 2: Identifying alternative materials
-# Author: Simon Markthaler
-# Date: 2025-07-19
-# Version: 0.0.1
-#
-# main:
-# > Main script for unsupervised similarity matching of materials.
-# ----------------------------------------------------------------------------------------------------------------
+"""
+---------------------------------------------------------------------------------------------------
+IdenMat: Identifying alternative battery electrode materials 
+         via unsupervised similarity matching (NLP)
+GitHub Repository: https://github.com/SimMarkt/IdenMat.git
+
+main:
+> Main script for unsupervised similarity matching of materials.
+---------------------------------------------------------------------------------------------------
+"""
 
 # --------------------------------------------Import Python libraries---------------------------------------------
 import os
