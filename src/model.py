@@ -1,12 +1,13 @@
-# ----------------------------------------------------------------------------------------------------------------
-# Task 2: Identifying alternative materials
-# Author: Simon Markthaler
-# Date: 2025-07-19
-# Version: 0.0.1
-#
-# model:
-# > Provides the similarity model containing TF-IDF and cosine similarity.
-# ----------------------------------------------------------------------------------------------------------------
+"""
+---------------------------------------------------------------------------------------------------
+IdenMat: Identifying alternative battery electrode materials 
+         via unsupervised similarity matching (NLP)
+GitHub Repository: https://github.com/SimMarkt/IdenMat.git
+
+model:
+> Provides the similarity model containing TF-IDF and cosine similarity.
+---------------------------------------------------------------------------------------------------
+"""
 
 import pandas as pd
 

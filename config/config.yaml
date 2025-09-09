@@ -1,16 +1,19 @@
-# ----------------------------------------------------------------------------------------------------------------
-# Task 2: Identifying alternative materials
-# Author: Simon Markthaler
-# Date: 2025-07-19
-# Version: 0.0.1
+# -------------------------------------------------------------------------------------------------
+# IdenMat: Identifying alternative battery electrode materials 
+#          via unsupervised similarity matching (NLP)
+# GitHub Repository: https://github.com/SimMarkt/IdenMat.git
 #
 # config:
 # > Contains the configuration of the project.
-# ----------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------
 
-data_path_fuse : /data/Battery.csv        # Data path to Fuse data set
+data_path_bat : /data/Battery.csv        # Data path to battery data set
 
-data_path_plot : /plots/fuse_material_histogram.png   # Data path to Fuse material histogram plot
-data_path_nan : /plots/missing_value_barchart.png     # Data path to bar chart with the No. of missing values per column
-data_path_cor : /plots/correlation_heatmap.png        # Data path to Cramers V correlation heat map
-data_path_results : /plots/similarity_heat_map.png    # Data path to similarity heat map
+# Data path to Fuse material histogram plot
+data_path_plot : /plots/bat_material_histogram.png
+# Data path to bar chart with the No. of missing values per column
+data_path_nan : /plots/missing_value_barchart.png
+# Data path to Cramers V correlation heat map
+data_path_cor : /plots/correlation_heatmap.png
+# Data path to similarity heat map
+data_path_results : /plots/similarity_heat_map.png
