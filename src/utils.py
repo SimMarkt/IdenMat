@@ -1,6 +1,6 @@
 """
 ---------------------------------------------------------------------------------------------------
-IdenMat: Identifying alternative battery electrode materials 
+IdenMat: Identifying alternative battery electrode materials
          via unsupervised similarity matching (NLP)
 GitHub Repository: https://github.com/SimMarkt/IdenMat.git
 
@@ -18,7 +18,7 @@ class Configuration:
     """Configuration class for loading environment variables from a YAML file."""
     def __init__(self):
         # Load the environment configuration from the YAML file
-        with open("config/config.yaml", "r") as env_file:
+        with open("config/config.yaml", "r", encoding="utf-8") as env_file:
             agent_config = yaml.safe_load(env_file)
 
         # Unpack data from dictionary

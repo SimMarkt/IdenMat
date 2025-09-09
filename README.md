@@ -2,7 +2,7 @@ IN PROGRESS ...
 
 
 
-
+Note: The battery data set is synthetic, since the original data set is confidential.
 
 
 
@@ -24,9 +24,9 @@ IdenMat/
 │   └── config.yaml                 # Configuration file with paths and model parameters
 │
 ├── data/
-│   └── Fuse.csv                    # Fuse data set
+│   └── Battery.csv                    # Battery data set
 │
-├── plots/                          # Visualizations (fuse material histogram, similarity heat map)
+├── plots/                          # Visualizations (battery material histogram, similarity heat map)
 │
 ├── src/
 │   ├── model.py                    # Model implementation (TF-IDF, Cosine similarity)
