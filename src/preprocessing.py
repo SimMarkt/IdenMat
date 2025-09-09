@@ -13,25 +13,30 @@ import pandas as pd
 import numpy as np
 from scipy.stats import chi2_contingency
 
-from src.utils import plot_histogram, plot_missing_value_count, plot_correlation_histogram
+from src.utils import Configuration, plot_histogram, plot_missing_value_count, plot_correlation_histogram
 
 class Preprocessing:
     """Preprocessing class for loading and preprocessing data sets."""
-    def __init__(self, Config):
-        self.Config = Config
+    def __init__(self, config: Configuration) -> None:
+        """
+        :param config: Configuration object containing environment variables.
+        """
+        self.config = config
 
-        self.path_bat = self.Config.path + self.Config.data_path_bat
-        self.path_nan = self.Config.path + self.Config.data_path_nan
-        self.path_cor =self.Config.path + self.Config.data_path_cor
-        self.path_plot = self.Config.path + self.Config.data_path_plot
+        self.path_bat = self.config.path + self.config.data_path_bat
+        self.path_nan = self.config.path + self.config.data_path_nan
+        self.path_cor =self.config.path + self.config.data_path_cor
+        self.path_plot = self.config.path + self.config.data_path_plot
 
-        self.bat_material_list = None  # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
+        # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
+        self.bat_material_list = None
 
         print("Start data preprocessing...")
-        
-    def load_data(self):
+
+    def load_data(self) -> pd.DataFrame:
         """   
         Load the dataset and drop duplicates.
+        :return df_data: DataFrame containing the cleaned data.
         """
         # Load the dataset
         print("...Load data")
@@ -50,12 +55,16 @@ class Preprocessing:
         # Be aware that the results does not account for mixed formats.
         cramers_matrix = self.create_correlation(df_data)
         plot_correlation_histogram(cramers_matrix, self.path_cor)
-        
+
         return df_data
 
-    def matching(self, df_data):
+    def matching(self, df_data: pd.DataFrame):
         """
         Match 'ELECTRODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
+        :param df_data: DataFrame containing the cleaned data.
+        :return df_data: DataFrame with matched and inferred values.
+        :return bat_material_list: List of all electrode materials in 
+                                   the 'ELECTRODE_MATERIAL' column.
         """
 
         print("...Matching 'ELECTRODE_MATERIALs' with 'PART_DESCRIPTION'")
@@ -63,50 +72,65 @@ class Preprocessing:
         # Harmonize text data
         df_data['ELECTRODE_MATERIAL'] = df_data['ELECTRODE_MATERIAL'].str.lower()
         df_data['PART_DESCRIPTION'] = df_data['PART_DESCRIPTION'].str.lower()
-        
-        self.bat_material_list = df_data['ELECTRODE_MATERIAL'].dropna().unique()     # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
-        
-        # Identify Indexes with missing electrode materials where 'PART_DESCRIPTION' contains material information
+
+        # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
+        self.bat_material_list = df_data['ELECTRODE_MATERIAL'].dropna().unique()
+
+        # Identify Indexes with missing electrode materials where 'PART_DESCRIPTION' contains
+        # material information
         # Add these materials to the 'ELECTRODE_MATERIAL' column
         df_data['ELECTRODE_MATERIAL'] = df_data.apply(self.infer_bat_material, axis=1)
-        # Preliminary investigations also analyzed the 'PART_DESCRIPTION' column for materials not present in the bat_material_list using a GPT model.
-        # This was done to ensure that all relevant materials are captured, even if they are not explicitly listed in the 'ELECTRODE_MATERIAL' column.
+        # Preliminary investigations also analyzed the 'PART_DESCRIPTION' column for materials
+        # not present in the bat_material_list using an LLM.
+        # This was done to ensure that all relevant materials are captured, even if they are not
+        # explicitly listed in the 'ELECTRODE_MATERIAL' column.
 
         # Visualize the distribution of inferred electrode materials
         plot_histogram(df_data['ELECTRODE_MATERIAL'], self.path_plot)
 
-        # If 'PART_DESCRIPTION' is missing material details, supplement it using the inferred 'ELECTRODE_MATERIAL' values
+        # If 'PART_DESCRIPTION' is missing material details, supplement it using the inferred
+        # 'ELECTRODE_MATERIAL' values
         df_data['PART_DESCRIPTION'] = df_data.apply(self.add_material_if_missing, axis=1)
 
         # Identify Indexes with missing Part Descriptions
-        missing_mask = df_data['PART_DESCRIPTION'].isna() | (df_data['PART_DESCRIPTION'].str.strip() == '')
+        missing_mask = (
+            df_data['PART_DESCRIPTION'].isna() |
+            (df_data['PART_DESCRIPTION'].str.strip() == '')
+        )
 
         condition = missing_mask & df_data['ELECTRODE_MATERIAL'].notna()
-        print(f"...Number of missing PART_DESCRIPTION values with non-missing ELECTRODE_MATERIAL: {condition.sum()}")  
+        print("...Number of missing PART_DESCRIPTION values with non-missing"
+              f" ELECTRODE_MATERIAL: {condition.sum()}")
 
-        # Optional: If PART_DESCRIPTION is missing, generate a pseudo-description based on other fields (e.g. by a rule-based approach and concetation of relevant fields)
+        # Optional: If PART_DESCRIPTION is missing, generate a pseudo-description based on other
+        # fields (e.g. by a rule-based approach and concetation of relevant fields)
         # df_data['PART_DESCRIPTION'] = df_data.apply(self.rule_based_imputation, axis=1)
         # However, this may weaken the effectiveness of TF-IDF and cosine similarity.
-        # Alternatively, use rule-based imputation together with sentence_transformers or other embedding methods, 
-        # could be used to generate embeddings for the PART_DESCRIPTION column.
-    
+        # Alternatively, use rule-based imputation together with sentence_transformers or other
+        # embedding methods, could be used to generate embeddings for the PART_DESCRIPTION column.
+
         return df_data, self.bat_material_list
-    
+
     def infer_bat_material(self, row):
         """
         Infer missing 'ELECTRODE_MATERIAL' based on 'PART_DESCRIPTION'.
+        :param row: DataFrame row.
+        :return: Inferred or original 'ELECTRODE_MATERIAL'.
         """
-        # Check if the Part Description contains a ELECTRODE_MATERIAL of the ELECTRODE_MATERIAL List in the text of the missing material values -> Add it to ELECTRODE_MATERIALs
+        # Check if the Part Description contains a ELECTRODE_MATERIAL of the ELECTRODE_MATERIAL
+        # list in the text of the missing material values -> Add it to ELECTRODE_MATERIALs
         if pd.isna(row['ELECTRODE_MATERIAL']):
             description = str(row['PART_DESCRIPTION'])
             for material in self.bat_material_list:
                 if material in description:
-                    print(f"     Missing 'ELECTRODE_MATERIAL' in PART_ID:{row['PART_ID']} -> Filled with information from 'PART_DESCRIPTION': 'ELECTRODE_MATERIAL' = {material}")
+                    print(f"     Missing 'ELECTRODE_MATERIAL' in PART_ID:{row['PART_ID']} ->"
+                          " Filled with information from 'PART_DESCRIPTION': 'ELECTRODE_MATERIAL'"
+                          f" = {material}")
                     return material
             return np.nan  # Still missing if no match found
         else:
             return row['ELECTRODE_MATERIAL']  # Already filled
-        
+
             # Function to add ELECTRODE_MATERIAL if missing
 
     def add_material_if_missing(self, row):
@@ -121,17 +145,22 @@ class Preprocessing:
                 if not any(mat in description for mat in self.bat_material_list):
                     # Append the material if none found
                     new_description = description + ', ' + material
-                    print(f"     Missing material information in 'PART_DESCRIPTION' in PART_ID:{row['PART_ID']} -> Added information from 'ELECTRODE_MATERIAL' = {material}")
+                    print("     Missing material information in 'PART_DESCRIPTION' in"
+                          f" PART_ID:{row['PART_ID']} -> Added information from 'ELECTRODE_MATERIAL"
+                          f"' = {material}")
                     return new_description
                 return description
             else:
                 return description
         else:
             return description
-        
+
+    @staticmethod
     def rule_based_imputation(row):
         """        
         Generate a pseudo-description based on other fields if PART_DESCRIPTION is missing.
+        :param row: DataFrame row.
+        :return: Imputed or original 'PART_DESCRIPTION'.
         """
         if pd.isna(row['PART_DESCRIPTION']) or str(row['PART_DESCRIPTION']).strip() == '':
             # Extract fields, fallback to default or blank if missing
@@ -168,12 +197,18 @@ class Preprocessing:
         else:
             return row['PART_DESCRIPTION']
 
-    @staticmethod    
+    @staticmethod
     def cramers_v(x, y):
+        """
+        Calculate Cramér's V statistic for categorical-categorical association.
+        :param x: First categorical variable (Pandas Series).
+        :param y: Second categorical variable (Pandas Series).
+        :return: Cramér's V statistic.
+        """
         confusion_matrix = pd.crosstab(x, y)
         if confusion_matrix.size == 0:
             return np.nan
-        chi2, p, dof, expected = chi2_contingency(confusion_matrix)
+        chi2, _, _, _ = chi2_contingency(confusion_matrix)
         n = confusion_matrix.sum().sum()
         phi2 = chi2 / n
         r, k = confusion_matrix.shape
@@ -183,8 +218,13 @@ class Preprocessing:
         if min(kcorr - 1, rcorr - 1) == 0:
             return np.nan
         return np.sqrt(phi2corr / min((kcorr - 1), (rcorr - 1)))
-    
+
     def create_correlation(self, df_data):
+        """
+        Create a Cramér's V correlation matrix for categorical variables.
+        :param df_data: DataFrame containing the cleaned data.
+        :return cramers_matrix: Cramér's V correlation matrix.
+        """
 
         df_copy = df_data.copy()
 
@@ -197,7 +237,7 @@ class Preprocessing:
 
         # Create the Cramér's V matrix
         columns = df_categorical.columns
-        cramers_matrix = pd.DataFrame(np.zeros((len(columns), len(columns))), 
+        cramers_matrix = pd.DataFrame(np.zeros((len(columns), len(columns))),
                                     index=columns, columns=columns)
 
         # Fill in the matrix
@@ -208,8 +248,5 @@ class Preprocessing:
                 else:
                     val = self.cramers_v(df_categorical[col1], df_categorical[col2])
                     cramers_matrix.loc[col1, col2] = val
-        
-        return cramers_matrix 
 
-
-
+        return cramers_matrix

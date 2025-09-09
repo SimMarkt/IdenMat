@@ -37,7 +37,7 @@ if __name__ == "__main__":
     # based on its frequency in the document and across all documents
     tfidf_matrix = model.tf_idf(df_data, bat_material_list)
 
-    # Create material vectors by averaging the TF-IDF vectors of all part descriptions 
+    # Create material vectors by averaging the TF-IDF vectors of all part descriptions
     # that belong to each material
     material_matrix, materials = model.create_material_vectors(tfidf_matrix)
 
