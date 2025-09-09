@@ -1,6 +1,6 @@
 """
 ---------------------------------------------------------------------------------------------------
-IdenMat: Identifying alternative battery electrode materials 
+IdenMat: Identifying alternative battery electrode materials
          via unsupervised similarity matching (NLP)
 GitHub Repository: https://github.com/SimMarkt/IdenMat.git
 
@@ -20,12 +20,12 @@ class Preprocessing:
     def __init__(self, Config):
         self.Config = Config
 
-        self.path_fuse = self.Config.path + self.Config.data_path_fuse
+        self.path_bat = self.Config.path + self.Config.data_path_bat
         self.path_nan = self.Config.path + self.Config.data_path_nan
         self.path_cor =self.Config.path + self.Config.data_path_cor
         self.path_plot = self.Config.path + self.Config.data_path_plot
 
-        self.fuse_material_list = None  # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
+        self.bat_material_list = None  # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
 
         print("Start data preprocessing...")
         
@@ -35,7 +35,7 @@ class Preprocessing:
         """
         # Load the dataset
         print("...Load data")
-        df_data = pd.read_csv(self.path_fuse, delimiter=',', header=0)
+        df_data = pd.read_csv(self.path_bat, delimiter=',', header=0)
 
         print(f'...Data shape: {df_data.shape}')
 
@@ -64,12 +64,12 @@ class Preprocessing:
         df_data['ELECTRODE_MATERIAL'] = df_data['ELECTRODE_MATERIAL'].str.lower()
         df_data['PART_DESCRIPTION'] = df_data['PART_DESCRIPTION'].str.lower()
         
-        self.fuse_material_list = df_data['ELECTRODE_MATERIAL'].dropna().unique()     # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
+        self.bat_material_list = df_data['ELECTRODE_MATERIAL'].dropna().unique()     # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
         
         # Identify Indexes with missing electrode materials where 'PART_DESCRIPTION' contains material information
         # Add these materials to the 'ELECTRODE_MATERIAL' column
-        df_data['ELECTRODE_MATERIAL'] = df_data.apply(self.infer_fuse_material, axis=1)
-        # Preliminary investigations also analyzed the 'PART_DESCRIPTION' column for materials not present in the fuse_material_list using a GPT model.
+        df_data['ELECTRODE_MATERIAL'] = df_data.apply(self.infer_bat_material, axis=1)
+        # Preliminary investigations also analyzed the 'PART_DESCRIPTION' column for materials not present in the bat_material_list using a GPT model.
         # This was done to ensure that all relevant materials are captured, even if they are not explicitly listed in the 'ELECTRODE_MATERIAL' column.
 
         # Visualize the distribution of inferred electrode materials
@@ -90,16 +90,16 @@ class Preprocessing:
         # Alternatively, use rule-based imputation together with sentence_transformers or other embedding methods, 
         # could be used to generate embeddings for the PART_DESCRIPTION column.
     
-        return df_data, self.fuse_material_list
+        return df_data, self.bat_material_list
     
-    def infer_fuse_material(self, row):
+    def infer_bat_material(self, row):
         """
         Infer missing 'ELECTRODE_MATERIAL' based on 'PART_DESCRIPTION'.
         """
         # Check if the Part Description contains a ELECTRODE_MATERIAL of the ELECTRODE_MATERIAL List in the text of the missing material values -> Add it to ELECTRODE_MATERIALs
         if pd.isna(row['ELECTRODE_MATERIAL']):
             description = str(row['PART_DESCRIPTION'])
-            for material in self.fuse_material_list:
+            for material in self.bat_material_list:
                 if material in description:
                     print(f"     Missing 'ELECTRODE_MATERIAL' in PART_ID:{row['PART_ID']} -> Filled with information from 'PART_DESCRIPTION': 'ELECTRODE_MATERIAL' = {material}")
                     return material
@@ -115,10 +115,10 @@ class Preprocessing:
         """
         material = row['ELECTRODE_MATERIAL']
         description = row['PART_DESCRIPTION']
-        if material in self.fuse_material_list:
+        if material in self.bat_material_list:
             if not pd.isna(description) or str(description).strip() == '':
                 # Check if any material from the full list is already in the description
-                if not any(mat in description for mat in self.fuse_material_list):
+                if not any(mat in description for mat in self.bat_material_list):
                     # Append the material if none found
                     new_description = description + ', ' + material
                     print(f"     Missing material information in 'PART_DESCRIPTION' in PART_ID:{row['PART_ID']} -> Added information from 'ELECTRODE_MATERIAL' = {material}")
@@ -139,28 +139,28 @@ class Preprocessing:
             current = str(row.get('Rated Current (A)', '')).replace('A', '').strip()
             voltage = str(row.get('Rated Voltage (V)', '') or row.get('Maximum AC Voltage Rating', '')).replace('V', '').strip()
             mounting = str(row.get('Mounting', '')).strip()
-            fuse_size = str(row.get('Fuse Size', '')).strip()
+            bat_size = str(row.get('bat Size', '')).strip()
             material = str(row.get('ELECTRODE_MATERIAL', '')).strip()
 
             # Ensure values are not empty
             current = current + 'A' if current else ''
             voltage = voltage + 'V' if voltage else ''
-            acting = acting if acting else 'Fuse'
+            acting = acting if acting else 'bat'
             mounting = mounting if mounting else ''
-            fuse_size = fuse_size if fuse_size else ''
+            bat_size = bat_size if bat_size else ''
             material = material if material else ''
 
             # Build description
             parts = [
-                "Fuse",
+                "bat",
                 acting,
                 current,
                 voltage,
                 mounting,
                 "Cartridge",
-                fuse_size,
+                bat_size,
                 material,
-                "Electric Fuse"
+                "Electric bat"
             ]
 
             # Filter out empty strings and join

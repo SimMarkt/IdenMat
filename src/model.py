@@ -1,6 +1,6 @@
 """
 ---------------------------------------------------------------------------------------------------
-IdenMat: Identifying alternative battery electrode materials 
+IdenMat: Identifying alternative battery electrode materials
          via unsupervised similarity matching (NLP)
 GitHub Repository: https://github.com/SimMarkt/IdenMat.git
 
@@ -15,37 +15,49 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.sparse import vstack, csr_matrix
 
-from src.utils import plot_cosine_similarity_heatmap
+from src.utils import Configuration, plot_cosine_similarity_heatmap
 
 class SimilarityModel:
     """SimilarityModel class for unsupervised similarity matching of materials."""
-    def __init__(self, Config):
-        self.Config = Config
+    def __init__(self, config: Configuration) -> None:
+        """
+        :param config: Configuration object containing environment variables.
+        """
+        self.config = config
 
-        self.path_results = self.Config.path + self.Config.data_path_results
+        self.path_results = self.config.path + self.config.data_path_results
 
         self.df_data = None
-        self.fuse_material_list = None
+        self.bat_material_list = None
         self.materials = None
 
         print("\nStarting material similarity matching...")
-        
-    def tf_idf(self, df_data, fuse_material_list):
+
+    def tf_idf(self, df_data, bat_material_list):
         """        
         Create TF-IDF matrix for part descriptions.
+        :param df_data: DataFrame containing the cleaned data.
+        :param bat_material_list: List of all electrode materials in
+                                  the 'ELECTRODE_MATERIAL' column.
+        :return tfidf_matrix: TF-IDF matrix.
         """
 
         self.df_data = df_data
-        self.fuse_material_list = fuse_material_list
+        self.bat_material_list = bat_material_list
         # Drop all samples without Part description which includes a ELECTRODE_MATERIAL
-        mask = self.df_data.apply(self.contains_material, axis=1)    # True if PART_DESCRIPTION contains any ELECTRODE_MATERIAL
+        # mask: True if PART_DESCRIPTION contains any ELECTRODE_MATERIAL
+        mask = self.df_data.apply(self.contains_material, axis=1)
         self.df_data = self.df_data[mask].reset_index(drop=True)          # Drop the samples
 
         print(f'...Data shape after droping undefined samples: {self.df_data.shape}')
 
         # Vectorize the part descriptions
         print("...Vectorize the part descriptions using TF-IDF")
-        tfidf = TfidfVectorizer(stop_words='english')       # Computes: [Frequency of a term (TF) in a description] x [How rare the term is across all descriptions]
+        # Computes:
+        # [Frequency of a term (TF) in a description]
+        #  x
+        # [How rare the term is across all descriptions]
+        tfidf = TfidfVectorizer(stop_words='english')
         tfidf_matrix = tfidf.fit_transform(self.df_data['PART_DESCRIPTION'].fillna(""))
 
         # print(tfidf.get_feature_names_out())
@@ -56,21 +68,25 @@ class SimilarityModel:
 
         return tfidf_matrix
 
-    def contains_material(self, row):
+    def contains_material(self, row) -> bool:
         """        
         Check if PART_DESCRIPTION contains any ELECTRODE_MATERIAL.
+        :param row: DataFrame row.
+        :return: True if PART_DESCRIPTION contains any ELECTRODE_MATERIAL, else False.
         """
         description = row['PART_DESCRIPTION']
         if pd.isna(description) or str(description).strip() == '':
             return False
-        if not any(mat in description for mat in self.fuse_material_list):
+        if not any(mat in description for mat in self.bat_material_list):
             return False
         return True
 
-
     def create_material_vectors(self, tfidf_matrix):
         """
-        Create material vectors by averaging the TF-IDF vectors of all part descriptions that belong to each material.
+        Create material vectors by averaging the TF-IDF vectors of all part descriptions
+        that belong to each material.
+        :param tfidf_matrix: TF-IDF matrix.
+        :return material_matrix: Matrix of material vectors.
         """
         print("...Group dataframe by materials")
         # Group rows by material
