@@ -1,0 +1,999 @@
+ID,PART_DESCRIPTION,CAPACITY_mAh,NOMINAL_VOLTAGE_V,MAX_OPERATING_TEMP_C,MIN_OPERATING_TEMP_C,FORM_FACTOR,MAX_DISCHARGE_CURRENT_A,ANODE_MATERIAL,CATHODE_MATERIAL
+,Lead-acid deep cycle battery for UPS,5000.0,12.0,70.0,0.0,Pouch,100.0,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,,12.0,70.0,,Prismatic,2.0,Lithium Metal,Lithium Cobalt Oxide
+B3,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.6,70.0,,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Solid-state battery prototype for aerospace,5000.0,3.2,40.0,-10.0,Prismatic,100.0,,Lithium Cobalt Oxide
+B5,Solid-state battery prototype for aerospace,2500.0,24.0,40.0,-10.0,,100.0,Lithium Metal,Lithium Cobalt Oxide
+B6,Compact LiFePO4 battery for solar storage,3000.0,3.2,,0.0,Cylindrical,,Graphite,Lithium Cobalt Oxide
+B7,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,24.0,50.0,,Pouch,5.0,Hydrogen-absorbing Alloy,
+B8,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.2,,,Cylindrical,2.0,,Nickel Oxyhydroxide
+B9,Nickel-metal hydride battery pack for hybrid vehicles,,12.0,60.0,,Cylindrical,1.0,Hydrogen-absorbing Alloy,
+B10,Solid-state battery prototype for aerospace,10000.0,3.7,40.0,-20.0,Cylindrical,100.0,Lithium Metal,Lithium Cobalt Oxide
+B11,Lead-acid deep cycle battery for UPS,5000.0,3.7,60.0,-10.0,Prismatic,10.0,,
+B12,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,70.0,-10.0,Pouch,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B13,Solid-state battery prototype for aerospace,1000.0,24.0,40.0,-20.0,,100.0,Lithium Metal,Lithium Cobalt Oxide
+B14,Compact LiFePO4 battery for solar storage,10000.0,24.0,50.0,0.0,Cylindrical,5.0,Graphite,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,1000.0,24.0,40.0,-10.0,Prismatic,1.0,,
+B16,Compact LiFePO4 battery for solar storage,2000.0,12.0,40.0,0.0,Pouch,,Graphite,Lithium Cobalt Oxide
+B17,Lead-acid deep cycle battery for UPS,,24.0,40.0,,Pouch,20.0,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,,3.7,70.0,-10.0,,2.0,Lithium Metal,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,2000.0,12.0,50.0,0.0,,100.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,2500.0,,40.0,-10.0,Pouch,2.0,Lead,Lead Dioxide
+,Compact LiFePO4 battery for solar storage,2000.0,24.0,50.0,-10.0,Prismatic,1.0,Graphite,Lithium Cobalt Oxide
+B22,Solid-state battery prototype for aerospace,10000.0,24.0,70.0,0.0,Pouch,100.0,Lithium Metal,Lithium Cobalt Oxide
+B23,Lead-acid deep cycle battery for UPS,5000.0,,60.0,-10.0,Pouch,,Lead,Lead Dioxide
+B24,High capacity lithium-ion cell for EVs,1000.0,24.0,40.0,-10.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+B25,High capacity lithium-ion cell for EVs,1000.0,3.2,50.0,-10.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B26,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,50.0,0.0,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B27,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,70.0,,Pouch,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B28,Compact LiFePO4 battery for solar storage,10000.0,3.2,40.0,,,5.0,Graphite,Lithium Cobalt Oxide
+B29,Lead-acid deep cycle battery for UPS,2500.0,3.6,,-20.0,,100.0,Lead,Lead Dioxide
+B30,Lead-acid deep cycle battery for UPS,3000.0,3.2,50.0,-10.0,,5.0,,Lead Dioxide
+B31,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,,40.0,-20.0,Pouch,100.0,,Nickel Oxyhydroxide
+,Lead-acid deep cycle battery for UPS,10000.0,12.0,,,Prismatic,20.0,Lead,Lead Dioxide
+,Lead-acid deep cycle battery for UPS,2000.0,12.0,50.0,0.0,,,Lead,
+B34,High capacity lithium-ion cell for EVs,5000.0,3.2,50.0,-10.0,Prismatic,1.0,Graphite,
+B35,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.7,60.0,-20.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B36,Solid-state battery prototype for aerospace,3000.0,,60.0,-10.0,Pouch,1.0,Lithium Metal,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,,70.0,-10.0,Pouch,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B38,Solid-state battery prototype for aerospace,1000.0,24.0,40.0,0.0,Prismatic,100.0,Lithium Metal,Lithium Cobalt Oxide
+B39,High capacity lithium-ion cell for EVs,3000.0,24.0,40.0,-20.0,Prismatic,5.0,Graphite,Lithium Iron Phosphate
+B40,Compact LiFePO4 battery for solar storage,,3.7,70.0,-20.0,Pouch,2.0,Graphite,
+B41,Lead-acid deep cycle battery for UPS,,12.0,,-20.0,Pouch,100.0,Lead,Lead Dioxide
+,High capacity lithium-ion cell for EVs,,3.2,60.0,-20.0,Prismatic,2.0,Graphite,Lithium Iron Phosphate
+B43,Lead-acid deep cycle battery for UPS,2500.0,24.0,60.0,,,5.0,Lead,Lead Dioxide
+B44,Compact LiFePO4 battery for solar storage,10000.0,,60.0,-10.0,Prismatic,,Graphite,Lithium Cobalt Oxide
+B45,Compact LiFePO4 battery for solar storage,1000.0,,50.0,0.0,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,3000.0,12.0,60.0,-10.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B47,Compact LiFePO4 battery for solar storage,5000.0,12.0,,-10.0,Cylindrical,,Graphite,Lithium Cobalt Oxide
+B48,Solid-state battery prototype for aerospace,1000.0,12.0,,0.0,Pouch,,Lithium Metal,
+B49,Compact LiFePO4 battery for solar storage,3000.0,12.0,,0.0,,10.0,Graphite,Lithium Cobalt Oxide
+B50,Lead-acid deep cycle battery for UPS,2000.0,24.0,40.0,0.0,Prismatic,50.0,Lead,Lead Dioxide
+,Lead-acid deep cycle battery for UPS,3000.0,3.7,70.0,-10.0,Pouch,100.0,,Lead Dioxide
+B52,Lead-acid deep cycle battery for UPS,,12.0,70.0,,Pouch,2.0,Lead,Lead Dioxide
+B53,Lead-acid deep cycle battery for UPS,,,40.0,0.0,Pouch,100.0,Lead,Lead Dioxide
+B54,Solid-state battery prototype for aerospace,2500.0,,70.0,,Pouch,2.0,Lithium Metal,Lithium Cobalt Oxide
+B55,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,,50.0,0.0,Cylindrical,2.0,,Nickel Oxyhydroxide
+B56,High capacity lithium-ion cell for EVs,10000.0,3.2,60.0,-10.0,Cylindrical,50.0,Graphite,Lithium Iron Phosphate
+B57,Lead-acid deep cycle battery for UPS,2000.0,3.2,50.0,-10.0,Prismatic,10.0,Lead,Lead Dioxide
+B58,Compact LiFePO4 battery for solar storage,2500.0,,40.0,-20.0,Prismatic,20.0,Graphite,Lithium Cobalt Oxide
+B59,Lead-acid deep cycle battery for UPS,10000.0,3.6,40.0,-10.0,Prismatic,,Lead,Lead Dioxide
+B60,Compact LiFePO4 battery for solar storage,3000.0,,,-10.0,Pouch,10.0,Graphite,
+B61,Compact LiFePO4 battery for solar storage,5000.0,24.0,50.0,-10.0,Pouch,1.0,Graphite,Lithium Cobalt Oxide
+B62,Lead-acid deep cycle battery for UPS,2000.0,12.0,50.0,0.0,Cylindrical,1.0,Lead,Lead Dioxide
+B63,Solid-state battery prototype for aerospace,2500.0,3.6,40.0,-10.0,Cylindrical,2.0,Lithium Metal,Lithium Cobalt Oxide
+B64,Compact LiFePO4 battery for solar storage,10000.0,3.7,50.0,,Prismatic,5.0,,Lithium Cobalt Oxide
+B65,Compact LiFePO4 battery for solar storage,10000.0,3.7,,-20.0,Cylindrical,100.0,,Lithium Cobalt Oxide
+B66,Lead-acid deep cycle battery for UPS,,12.0,50.0,-20.0,Cylindrical,100.0,Lead,Lead Dioxide
+B67,Compact LiFePO4 battery for solar storage,3000.0,,50.0,0.0,Cylindrical,2.0,Graphite,Lithium Cobalt Oxide
+B68,Compact LiFePO4 battery for solar storage,2000.0,3.2,50.0,,Cylindrical,5.0,Graphite,Lithium Cobalt Oxide
+B69,Lead-acid deep cycle battery for UPS,10000.0,3.2,40.0,0.0,Cylindrical,10.0,Lead,
+B70,Lead-acid deep cycle battery for UPS,,24.0,70.0,-10.0,Prismatic,1.0,Lead,Lead Dioxide
+B71,High capacity lithium-ion cell for EVs,2500.0,24.0,,-20.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+B72,Solid-state battery prototype for aerospace,2000.0,3.2,40.0,0.0,Cylindrical,50.0,Lithium Metal,Lithium Cobalt Oxide
+B73,Solid-state battery prototype for aerospace,10000.0,3.7,40.0,-10.0,Prismatic,5.0,Lithium Metal,Lithium Cobalt Oxide
+B74,Compact LiFePO4 battery for solar storage,3000.0,3.7,50.0,-20.0,Pouch,10.0,Graphite,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,10000.0,24.0,50.0,,Cylindrical,1.0,Lithium Metal,Lithium Cobalt Oxide
+B76,Compact LiFePO4 battery for solar storage,3000.0,,70.0,-20.0,Pouch,50.0,Graphite,
+B77,High capacity lithium-ion cell for EVs,2000.0,3.2,40.0,-10.0,Prismatic,5.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,3000.0,24.0,40.0,-20.0,Prismatic,2.0,,Lead Dioxide
+B79,Lead-acid deep cycle battery for UPS,,24.0,60.0,,Pouch,2.0,Lead,Lead Dioxide
+B80,Lead-acid deep cycle battery for UPS,5000.0,3.2,40.0,,,2.0,Lead,Lead Dioxide
+B81,Solid-state battery prototype for aerospace,5000.0,3.2,70.0,0.0,Cylindrical,,Lithium Metal,Lithium Cobalt Oxide
+B82,High capacity lithium-ion cell for EVs,1000.0,3.7,60.0,-20.0,Pouch,10.0,,Lithium Iron Phosphate
+B83,Solid-state battery prototype for aerospace,2000.0,12.0,60.0,0.0,Cylindrical,2.0,Lithium Metal,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,10000.0,12.0,60.0,-10.0,Pouch,100.0,,Lithium Cobalt Oxide
+B85,High capacity lithium-ion cell for EVs,10000.0,3.2,50.0,,Prismatic,20.0,,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,1000.0,3.6,,0.0,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B87,High capacity lithium-ion cell for EVs,3000.0,24.0,40.0,0.0,Pouch,1.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,1000.0,24.0,,0.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,3000.0,,70.0,0.0,Prismatic,10.0,,Lead Dioxide
+B90,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.6,50.0,-20.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,
+B91,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,,70.0,-20.0,,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B92,High capacity lithium-ion cell for EVs,,3.2,,-20.0,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B93,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,50.0,-10.0,Pouch,1.0,,Nickel Oxyhydroxide
+B94,Nickel-metal hydride battery pack for hybrid vehicles,,,50.0,0.0,Cylindrical,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B95,High capacity lithium-ion cell for EVs,,3.2,50.0,-20.0,Prismatic,2.0,Graphite,Lithium Iron Phosphate
+B96,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,50.0,-10.0,Prismatic,1.0,Hydrogen-absorbing Alloy,
+B97,Solid-state battery prototype for aerospace,5000.0,3.2,60.0,-20.0,Pouch,20.0,Lithium Metal,Lithium Cobalt Oxide
+B98,Compact LiFePO4 battery for solar storage,,24.0,60.0,-20.0,Prismatic,5.0,Graphite,
+B99,Compact LiFePO4 battery for solar storage,,,60.0,0.0,Cylindrical,20.0,,Lithium Cobalt Oxide
+B100,High capacity lithium-ion cell for EVs,1000.0,3.7,60.0,,Pouch,,Graphite,Lithium Iron Phosphate
+B101,Lead-acid deep cycle battery for UPS,1000.0,3.2,,,Prismatic,1.0,,Lead Dioxide
+B102,High capacity lithium-ion cell for EVs,10000.0,24.0,60.0,0.0,Prismatic,20.0,Graphite,Lithium Iron Phosphate
+B103,Lead-acid deep cycle battery for UPS,5000.0,3.7,50.0,-20.0,Cylindrical,50.0,Lead,Lead Dioxide
+B104,Compact LiFePO4 battery for solar storage,,3.7,70.0,0.0,Cylindrical,1.0,,Lithium Cobalt Oxide
+B105,High capacity lithium-ion cell for EVs,10000.0,3.7,60.0,-10.0,Pouch,,Graphite,Lithium Iron Phosphate
+B106,Solid-state battery prototype for aerospace,10000.0,24.0,40.0,0.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B107,Nickel-metal hydride battery pack for hybrid vehicles,,24.0,50.0,0.0,Cylindrical,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Lead-acid deep cycle battery for UPS,1000.0,3.2,,0.0,Pouch,2.0,Lead,Lead Dioxide
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,12.0,,-20.0,Prismatic,1.0,,Nickel Oxyhydroxide
+B110,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,60.0,-10.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B111,High capacity lithium-ion cell for EVs,,12.0,70.0,-20.0,Pouch,50.0,Graphite,Lithium Iron Phosphate
+B112,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,24.0,60.0,,Pouch,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B113,Solid-state battery prototype for aerospace,2000.0,24.0,60.0,-20.0,Cylindrical,10.0,Lithium Metal,Lithium Cobalt Oxide
+B114,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,24.0,,-20.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B115,High capacity lithium-ion cell for EVs,10000.0,12.0,,-20.0,Prismatic,1.0,,Lithium Iron Phosphate
+B116,Solid-state battery prototype for aerospace,,24.0,40.0,-10.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B117,Compact LiFePO4 battery for solar storage,1000.0,3.2,50.0,0.0,Pouch,,Graphite,Lithium Cobalt Oxide
+B118,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,50.0,-20.0,,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B119,High capacity lithium-ion cell for EVs,5000.0,,60.0,-20.0,,2.0,Graphite,Lithium Iron Phosphate
+B120,Compact LiFePO4 battery for solar storage,2000.0,12.0,50.0,-10.0,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B121,Compact LiFePO4 battery for solar storage,1000.0,3.6,60.0,-10.0,,20.0,Graphite,
+B122,Lead-acid deep cycle battery for UPS,5000.0,24.0,60.0,,Cylindrical,20.0,Lead,Lead Dioxide
+B123,Solid-state battery prototype for aerospace,2000.0,3.2,50.0,,,2.0,,Lithium Cobalt Oxide
+B124,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,40.0,,,100.0,Hydrogen-absorbing Alloy,
+B125,High capacity lithium-ion cell for EVs,1000.0,24.0,40.0,-20.0,Cylindrical,20.0,Graphite,Lithium Iron Phosphate
+B126,Lead-acid deep cycle battery for UPS,,3.2,70.0,-20.0,Prismatic,2.0,Lead,Lead Dioxide
+B127,Solid-state battery prototype for aerospace,1000.0,12.0,70.0,,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B128,Lead-acid deep cycle battery for UPS,2500.0,3.6,50.0,-10.0,Cylindrical,,Lead,Lead Dioxide
+B129,Solid-state battery prototype for aerospace,2500.0,3.6,40.0,0.0,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+B130,Solid-state battery prototype for aerospace,3000.0,3.6,60.0,-10.0,Cylindrical,2.0,Lithium Metal,Lithium Cobalt Oxide
+B131,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,12.0,,-20.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Solid-state battery prototype for aerospace,2000.0,3.2,60.0,-10.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,,12.0,,0.0,Pouch,20.0,Lead,Lead Dioxide
+B134,Solid-state battery prototype for aerospace,2000.0,3.6,50.0,0.0,Cylindrical,2.0,Lithium Metal,Lithium Cobalt Oxide
+B135,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,,-20.0,Cylindrical,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B136,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,,70.0,,Cylindrical,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B137,Lead-acid deep cycle battery for UPS,,12.0,40.0,,Prismatic,50.0,Lead,Lead Dioxide
+B138,Compact LiFePO4 battery for solar storage,,12.0,60.0,-10.0,,1.0,Graphite,Lithium Cobalt Oxide
+B139,Compact LiFePO4 battery for solar storage,10000.0,,50.0,-20.0,Pouch,20.0,Graphite,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,,3.2,40.0,-10.0,Prismatic,100.0,Lithium Metal,Lithium Cobalt Oxide
+B141,High capacity lithium-ion cell for EVs,5000.0,12.0,50.0,0.0,,10.0,Graphite,Lithium Iron Phosphate
+,Solid-state battery prototype for aerospace,3000.0,3.6,40.0,-10.0,Cylindrical,,Lithium Metal,
+,Lead-acid deep cycle battery for UPS,2000.0,3.7,60.0,,Pouch,5.0,Lead,
+B144,Lead-acid deep cycle battery for UPS,,,,-10.0,Prismatic,,Lead,Lead Dioxide
+B145,Lead-acid deep cycle battery for UPS,1000.0,3.6,50.0,-10.0,Prismatic,100.0,Lead,Lead Dioxide
+B146,Lead-acid deep cycle battery for UPS,2000.0,24.0,60.0,,Cylindrical,5.0,Lead,Lead Dioxide
+B147,Lead-acid deep cycle battery for UPS,,,70.0,-10.0,Cylindrical,10.0,Lead,Lead Dioxide
+B148,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.6,40.0,0.0,Pouch,1.0,,Nickel Oxyhydroxide
+B149,Compact LiFePO4 battery for solar storage,5000.0,3.6,60.0,0.0,Cylindrical,,Graphite,Lithium Cobalt Oxide
+B150,Lead-acid deep cycle battery for UPS,2500.0,,70.0,-20.0,Pouch,100.0,Lead,Lead Dioxide
+B151,High capacity lithium-ion cell for EVs,10000.0,3.7,50.0,0.0,Prismatic,5.0,Graphite,
+B152,High capacity lithium-ion cell for EVs,2000.0,24.0,70.0,0.0,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B153,High capacity lithium-ion cell for EVs,10000.0,3.6,,-20.0,Pouch,10.0,Graphite,Lithium Iron Phosphate
+B154,High capacity lithium-ion cell for EVs,10000.0,,50.0,0.0,Pouch,20.0,Graphite,Lithium Iron Phosphate
+B155,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,,40.0,-20.0,Prismatic,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B156,High capacity lithium-ion cell for EVs,2500.0,3.2,40.0,-10.0,Cylindrical,,Graphite,
+,Lead-acid deep cycle battery for UPS,3000.0,3.2,70.0,-20.0,Prismatic,2.0,Lead,Lead Dioxide
+B158,Solid-state battery prototype for aerospace,10000.0,12.0,40.0,0.0,Cylindrical,,,Lithium Cobalt Oxide
+B159,High capacity lithium-ion cell for EVs,,3.7,40.0,,,2.0,,Lithium Iron Phosphate
+B160,Nickel-metal hydride battery pack for hybrid vehicles,,12.0,,0.0,,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B161,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,,-10.0,Pouch,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,High capacity lithium-ion cell for EVs,2000.0,24.0,,-20.0,Pouch,2.0,,Lithium Iron Phosphate
+B163,Solid-state battery prototype for aerospace,2500.0,,40.0,-10.0,,50.0,Lithium Metal,Lithium Cobalt Oxide
+B164,High capacity lithium-ion cell for EVs,2000.0,24.0,40.0,0.0,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B165,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,70.0,0.0,Cylindrical,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B166,Compact LiFePO4 battery for solar storage,2000.0,3.6,60.0,-10.0,Pouch,2.0,,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,10000.0,,40.0,,Prismatic,20.0,,Lead Dioxide
+B168,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,,,-20.0,,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B169,High capacity lithium-ion cell for EVs,2000.0,,70.0,0.0,Pouch,2.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,2000.0,3.7,40.0,-10.0,Cylindrical,1.0,Lead,Lead Dioxide
+B171,High capacity lithium-ion cell for EVs,1000.0,3.7,40.0,-10.0,Prismatic,2.0,Graphite,
+B172,High capacity lithium-ion cell for EVs,2000.0,3.2,50.0,-20.0,Prismatic,5.0,Graphite,Lithium Iron Phosphate
+,Compact LiFePO4 battery for solar storage,1000.0,24.0,50.0,-20.0,Prismatic,,Graphite,
+B174,Lead-acid deep cycle battery for UPS,5000.0,3.6,70.0,-20.0,Pouch,10.0,,Lead Dioxide
+B175,Lead-acid deep cycle battery for UPS,10000.0,24.0,70.0,-10.0,Prismatic,,Lead,Lead Dioxide
+B176,Compact LiFePO4 battery for solar storage,1000.0,24.0,50.0,-20.0,Prismatic,10.0,Graphite,
+B177,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,70.0,-20.0,Prismatic,1.0,Hydrogen-absorbing Alloy,
+B178,High capacity lithium-ion cell for EVs,10000.0,3.2,50.0,0.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+B179,Solid-state battery prototype for aerospace,1000.0,,40.0,-20.0,Cylindrical,5.0,Lithium Metal,
+B180,High capacity lithium-ion cell for EVs,10000.0,12.0,50.0,-20.0,Pouch,5.0,,Lithium Iron Phosphate
+B181,High capacity lithium-ion cell for EVs,,24.0,50.0,-10.0,Pouch,1.0,,Lithium Iron Phosphate
+B182,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.7,60.0,-10.0,Cylindrical,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B183,High capacity lithium-ion cell for EVs,5000.0,3.6,50.0,0.0,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B184,Compact LiFePO4 battery for solar storage,3000.0,12.0,,-20.0,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B185,Compact LiFePO4 battery for solar storage,,3.7,60.0,0.0,,10.0,Graphite,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,2500.0,24.0,70.0,-10.0,Prismatic,,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,1000.0,3.2,,0.0,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+B188,High capacity lithium-ion cell for EVs,10000.0,24.0,40.0,-10.0,Prismatic,50.0,Graphite,Lithium Iron Phosphate
+B189,High capacity lithium-ion cell for EVs,1000.0,,60.0,0.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,,40.0,0.0,Prismatic,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B191,Compact LiFePO4 battery for solar storage,5000.0,,70.0,-20.0,,50.0,Graphite,Lithium Cobalt Oxide
+B192,Solid-state battery prototype for aerospace,2000.0,,60.0,0.0,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B193,Lead-acid deep cycle battery for UPS,,,60.0,-20.0,Pouch,,Lead,Lead Dioxide
+B194,Compact LiFePO4 battery for solar storage,,3.7,70.0,-20.0,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B195,Lead-acid deep cycle battery for UPS,3000.0,12.0,40.0,-20.0,Prismatic,50.0,Lead,Lead Dioxide
+B196,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,,60.0,-20.0,,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B197,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.2,40.0,0.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B198,High capacity lithium-ion cell for EVs,5000.0,3.7,60.0,-10.0,Cylindrical,1.0,Graphite,Lithium Iron Phosphate
+B199,Solid-state battery prototype for aerospace,3000.0,3.6,,-10.0,Prismatic,2.0,Lithium Metal,Lithium Cobalt Oxide
+B200,Lead-acid deep cycle battery for UPS,3000.0,,60.0,-10.0,Cylindrical,50.0,,
+B201,Compact LiFePO4 battery for solar storage,3000.0,3.2,70.0,0.0,Prismatic,,Graphite,Lithium Cobalt Oxide
+B202,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,12.0,70.0,-20.0,Cylindrical,,Hydrogen-absorbing Alloy,
+B203,High capacity lithium-ion cell for EVs,10000.0,12.0,40.0,-10.0,Prismatic,,Graphite,Lithium Iron Phosphate
+B204,High capacity lithium-ion cell for EVs,,3.2,60.0,0.0,Cylindrical,10.0,Graphite,
+B205,Lead-acid deep cycle battery for UPS,2000.0,3.6,40.0,-20.0,Prismatic,50.0,Lead,Lead Dioxide
+B206,Nickel-metal hydride battery pack for hybrid vehicles,,12.0,40.0,,Prismatic,10.0,,Nickel Oxyhydroxide
+,Solid-state battery prototype for aerospace,3000.0,,,-20.0,Pouch,100.0,Lithium Metal,Lithium Cobalt Oxide
+B208,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,12.0,50.0,-10.0,Pouch,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B209,Lead-acid deep cycle battery for UPS,5000.0,24.0,,-10.0,,50.0,Lead,Lead Dioxide
+B210,Lead-acid deep cycle battery for UPS,2500.0,3.2,,-10.0,Prismatic,,Lead,Lead Dioxide
+,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.2,,-20.0,,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B212,Lead-acid deep cycle battery for UPS,2000.0,12.0,60.0,0.0,Pouch,2.0,Lead,Lead Dioxide
+,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,40.0,-20.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,
+B214,Compact LiFePO4 battery for solar storage,2500.0,24.0,40.0,-10.0,Cylindrical,100.0,Graphite,Lithium Cobalt Oxide
+B215,Nickel-metal hydride battery pack for hybrid vehicles,,,,-20.0,Pouch,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B216,Nickel-metal hydride battery pack for hybrid vehicles,,12.0,,0.0,Prismatic,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B217,Lead-acid deep cycle battery for UPS,2500.0,,70.0,-20.0,,1.0,Lead,Lead Dioxide
+B218,Lead-acid deep cycle battery for UPS,2000.0,12.0,70.0,0.0,Pouch,20.0,Lead,Lead Dioxide
+B219,High capacity lithium-ion cell for EVs,2000.0,,60.0,0.0,Prismatic,10.0,Graphite,Lithium Iron Phosphate
+B220,High capacity lithium-ion cell for EVs,1000.0,3.7,70.0,,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B221,Compact LiFePO4 battery for solar storage,2000.0,3.7,60.0,-10.0,Cylindrical,5.0,Graphite,Lithium Cobalt Oxide
+B222,High capacity lithium-ion cell for EVs,10000.0,3.7,40.0,0.0,Prismatic,10.0,Graphite,
+B223,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,,40.0,-20.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B224,Lead-acid deep cycle battery for UPS,2000.0,3.2,50.0,0.0,Pouch,20.0,Lead,Lead Dioxide
+B225,High capacity lithium-ion cell for EVs,5000.0,24.0,40.0,-10.0,Pouch,2.0,Graphite,Lithium Iron Phosphate
+B226,High capacity lithium-ion cell for EVs,1000.0,3.6,,-20.0,Pouch,5.0,,Lithium Iron Phosphate
+,Compact LiFePO4 battery for solar storage,,12.0,70.0,-20.0,Prismatic,2.0,Graphite,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,1000.0,12.0,50.0,-20.0,Prismatic,50.0,,
+B229,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.2,70.0,-10.0,Cylindrical,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B230,Lead-acid deep cycle battery for UPS,5000.0,12.0,,0.0,Prismatic,50.0,Lead,Lead Dioxide
+B231,Compact LiFePO4 battery for solar storage,1000.0,3.2,,,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+B232,High capacity lithium-ion cell for EVs,,24.0,50.0,0.0,Pouch,10.0,Graphite,Lithium Iron Phosphate
+B233,Lead-acid deep cycle battery for UPS,10000.0,3.6,60.0,,Pouch,,Lead,Lead Dioxide
+B234,Lead-acid deep cycle battery for UPS,10000.0,24.0,50.0,-10.0,,,Lead,Lead Dioxide
+B235,High capacity lithium-ion cell for EVs,,3.7,50.0,-20.0,Pouch,,Graphite,Lithium Iron Phosphate
+B236,Compact LiFePO4 battery for solar storage,3000.0,3.7,40.0,0.0,Pouch,20.0,,Lithium Cobalt Oxide
+B237,High capacity lithium-ion cell for EVs,1000.0,,,-20.0,Prismatic,50.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,3000.0,,70.0,,,50.0,Lead,
+,Solid-state battery prototype for aerospace,3000.0,12.0,50.0,-10.0,Prismatic,2.0,Lithium Metal,
+B240,Solid-state battery prototype for aerospace,1000.0,3.6,50.0,-20.0,Cylindrical,10.0,Lithium Metal,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.7,70.0,-20.0,Prismatic,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B242,High capacity lithium-ion cell for EVs,3000.0,3.7,,0.0,Prismatic,20.0,Graphite,Lithium Iron Phosphate
+B243,High capacity lithium-ion cell for EVs,3000.0,3.7,50.0,-10.0,Pouch,,Graphite,Lithium Iron Phosphate
+B244,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,,50.0,-20.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B245,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,,0.0,,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B246,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.6,,-10.0,Cylindrical,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B247,Lead-acid deep cycle battery for UPS,3000.0,3.7,60.0,-10.0,Pouch,1.0,Lead,Lead Dioxide
+B248,High capacity lithium-ion cell for EVs,,24.0,70.0,0.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+B249,Lead-acid deep cycle battery for UPS,2000.0,24.0,60.0,0.0,Cylindrical,100.0,Lead,Lead Dioxide
+B250,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,60.0,0.0,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B251,High capacity lithium-ion cell for EVs,3000.0,,,,Pouch,,Graphite,Lithium Iron Phosphate
+B252,Lead-acid deep cycle battery for UPS,,3.6,70.0,0.0,Pouch,1.0,Lead,Lead Dioxide
+B253,Lead-acid deep cycle battery for UPS,5000.0,24.0,,-20.0,Prismatic,50.0,Lead,Lead Dioxide
+B254,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,24.0,60.0,-20.0,Pouch,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B255,High capacity lithium-ion cell for EVs,2500.0,3.6,50.0,,Pouch,2.0,Graphite,Lithium Iron Phosphate
+B256,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,,50.0,-20.0,Pouch,10.0,Hydrogen-absorbing Alloy,
+,High capacity lithium-ion cell for EVs,10000.0,24.0,40.0,-20.0,Cylindrical,10.0,Graphite,
+B258,Solid-state battery prototype for aerospace,10000.0,3.7,60.0,-20.0,Cylindrical,5.0,Lithium Metal,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,,12.0,70.0,0.0,,,Graphite,Lithium Cobalt Oxide
+B260,Compact LiFePO4 battery for solar storage,5000.0,3.6,60.0,-10.0,Cylindrical,5.0,Graphite,Lithium Cobalt Oxide
+B261,Compact LiFePO4 battery for solar storage,10000.0,12.0,50.0,-10.0,Prismatic,100.0,Graphite,Lithium Cobalt Oxide
+B262,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.2,70.0,-10.0,Cylindrical,10.0,,
+B263,Solid-state battery prototype for aerospace,10000.0,3.2,,-10.0,Pouch,2.0,,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,2000.0,,50.0,-20.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B265,Lead-acid deep cycle battery for UPS,10000.0,24.0,50.0,-20.0,Prismatic,50.0,,Lead Dioxide
+B266,High capacity lithium-ion cell for EVs,2500.0,3.7,40.0,0.0,,5.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,5000.0,12.0,40.0,-10.0,Pouch,,,Lead Dioxide
+B268,High capacity lithium-ion cell for EVs,10000.0,3.2,40.0,-20.0,Prismatic,10.0,Graphite,
+B269,Solid-state battery prototype for aerospace,10000.0,24.0,50.0,-20.0,Pouch,20.0,Lithium Metal,Lithium Cobalt Oxide
+B270,Lead-acid deep cycle battery for UPS,5000.0,12.0,60.0,0.0,Pouch,50.0,Lead,Lead Dioxide
+B271,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,40.0,0.0,Prismatic,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B272,High capacity lithium-ion cell for EVs,2000.0,,60.0,0.0,,20.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,,3.2,40.0,-20.0,Pouch,,Graphite,Lithium Iron Phosphate
+B274,Lead-acid deep cycle battery for UPS,,3.2,70.0,-20.0,Cylindrical,50.0,Lead,
+B275,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,24.0,70.0,0.0,Pouch,2.0,Hydrogen-absorbing Alloy,
+B276,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,40.0,-10.0,Pouch,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B277,Solid-state battery prototype for aerospace,2000.0,24.0,50.0,0.0,Pouch,10.0,Lithium Metal,
+B278,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,,0.0,Pouch,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B279,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.7,40.0,0.0,Prismatic,50.0,,Nickel Oxyhydroxide
+B280,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.7,50.0,0.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Compact LiFePO4 battery for solar storage,5000.0,3.7,,-20.0,Pouch,20.0,Graphite,Lithium Cobalt Oxide
+B282,Solid-state battery prototype for aerospace,,3.6,60.0,-10.0,,5.0,Lithium Metal,Lithium Cobalt Oxide
+B283,High capacity lithium-ion cell for EVs,5000.0,3.6,40.0,0.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+B284,Lead-acid deep cycle battery for UPS,5000.0,24.0,50.0,-10.0,Pouch,,Lead,Lead Dioxide
+B285,High capacity lithium-ion cell for EVs,3000.0,,40.0,-10.0,Prismatic,,Graphite,Lithium Iron Phosphate
+B286,Solid-state battery prototype for aerospace,,3.6,50.0,-10.0,,10.0,Lithium Metal,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,2500.0,,60.0,0.0,,5.0,Lead,Lead Dioxide
+B288,Solid-state battery prototype for aerospace,1000.0,24.0,60.0,-20.0,Pouch,,Lithium Metal,
+B289,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,70.0,0.0,Pouch,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B290,Lead-acid deep cycle battery for UPS,2500.0,24.0,50.0,,Pouch,20.0,Lead,Lead Dioxide
+B291,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,12.0,50.0,-10.0,Prismatic,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B292,High capacity lithium-ion cell for EVs,3000.0,3.7,70.0,-20.0,Pouch,5.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,5000.0,12.0,70.0,0.0,Pouch,20.0,Graphite,Lithium Iron Phosphate
+B294,Lead-acid deep cycle battery for UPS,2000.0,3.7,50.0,-10.0,Cylindrical,5.0,Lead,Lead Dioxide
+B295,Lead-acid deep cycle battery for UPS,10000.0,3.2,70.0,-20.0,,100.0,Lead,Lead Dioxide
+B296,Solid-state battery prototype for aerospace,3000.0,,,-10.0,Cylindrical,5.0,Lithium Metal,Lithium Cobalt Oxide
+B297,Solid-state battery prototype for aerospace,2000.0,24.0,40.0,-20.0,Pouch,2.0,Lithium Metal,Lithium Cobalt Oxide
+B298,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,60.0,,Cylindrical,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B299,Lead-acid deep cycle battery for UPS,3000.0,24.0,70.0,0.0,Pouch,100.0,Lead,Lead Dioxide
+B300,High capacity lithium-ion cell for EVs,2000.0,3.6,50.0,-10.0,,20.0,Graphite,Lithium Iron Phosphate
+,Solid-state battery prototype for aerospace,2500.0,3.7,50.0,0.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B302,Solid-state battery prototype for aerospace,1000.0,12.0,60.0,-10.0,Cylindrical,1.0,Lithium Metal,Lithium Cobalt Oxide
+B303,High capacity lithium-ion cell for EVs,5000.0,3.7,50.0,,,100.0,Graphite,Lithium Iron Phosphate
+B304,Solid-state battery prototype for aerospace,3000.0,24.0,70.0,-10.0,Cylindrical,5.0,Lithium Metal,
+B305,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,60.0,0.0,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B306,Lead-acid deep cycle battery for UPS,10000.0,3.7,50.0,-20.0,Pouch,50.0,Lead,Lead Dioxide
+B307,High capacity lithium-ion cell for EVs,2000.0,12.0,40.0,,Pouch,1.0,Graphite,Lithium Iron Phosphate
+B308,Lead-acid deep cycle battery for UPS,5000.0,3.6,40.0,-10.0,Prismatic,2.0,Lead,Lead Dioxide
+B309,Solid-state battery prototype for aerospace,2000.0,3.2,70.0,-20.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B310,Solid-state battery prototype for aerospace,5000.0,3.6,,0.0,Cylindrical,,Lithium Metal,Lithium Cobalt Oxide
+B311,High capacity lithium-ion cell for EVs,1000.0,,70.0,,,1.0,Graphite,
+B312,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,24.0,60.0,-10.0,Cylindrical,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B313,Compact LiFePO4 battery for solar storage,1000.0,24.0,,,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B314,High capacity lithium-ion cell for EVs,1000.0,12.0,60.0,-20.0,Cylindrical,2.0,,Lithium Iron Phosphate
+B315,Compact LiFePO4 battery for solar storage,,24.0,50.0,0.0,Prismatic,20.0,Graphite,Lithium Cobalt Oxide
+B316,Compact LiFePO4 battery for solar storage,1000.0,3.2,,0.0,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B317,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,70.0,0.0,Prismatic,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B318,Compact LiFePO4 battery for solar storage,,12.0,70.0,-10.0,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B319,Compact LiFePO4 battery for solar storage,5000.0,3.7,60.0,-20.0,,100.0,Graphite,Lithium Cobalt Oxide
+B320,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.7,40.0,-20.0,Prismatic,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B321,Compact LiFePO4 battery for solar storage,2000.0,24.0,60.0,0.0,Cylindrical,2.0,Graphite,
+B322,Compact LiFePO4 battery for solar storage,2000.0,3.6,60.0,-10.0,Cylindrical,10.0,Graphite,
+,Compact LiFePO4 battery for solar storage,,3.7,,,Prismatic,50.0,Graphite,Lithium Cobalt Oxide
+B324,High capacity lithium-ion cell for EVs,,24.0,50.0,-10.0,Prismatic,10.0,Graphite,Lithium Iron Phosphate
+B325,High capacity lithium-ion cell for EVs,5000.0,12.0,,-10.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,3000.0,24.0,40.0,-10.0,Cylindrical,50.0,,Lithium Iron Phosphate
+,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,40.0,-10.0,Cylindrical,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B328,Solid-state battery prototype for aerospace,2000.0,,50.0,-20.0,Pouch,1.0,Lithium Metal,Lithium Cobalt Oxide
+B329,Compact LiFePO4 battery for solar storage,2500.0,24.0,50.0,-10.0,,2.0,Graphite,Lithium Cobalt Oxide
+B330,Compact LiFePO4 battery for solar storage,10000.0,3.2,40.0,-10.0,Prismatic,2.0,Graphite,Lithium Cobalt Oxide
+B331,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,12.0,70.0,0.0,Pouch,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B332,Compact LiFePO4 battery for solar storage,1000.0,3.2,40.0,,Cylindrical,,,Lithium Cobalt Oxide
+B333,High capacity lithium-ion cell for EVs,3000.0,3.6,40.0,-20.0,Pouch,5.0,Graphite,Lithium Iron Phosphate
+B334,Solid-state battery prototype for aerospace,5000.0,12.0,40.0,0.0,,50.0,,Lithium Cobalt Oxide
+B335,Lead-acid deep cycle battery for UPS,2500.0,3.2,50.0,-10.0,Prismatic,100.0,Lead,Lead Dioxide
+B336,Compact LiFePO4 battery for solar storage,5000.0,3.7,70.0,,Prismatic,5.0,Graphite,Lithium Cobalt Oxide
+B337,High capacity lithium-ion cell for EVs,3000.0,3.7,40.0,-20.0,Cylindrical,1.0,Graphite,Lithium Iron Phosphate
+B338,Lead-acid deep cycle battery for UPS,1000.0,3.6,50.0,0.0,Pouch,10.0,,Lead Dioxide
+B339,Solid-state battery prototype for aerospace,5000.0,12.0,60.0,0.0,Prismatic,100.0,Lithium Metal,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,,12.0,60.0,-20.0,Prismatic,10.0,Lead,Lead Dioxide
+B341,High capacity lithium-ion cell for EVs,1000.0,12.0,40.0,-20.0,Pouch,2.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,2500.0,3.6,60.0,,Pouch,20.0,,Lead Dioxide
+B343,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,12.0,70.0,0.0,Cylindrical,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B344,Lead-acid deep cycle battery for UPS,5000.0,3.7,60.0,-10.0,Pouch,2.0,Lead,Lead Dioxide
+B345,Compact LiFePO4 battery for solar storage,2500.0,3.2,60.0,0.0,Pouch,20.0,Graphite,Lithium Cobalt Oxide
+B346,Compact LiFePO4 battery for solar storage,2500.0,3.7,70.0,0.0,Pouch,50.0,Graphite,Lithium Cobalt Oxide
+B347,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.7,40.0,-10.0,Cylindrical,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B348,High capacity lithium-ion cell for EVs,5000.0,3.2,40.0,0.0,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+,Compact LiFePO4 battery for solar storage,3000.0,3.7,,0.0,Prismatic,2.0,,Lithium Cobalt Oxide
+B350,Solid-state battery prototype for aerospace,5000.0,,70.0,0.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+B351,Compact LiFePO4 battery for solar storage,2000.0,3.2,70.0,-20.0,Prismatic,5.0,Graphite,
+B352,Compact LiFePO4 battery for solar storage,10000.0,3.7,60.0,-10.0,Pouch,2.0,Graphite,Lithium Cobalt Oxide
+B353,High capacity lithium-ion cell for EVs,3000.0,24.0,70.0,,Prismatic,10.0,Graphite,Lithium Iron Phosphate
+B354,Lead-acid deep cycle battery for UPS,2500.0,3.7,,-10.0,Prismatic,1.0,Lead,Lead Dioxide
+B355,Compact LiFePO4 battery for solar storage,3000.0,3.6,60.0,-10.0,Pouch,2.0,Graphite,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,40.0,0.0,Prismatic,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B357,Lead-acid deep cycle battery for UPS,2500.0,3.7,40.0,,Cylindrical,50.0,Lead,
+B358,Solid-state battery prototype for aerospace,3000.0,12.0,40.0,,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+B359,High capacity lithium-ion cell for EVs,2500.0,24.0,60.0,-20.0,Cylindrical,5.0,,Lithium Iron Phosphate
+B360,Solid-state battery prototype for aerospace,2500.0,3.7,50.0,-20.0,Cylindrical,5.0,Lithium Metal,Lithium Cobalt Oxide
+B361,Lead-acid deep cycle battery for UPS,2000.0,3.2,70.0,-10.0,Prismatic,100.0,Lead,Lead Dioxide
+B362,Lead-acid deep cycle battery for UPS,5000.0,12.0,70.0,,Prismatic,1.0,Lead,Lead Dioxide
+B363,Lead-acid deep cycle battery for UPS,5000.0,,40.0,-10.0,Pouch,100.0,Lead,Lead Dioxide
+B364,Solid-state battery prototype for aerospace,10000.0,,40.0,-20.0,Prismatic,10.0,Lithium Metal,Lithium Cobalt Oxide
+B365,Lead-acid deep cycle battery for UPS,10000.0,3.2,60.0,-20.0,Prismatic,1.0,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,2000.0,,,-10.0,,2.0,Lithium Metal,
+B367,Lead-acid deep cycle battery for UPS,10000.0,3.2,70.0,-20.0,Pouch,,Lead,Lead Dioxide
+,Nickel-metal hydride battery pack for hybrid vehicles,,,60.0,0.0,Cylindrical,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B369,Lead-acid deep cycle battery for UPS,1000.0,3.7,70.0,-10.0,Prismatic,10.0,Lead,Lead Dioxide
+B370,Solid-state battery prototype for aerospace,1000.0,3.7,40.0,,Pouch,,Lithium Metal,
+B371,Compact LiFePO4 battery for solar storage,,24.0,70.0,,,10.0,,Lithium Cobalt Oxide
+B372,Lead-acid deep cycle battery for UPS,2000.0,24.0,50.0,0.0,,2.0,,Lead Dioxide
+B373,Compact LiFePO4 battery for solar storage,,,50.0,-10.0,Cylindrical,20.0,Graphite,Lithium Cobalt Oxide
+B374,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.6,40.0,-20.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B375,High capacity lithium-ion cell for EVs,1000.0,24.0,50.0,-20.0,Pouch,10.0,,Lithium Iron Phosphate
+B376,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,50.0,,Cylindrical,,Hydrogen-absorbing Alloy,
+B377,Lead-acid deep cycle battery for UPS,10000.0,3.7,60.0,-10.0,Pouch,2.0,Lead,Lead Dioxide
+B378,Compact LiFePO4 battery for solar storage,,3.6,,-20.0,Pouch,10.0,Graphite,Lithium Cobalt Oxide
+B379,Compact LiFePO4 battery for solar storage,10000.0,3.6,40.0,,,,,
+B380,Solid-state battery prototype for aerospace,1000.0,24.0,40.0,-20.0,Pouch,50.0,Lithium Metal,Lithium Cobalt Oxide
+B381,Compact LiFePO4 battery for solar storage,1000.0,12.0,40.0,0.0,,50.0,Graphite,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,1000.0,3.6,40.0,0.0,Cylindrical,,Lithium Metal,Lithium Cobalt Oxide
+B383,High capacity lithium-ion cell for EVs,,3.2,,,Prismatic,20.0,,Lithium Iron Phosphate
+B384,Lead-acid deep cycle battery for UPS,10000.0,3.7,50.0,0.0,Prismatic,50.0,Lead,Lead Dioxide
+B385,Solid-state battery prototype for aerospace,2000.0,3.2,60.0,-10.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B386,High capacity lithium-ion cell for EVs,2000.0,3.7,40.0,-20.0,Prismatic,10.0,Graphite,Lithium Iron Phosphate
+B387,Compact LiFePO4 battery for solar storage,5000.0,3.7,60.0,0.0,Cylindrical,2.0,,Lithium Cobalt Oxide
+B388,Compact LiFePO4 battery for solar storage,3000.0,3.6,60.0,-10.0,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B389,High capacity lithium-ion cell for EVs,3000.0,,50.0,0.0,Cylindrical,100.0,Graphite,
+B390,Compact LiFePO4 battery for solar storage,2500.0,3.2,40.0,0.0,Pouch,10.0,Graphite,Lithium Cobalt Oxide
+B391,High capacity lithium-ion cell for EVs,2000.0,3.7,50.0,-10.0,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B392,Solid-state battery prototype for aerospace,10000.0,3.2,40.0,,Pouch,100.0,Lithium Metal,
+B393,Solid-state battery prototype for aerospace,5000.0,12.0,50.0,-20.0,Prismatic,1.0,Lithium Metal,
+,High capacity lithium-ion cell for EVs,5000.0,3.2,60.0,-20.0,Pouch,1.0,Graphite,Lithium Iron Phosphate
+B395,Solid-state battery prototype for aerospace,3000.0,,40.0,0.0,Prismatic,2.0,Lithium Metal,Lithium Cobalt Oxide
+B396,Solid-state battery prototype for aerospace,2000.0,3.2,,0.0,,50.0,Lithium Metal,Lithium Cobalt Oxide
+B397,Solid-state battery prototype for aerospace,2500.0,24.0,60.0,-20.0,Prismatic,50.0,Lithium Metal,
+B398,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,70.0,-20.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B399,Lead-acid deep cycle battery for UPS,,24.0,60.0,-10.0,Pouch,,Lead,Lead Dioxide
+B400,Compact LiFePO4 battery for solar storage,2000.0,12.0,50.0,-20.0,,,,Lithium Cobalt Oxide
+B401,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,40.0,-20.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B402,Solid-state battery prototype for aerospace,1000.0,3.2,60.0,0.0,Pouch,10.0,Lithium Metal,Lithium Cobalt Oxide
+B403,High capacity lithium-ion cell for EVs,,12.0,50.0,,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B404,Solid-state battery prototype for aerospace,10000.0,,40.0,0.0,Prismatic,100.0,,Lithium Cobalt Oxide
+B405,Lead-acid deep cycle battery for UPS,3000.0,3.6,40.0,-20.0,Cylindrical,50.0,,Lead Dioxide
+B406,Solid-state battery prototype for aerospace,2000.0,3.2,60.0,-10.0,,2.0,Lithium Metal,Lithium Cobalt Oxide
+B407,High capacity lithium-ion cell for EVs,1000.0,3.6,40.0,-20.0,Prismatic,,Graphite,Lithium Iron Phosphate
+B408,Lead-acid deep cycle battery for UPS,2000.0,12.0,60.0,-20.0,Pouch,,Lead,Lead Dioxide
+B409,Solid-state battery prototype for aerospace,10000.0,3.7,40.0,-20.0,Prismatic,5.0,Lithium Metal,Lithium Cobalt Oxide
+B410,Lead-acid deep cycle battery for UPS,3000.0,3.7,70.0,0.0,Pouch,2.0,Lead,Lead Dioxide
+B411,Compact LiFePO4 battery for solar storage,10000.0,3.7,50.0,-10.0,Pouch,50.0,Graphite,Lithium Cobalt Oxide
+B412,Compact LiFePO4 battery for solar storage,3000.0,,,-20.0,Prismatic,5.0,Graphite,Lithium Cobalt Oxide
+B413,Solid-state battery prototype for aerospace,5000.0,24.0,60.0,0.0,,2.0,Lithium Metal,Lithium Cobalt Oxide
+B414,Lead-acid deep cycle battery for UPS,3000.0,24.0,70.0,-10.0,Prismatic,,Lead,Lead Dioxide
+B415,High capacity lithium-ion cell for EVs,,,60.0,0.0,Pouch,,Graphite,Lithium Iron Phosphate
+B416,Solid-state battery prototype for aerospace,10000.0,24.0,40.0,,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B417,Compact LiFePO4 battery for solar storage,1000.0,24.0,40.0,-10.0,Prismatic,,Graphite,Lithium Cobalt Oxide
+B418,Compact LiFePO4 battery for solar storage,5000.0,3.7,60.0,-20.0,Pouch,50.0,Graphite,Lithium Cobalt Oxide
+B419,Solid-state battery prototype for aerospace,,3.7,70.0,0.0,Cylindrical,,Lithium Metal,Lithium Cobalt Oxide
+B420,Lead-acid deep cycle battery for UPS,2000.0,3.6,40.0,0.0,Prismatic,1.0,Lead,Lead Dioxide
+B421,Compact LiFePO4 battery for solar storage,10000.0,3.2,50.0,,Pouch,,Graphite,Lithium Cobalt Oxide
+B422,Lead-acid deep cycle battery for UPS,1000.0,3.6,40.0,-20.0,Pouch,,Lead,Lead Dioxide
+,Compact LiFePO4 battery for solar storage,3000.0,3.6,50.0,-10.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+B424,Compact LiFePO4 battery for solar storage,1000.0,12.0,70.0,-10.0,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+B425,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,12.0,50.0,-10.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B426,Compact LiFePO4 battery for solar storage,5000.0,3.6,50.0,-20.0,Cylindrical,,Graphite,
+B427,High capacity lithium-ion cell for EVs,5000.0,3.6,,0.0,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B428,Solid-state battery prototype for aerospace,,3.6,50.0,0.0,Cylindrical,5.0,Lithium Metal,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,5000.0,24.0,40.0,-10.0,Cylindrical,2.0,Lithium Metal,Lithium Cobalt Oxide
+B430,Lead-acid deep cycle battery for UPS,10000.0,12.0,50.0,-20.0,Prismatic,50.0,,Lead Dioxide
+,Compact LiFePO4 battery for solar storage,10000.0,3.6,40.0,0.0,Pouch,,Graphite,Lithium Cobalt Oxide
+B432,High capacity lithium-ion cell for EVs,10000.0,3.7,,-10.0,Pouch,10.0,Graphite,
+B433,Lead-acid deep cycle battery for UPS,,3.7,60.0,0.0,Pouch,2.0,,Lead Dioxide
+B434,Nickel-metal hydride battery pack for hybrid vehicles,,24.0,70.0,0.0,Pouch,2.0,,Nickel Oxyhydroxide
+B435,Lead-acid deep cycle battery for UPS,10000.0,24.0,50.0,-20.0,,2.0,Lead,Lead Dioxide
+B436,Lead-acid deep cycle battery for UPS,10000.0,3.2,,,Pouch,1.0,Lead,Lead Dioxide
+B437,Compact LiFePO4 battery for solar storage,2500.0,3.2,50.0,0.0,Prismatic,5.0,,
+B438,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.2,50.0,-10.0,Cylindrical,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B439,Lead-acid deep cycle battery for UPS,10000.0,24.0,,-20.0,Pouch,2.0,Lead,Lead Dioxide
+B440,High capacity lithium-ion cell for EVs,3000.0,24.0,60.0,0.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B441,High capacity lithium-ion cell for EVs,5000.0,24.0,70.0,-20.0,Pouch,10.0,Graphite,Lithium Iron Phosphate
+B442,Solid-state battery prototype for aerospace,,,60.0,-20.0,Pouch,50.0,Lithium Metal,
+B443,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,70.0,-20.0,Cylindrical,100.0,Hydrogen-absorbing Alloy,
+B444,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,50.0,0.0,Cylindrical,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B445,Solid-state battery prototype for aerospace,5000.0,3.2,40.0,-10.0,Cylindrical,100.0,Lithium Metal,Lithium Cobalt Oxide
+B446,Lead-acid deep cycle battery for UPS,5000.0,3.2,50.0,-10.0,Pouch,100.0,,Lead Dioxide
+B447,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.2,70.0,-10.0,Pouch,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B448,High capacity lithium-ion cell for EVs,2500.0,3.6,60.0,-20.0,Pouch,20.0,,Lithium Iron Phosphate
+B449,High capacity lithium-ion cell for EVs,,3.6,50.0,0.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B450,Compact LiFePO4 battery for solar storage,,12.0,60.0,-20.0,Prismatic,2.0,Graphite,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,60.0,-10.0,Pouch,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Lead-acid deep cycle battery for UPS,,12.0,60.0,-10.0,Pouch,1.0,Lead,
+B453,Solid-state battery prototype for aerospace,10000.0,3.6,50.0,,Pouch,20.0,Lithium Metal,Lithium Cobalt Oxide
+B454,Solid-state battery prototype for aerospace,2500.0,3.6,,-20.0,,2.0,,Lithium Cobalt Oxide
+B455,Lead-acid deep cycle battery for UPS,5000.0,12.0,60.0,-10.0,Pouch,10.0,Lead,Lead Dioxide
+B456,Compact LiFePO4 battery for solar storage,5000.0,12.0,50.0,,,5.0,Graphite,Lithium Cobalt Oxide
+B457,Solid-state battery prototype for aerospace,1000.0,24.0,60.0,-20.0,Pouch,5.0,Lithium Metal,Lithium Cobalt Oxide
+B458,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,50.0,-20.0,Prismatic,2.0,,Nickel Oxyhydroxide
+B459,Compact LiFePO4 battery for solar storage,10000.0,,,-10.0,Pouch,,Graphite,Lithium Cobalt Oxide
+B460,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,,-10.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,High capacity lithium-ion cell for EVs,5000.0,3.6,,-20.0,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B462,Compact LiFePO4 battery for solar storage,10000.0,12.0,60.0,-20.0,,50.0,Graphite,Lithium Cobalt Oxide
+B463,Solid-state battery prototype for aerospace,,3.6,40.0,,Cylindrical,50.0,Lithium Metal,Lithium Cobalt Oxide
+B464,Compact LiFePO4 battery for solar storage,1000.0,3.6,40.0,,Pouch,,Graphite,Lithium Cobalt Oxide
+B465,Compact LiFePO4 battery for solar storage,5000.0,3.6,60.0,,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B466,Compact LiFePO4 battery for solar storage,2000.0,3.7,40.0,-20.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+B467,Compact LiFePO4 battery for solar storage,2000.0,3.2,,-10.0,Cylindrical,20.0,,Lithium Cobalt Oxide
+B468,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,12.0,40.0,0.0,Cylindrical,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B469,High capacity lithium-ion cell for EVs,3000.0,3.2,60.0,-10.0,Cylindrical,100.0,Graphite,
+B470,Lead-acid deep cycle battery for UPS,5000.0,,60.0,-10.0,Pouch,10.0,Lead,Lead Dioxide
+B471,Compact LiFePO4 battery for solar storage,2500.0,3.2,,0.0,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+B472,Solid-state battery prototype for aerospace,1000.0,3.6,70.0,-20.0,Prismatic,5.0,Lithium Metal,Lithium Cobalt Oxide
+B473,Compact LiFePO4 battery for solar storage,3000.0,24.0,60.0,0.0,,2.0,Graphite,Lithium Cobalt Oxide
+B474,Solid-state battery prototype for aerospace,,3.6,50.0,-10.0,Cylindrical,2.0,,
+B475,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.6,40.0,-20.0,Cylindrical,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B476,Solid-state battery prototype for aerospace,2000.0,3.2,40.0,,Prismatic,10.0,Lithium Metal,Lithium Cobalt Oxide
+B477,Lead-acid deep cycle battery for UPS,2500.0,3.6,50.0,-20.0,Cylindrical,1.0,Lead,Lead Dioxide
+B478,High capacity lithium-ion cell for EVs,1000.0,3.2,50.0,-20.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+B479,Solid-state battery prototype for aerospace,2000.0,24.0,60.0,,,20.0,Lithium Metal,
+B480,Solid-state battery prototype for aerospace,5000.0,12.0,40.0,-20.0,Cylindrical,1.0,Lithium Metal,
+B481,High capacity lithium-ion cell for EVs,,3.2,50.0,0.0,,10.0,Graphite,Lithium Iron Phosphate
+B482,Lead-acid deep cycle battery for UPS,,24.0,40.0,-10.0,,,,Lead Dioxide
+B483,Compact LiFePO4 battery for solar storage,2500.0,12.0,50.0,,,5.0,Graphite,
+B484,Solid-state battery prototype for aerospace,,3.7,,-10.0,,2.0,Lithium Metal,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,,3.2,70.0,-10.0,,20.0,Graphite,Lithium Iron Phosphate
+B486,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.2,60.0,-20.0,,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B487,High capacity lithium-ion cell for EVs,1000.0,3.7,40.0,0.0,Cylindrical,,Graphite,
+B488,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,70.0,-20.0,Pouch,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B489,Lead-acid deep cycle battery for UPS,3000.0,,40.0,-10.0,Prismatic,100.0,Lead,Lead Dioxide
+B490,Compact LiFePO4 battery for solar storage,,,40.0,-10.0,Prismatic,,Graphite,Lithium Cobalt Oxide
+B491,High capacity lithium-ion cell for EVs,,3.6,70.0,0.0,,50.0,Graphite,Lithium Iron Phosphate
+B492,Solid-state battery prototype for aerospace,2000.0,,40.0,-20.0,Pouch,1.0,Lithium Metal,Lithium Cobalt Oxide
+B493,Lead-acid deep cycle battery for UPS,2000.0,12.0,40.0,-10.0,Cylindrical,10.0,Lead,
+B494,High capacity lithium-ion cell for EVs,10000.0,12.0,60.0,-10.0,Pouch,2.0,Graphite,Lithium Iron Phosphate
+B495,Solid-state battery prototype for aerospace,3000.0,3.6,70.0,-10.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,1000.0,3.7,70.0,,,1.0,Graphite,Lithium Iron Phosphate
+B497,Nickel-metal hydride battery pack for hybrid vehicles,,24.0,,-10.0,Prismatic,2.0,Hydrogen-absorbing Alloy,
+B498,High capacity lithium-ion cell for EVs,10000.0,3.7,,-10.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B499,High capacity lithium-ion cell for EVs,1000.0,3.2,60.0,-20.0,Cylindrical,20.0,Graphite,Lithium Iron Phosphate
+B500,High capacity lithium-ion cell for EVs,,12.0,40.0,-20.0,,2.0,Graphite,Lithium Iron Phosphate
+B501,Lead-acid deep cycle battery for UPS,5000.0,3.7,40.0,-10.0,,50.0,Lead,Lead Dioxide
+B502,High capacity lithium-ion cell for EVs,1000.0,,50.0,-10.0,Prismatic,50.0,Graphite,Lithium Iron Phosphate
+B503,Solid-state battery prototype for aerospace,3000.0,3.2,40.0,-20.0,Cylindrical,20.0,Lithium Metal,
+B504,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.6,60.0,0.0,Cylindrical,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B505,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.6,60.0,0.0,Cylindrical,20.0,Hydrogen-absorbing Alloy,
+B506,High capacity lithium-ion cell for EVs,10000.0,,,,Cylindrical,,Graphite,Lithium Iron Phosphate
+B507,Lead-acid deep cycle battery for UPS,2500.0,3.2,40.0,0.0,Prismatic,2.0,Lead,Lead Dioxide
+B508,Lead-acid deep cycle battery for UPS,5000.0,12.0,,0.0,,,Lead,Lead Dioxide
+B509,Solid-state battery prototype for aerospace,2000.0,3.7,40.0,0.0,Prismatic,2.0,Lithium Metal,
+B510,High capacity lithium-ion cell for EVs,3000.0,3.2,40.0,0.0,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B511,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,40.0,0.0,Prismatic,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B512,Lead-acid deep cycle battery for UPS,3000.0,24.0,50.0,-20.0,Cylindrical,10.0,Lead,Lead Dioxide
+B513,High capacity lithium-ion cell for EVs,3000.0,24.0,,,Pouch,2.0,,Lithium Iron Phosphate
+B514,Lead-acid deep cycle battery for UPS,2000.0,,60.0,0.0,Pouch,5.0,Lead,Lead Dioxide
+B515,Lead-acid deep cycle battery for UPS,10000.0,24.0,40.0,0.0,Pouch,10.0,Lead,Lead Dioxide
+B516,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,24.0,60.0,-10.0,Cylindrical,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B517,Compact LiFePO4 battery for solar storage,2000.0,,40.0,-20.0,Prismatic,2.0,Graphite,Lithium Cobalt Oxide
+B518,Solid-state battery prototype for aerospace,,12.0,60.0,-20.0,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+B519,Solid-state battery prototype for aerospace,10000.0,3.7,60.0,-20.0,,20.0,Lithium Metal,Lithium Cobalt Oxide
+B520,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,40.0,0.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B521,Lead-acid deep cycle battery for UPS,10000.0,12.0,40.0,0.0,Prismatic,10.0,Lead,Lead Dioxide
+B522,High capacity lithium-ion cell for EVs,5000.0,3.2,60.0,-10.0,Pouch,,Graphite,Lithium Iron Phosphate
+B523,Lead-acid deep cycle battery for UPS,2000.0,3.2,,-20.0,,100.0,Lead,Lead Dioxide
+B524,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,50.0,0.0,Prismatic,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B525,Solid-state battery prototype for aerospace,10000.0,12.0,70.0,-20.0,,,Lithium Metal,Lithium Cobalt Oxide
+B526,Lead-acid deep cycle battery for UPS,3000.0,3.7,70.0,-10.0,Prismatic,2.0,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,3000.0,3.7,,,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B528,High capacity lithium-ion cell for EVs,1000.0,,50.0,,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B529,Solid-state battery prototype for aerospace,5000.0,24.0,,,Cylindrical,100.0,Lithium Metal,Lithium Cobalt Oxide
+B530,Solid-state battery prototype for aerospace,3000.0,,40.0,0.0,Cylindrical,50.0,Lithium Metal,Lithium Cobalt Oxide
+B531,Compact LiFePO4 battery for solar storage,1000.0,3.2,70.0,0.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,3000.0,,70.0,-10.0,Cylindrical,1.0,Graphite,
+,Compact LiFePO4 battery for solar storage,5000.0,12.0,40.0,0.0,Prismatic,100.0,Graphite,Lithium Cobalt Oxide
+B534,Solid-state battery prototype for aerospace,10000.0,3.2,40.0,-10.0,Prismatic,20.0,,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,40.0,-20.0,Cylindrical,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B536,Solid-state battery prototype for aerospace,5000.0,3.6,50.0,-10.0,Pouch,20.0,,Lithium Cobalt Oxide
+B537,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,70.0,-20.0,Pouch,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B538,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,40.0,-10.0,Pouch,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Compact LiFePO4 battery for solar storage,3000.0,3.2,60.0,0.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+B540,Lead-acid deep cycle battery for UPS,10000.0,12.0,70.0,0.0,Prismatic,20.0,Lead,Lead Dioxide
+B541,High capacity lithium-ion cell for EVs,2000.0,3.2,60.0,-10.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B542,Compact LiFePO4 battery for solar storage,10000.0,24.0,50.0,0.0,Cylindrical,20.0,Graphite,Lithium Cobalt Oxide
+B543,Compact LiFePO4 battery for solar storage,2000.0,3.6,40.0,0.0,Prismatic,50.0,,Lithium Cobalt Oxide
+B544,Lead-acid deep cycle battery for UPS,,24.0,60.0,0.0,Cylindrical,2.0,Lead,Lead Dioxide
+B545,High capacity lithium-ion cell for EVs,3000.0,24.0,50.0,-20.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+B546,Solid-state battery prototype for aerospace,3000.0,,,,Pouch,2.0,,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,2500.0,3.6,,,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+B548,Compact LiFePO4 battery for solar storage,,3.2,,,Pouch,100.0,Graphite,Lithium Cobalt Oxide
+B549,High capacity lithium-ion cell for EVs,10000.0,3.2,50.0,0.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B550,Compact LiFePO4 battery for solar storage,2500.0,3.7,40.0,0.0,Cylindrical,5.0,,Lithium Cobalt Oxide
+B551,Nickel-metal hydride battery pack for hybrid vehicles,,,40.0,0.0,,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B552,Compact LiFePO4 battery for solar storage,5000.0,,60.0,-10.0,,100.0,,Lithium Cobalt Oxide
+B553,Compact LiFePO4 battery for solar storage,,24.0,60.0,-20.0,Cylindrical,10.0,Graphite,Lithium Cobalt Oxide
+B554,Solid-state battery prototype for aerospace,10000.0,,60.0,-20.0,Pouch,20.0,Lithium Metal,Lithium Cobalt Oxide
+B555,Solid-state battery prototype for aerospace,2000.0,,40.0,,Pouch,50.0,Lithium Metal,Lithium Cobalt Oxide
+B556,Solid-state battery prototype for aerospace,10000.0,3.6,,-10.0,Cylindrical,1.0,,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.2,50.0,,,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B558,Solid-state battery prototype for aerospace,3000.0,12.0,40.0,-10.0,Pouch,5.0,,Lithium Cobalt Oxide
+B559,High capacity lithium-ion cell for EVs,2500.0,3.6,70.0,-10.0,Cylindrical,10.0,Graphite,
+,Lead-acid deep cycle battery for UPS,5000.0,3.7,50.0,-10.0,,2.0,,Lead Dioxide
+B561,High capacity lithium-ion cell for EVs,3000.0,12.0,60.0,,Prismatic,20.0,Graphite,Lithium Iron Phosphate
+B562,High capacity lithium-ion cell for EVs,10000.0,12.0,70.0,-20.0,,20.0,Graphite,Lithium Iron Phosphate
+,Solid-state battery prototype for aerospace,1000.0,12.0,,,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B564,Lead-acid deep cycle battery for UPS,1000.0,24.0,50.0,0.0,,,Lead,Lead Dioxide
+B565,Lead-acid deep cycle battery for UPS,2000.0,12.0,70.0,-10.0,Cylindrical,20.0,,Lead Dioxide
+B566,Lead-acid deep cycle battery for UPS,3000.0,3.2,70.0,0.0,,20.0,Lead,Lead Dioxide
+B567,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,12.0,50.0,-10.0,Cylindrical,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B568,Solid-state battery prototype for aerospace,2500.0,24.0,50.0,-20.0,Prismatic,1.0,Lithium Metal,Lithium Cobalt Oxide
+B569,Lead-acid deep cycle battery for UPS,3000.0,12.0,,,Cylindrical,,Lead,Lead Dioxide
+B570,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,60.0,-20.0,Pouch,100.0,,Nickel Oxyhydroxide
+B571,Compact LiFePO4 battery for solar storage,2500.0,3.7,40.0,-10.0,Cylindrical,20.0,Graphite,Lithium Cobalt Oxide
+B572,Compact LiFePO4 battery for solar storage,1000.0,24.0,,-10.0,Pouch,,Graphite,Lithium Cobalt Oxide
+B573,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.2,70.0,-10.0,Pouch,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.2,60.0,-20.0,Prismatic,,,Nickel Oxyhydroxide
+B575,Solid-state battery prototype for aerospace,5000.0,3.6,70.0,-10.0,,20.0,Lithium Metal,Lithium Cobalt Oxide
+B576,Solid-state battery prototype for aerospace,,24.0,70.0,-20.0,Prismatic,100.0,Lithium Metal,Lithium Cobalt Oxide
+B577,Compact LiFePO4 battery for solar storage,1000.0,12.0,40.0,0.0,Cylindrical,10.0,,Lithium Cobalt Oxide
+B578,Lead-acid deep cycle battery for UPS,,24.0,40.0,,Pouch,100.0,Lead,Lead Dioxide
+B579,Compact LiFePO4 battery for solar storage,3000.0,,40.0,-10.0,Pouch,20.0,Graphite,Lithium Cobalt Oxide
+B580,Lead-acid deep cycle battery for UPS,3000.0,24.0,50.0,-10.0,Cylindrical,2.0,Lead,
+B581,Lead-acid deep cycle battery for UPS,,24.0,50.0,0.0,,1.0,Lead,Lead Dioxide
+B582,Solid-state battery prototype for aerospace,10000.0,3.6,40.0,-10.0,Prismatic,,Lithium Metal,
+,High capacity lithium-ion cell for EVs,10000.0,3.2,40.0,-20.0,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B584,High capacity lithium-ion cell for EVs,3000.0,12.0,50.0,,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B585,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.6,,-10.0,,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B586,Solid-state battery prototype for aerospace,,3.7,,-10.0,Prismatic,1.0,Lithium Metal,
+B587,Lead-acid deep cycle battery for UPS,2000.0,3.2,70.0,0.0,Cylindrical,,Lead,Lead Dioxide
+B588,High capacity lithium-ion cell for EVs,5000.0,3.7,40.0,,Pouch,1.0,,Lithium Iron Phosphate
+B589,Lead-acid deep cycle battery for UPS,1000.0,3.2,,,Prismatic,10.0,Lead,Lead Dioxide
+B590,High capacity lithium-ion cell for EVs,,12.0,50.0,-10.0,,20.0,Graphite,Lithium Iron Phosphate
+B591,High capacity lithium-ion cell for EVs,5000.0,12.0,40.0,0.0,Pouch,50.0,,Lithium Iron Phosphate
+B592,High capacity lithium-ion cell for EVs,2000.0,24.0,,0.0,,,Graphite,Lithium Iron Phosphate
+B593,Solid-state battery prototype for aerospace,2000.0,3.7,60.0,-20.0,Pouch,50.0,Lithium Metal,
+B594,Compact LiFePO4 battery for solar storage,2500.0,3.2,60.0,0.0,Cylindrical,10.0,,Lithium Cobalt Oxide
+B595,Lead-acid deep cycle battery for UPS,5000.0,12.0,50.0,-20.0,,5.0,Lead,Lead Dioxide
+B596,Solid-state battery prototype for aerospace,2500.0,,50.0,-20.0,,20.0,Lithium Metal,
+B597,Solid-state battery prototype for aerospace,1000.0,12.0,,0.0,Prismatic,2.0,Lithium Metal,Lithium Cobalt Oxide
+B598,Solid-state battery prototype for aerospace,10000.0,3.6,70.0,-20.0,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B599,Solid-state battery prototype for aerospace,10000.0,3.2,,-10.0,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,,12.0,60.0,-10.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,12.0,50.0,0.0,Pouch,100.0,,
+B602,Lead-acid deep cycle battery for UPS,,3.2,70.0,,Pouch,2.0,Lead,Lead Dioxide
+B603,Solid-state battery prototype for aerospace,1000.0,12.0,60.0,-20.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+B604,Lead-acid deep cycle battery for UPS,2500.0,3.6,70.0,-10.0,Pouch,2.0,Lead,
+B605,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,,70.0,0.0,Prismatic,50.0,,Nickel Oxyhydroxide
+,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,60.0,0.0,Pouch,5.0,Hydrogen-absorbing Alloy,
+,Lead-acid deep cycle battery for UPS,5000.0,24.0,50.0,-20.0,Cylindrical,2.0,Lead,Lead Dioxide
+,High capacity lithium-ion cell for EVs,2500.0,3.6,60.0,0.0,Cylindrical,50.0,Graphite,Lithium Iron Phosphate
+B609,Compact LiFePO4 battery for solar storage,,3.7,60.0,,,,Graphite,
+B610,High capacity lithium-ion cell for EVs,,,70.0,0.0,Cylindrical,20.0,Graphite,Lithium Iron Phosphate
+B611,High capacity lithium-ion cell for EVs,10000.0,3.6,60.0,-20.0,,1.0,Graphite,Lithium Iron Phosphate
+B612,High capacity lithium-ion cell for EVs,2000.0,24.0,50.0,0.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+B613,Solid-state battery prototype for aerospace,2500.0,24.0,60.0,-10.0,Pouch,1.0,Lithium Metal,
+B614,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.2,,-20.0,Prismatic,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B615,High capacity lithium-ion cell for EVs,5000.0,3.2,50.0,-10.0,Pouch,5.0,Graphite,Lithium Iron Phosphate
+B616,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,70.0,,Prismatic,2.0,,Nickel Oxyhydroxide
+B617,Lead-acid deep cycle battery for UPS,3000.0,12.0,40.0,0.0,Pouch,5.0,Lead,Lead Dioxide
+B618,Compact LiFePO4 battery for solar storage,1000.0,3.2,40.0,-20.0,Prismatic,1.0,Graphite,Lithium Cobalt Oxide
+B619,Lead-acid deep cycle battery for UPS,5000.0,12.0,,,Pouch,100.0,Lead,Lead Dioxide
+B620,Lead-acid deep cycle battery for UPS,2000.0,3.7,60.0,,Prismatic,50.0,Lead,Lead Dioxide
+B621,Solid-state battery prototype for aerospace,5000.0,24.0,70.0,,,100.0,Lithium Metal,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,3000.0,12.0,50.0,0.0,Prismatic,20.0,Graphite,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,10000.0,24.0,40.0,-20.0,Cylindrical,20.0,Lead,Lead Dioxide
+B624,Lead-acid deep cycle battery for UPS,,12.0,70.0,,Pouch,5.0,Lead,Lead Dioxide
+B625,Compact LiFePO4 battery for solar storage,,3.7,60.0,,Prismatic,50.0,Graphite,Lithium Cobalt Oxide
+B626,Compact LiFePO4 battery for solar storage,10000.0,3.2,70.0,0.0,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B627,Lead-acid deep cycle battery for UPS,2000.0,3.7,40.0,0.0,Pouch,2.0,Lead,Lead Dioxide
+B628,Compact LiFePO4 battery for solar storage,2500.0,3.2,70.0,-10.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,1000.0,3.2,,-20.0,,,,Lead Dioxide
+,Lead-acid deep cycle battery for UPS,1000.0,24.0,40.0,-10.0,Prismatic,,,Lead Dioxide
+,Solid-state battery prototype for aerospace,3000.0,3.7,,-20.0,Cylindrical,,Lithium Metal,Lithium Cobalt Oxide
+B632,High capacity lithium-ion cell for EVs,10000.0,12.0,50.0,,Pouch,2.0,Graphite,Lithium Iron Phosphate
+B633,Lead-acid deep cycle battery for UPS,1000.0,3.7,,-20.0,Cylindrical,10.0,Lead,Lead Dioxide
+B634,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,70.0,-10.0,Pouch,1.0,,
+B635,High capacity lithium-ion cell for EVs,,,40.0,-10.0,,100.0,Graphite,Lithium Iron Phosphate
+B636,High capacity lithium-ion cell for EVs,,24.0,50.0,-10.0,Pouch,,Graphite,
+B637,High capacity lithium-ion cell for EVs,3000.0,3.6,60.0,-20.0,Prismatic,2.0,Graphite,
+B638,Solid-state battery prototype for aerospace,3000.0,3.6,70.0,-10.0,Cylindrical,10.0,Lithium Metal,Lithium Cobalt Oxide
+B639,Lead-acid deep cycle battery for UPS,1000.0,12.0,50.0,-10.0,Pouch,20.0,Lead,Lead Dioxide
+B640,Solid-state battery prototype for aerospace,3000.0,24.0,,-10.0,,,Lithium Metal,Lithium Cobalt Oxide
+B641,Lead-acid deep cycle battery for UPS,1000.0,12.0,40.0,,Pouch,,Lead,Lead Dioxide
+B642,Solid-state battery prototype for aerospace,3000.0,12.0,60.0,0.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B643,Solid-state battery prototype for aerospace,5000.0,3.6,40.0,,Pouch,20.0,Lithium Metal,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,12.0,60.0,-20.0,Cylindrical,2.0,Hydrogen-absorbing Alloy,
+B645,Solid-state battery prototype for aerospace,3000.0,3.6,70.0,-10.0,Cylindrical,,Lithium Metal,
+B646,Compact LiFePO4 battery for solar storage,2000.0,3.2,70.0,0.0,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B647,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,40.0,-10.0,Prismatic,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B648,Solid-state battery prototype for aerospace,10000.0,12.0,,-10.0,Pouch,100.0,Lithium Metal,
+B649,High capacity lithium-ion cell for EVs,3000.0,,60.0,0.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B650,Compact LiFePO4 battery for solar storage,2500.0,3.7,70.0,0.0,Pouch,100.0,,
+B651,Compact LiFePO4 battery for solar storage,,12.0,40.0,0.0,Prismatic,2.0,Graphite,Lithium Cobalt Oxide
+B652,Compact LiFePO4 battery for solar storage,10000.0,3.2,60.0,-20.0,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+B653,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.2,70.0,-20.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Solid-state battery prototype for aerospace,10000.0,,50.0,-10.0,Cylindrical,10.0,Lithium Metal,Lithium Cobalt Oxide
+B655,Solid-state battery prototype for aerospace,2000.0,3.6,40.0,-20.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,1000.0,,50.0,0.0,Pouch,,,Lithium Iron Phosphate
+B657,High capacity lithium-ion cell for EVs,5000.0,3.6,40.0,0.0,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B658,Compact LiFePO4 battery for solar storage,10000.0,3.2,70.0,-20.0,Prismatic,20.0,Graphite,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,3000.0,3.6,60.0,-10.0,,2.0,,
+B660,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.2,60.0,-10.0,Cylindrical,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B661,Solid-state battery prototype for aerospace,5000.0,3.6,60.0,-20.0,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B662,Compact LiFePO4 battery for solar storage,3000.0,3.7,,-10.0,Prismatic,2.0,Graphite,Lithium Cobalt Oxide
+B663,High capacity lithium-ion cell for EVs,2500.0,24.0,70.0,-10.0,Pouch,10.0,Graphite,Lithium Iron Phosphate
+B664,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,,50.0,-10.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B665,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,70.0,0.0,Cylindrical,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,High capacity lithium-ion cell for EVs,2000.0,24.0,50.0,0.0,Prismatic,2.0,,Lithium Iron Phosphate
+B667,Solid-state battery prototype for aerospace,2500.0,24.0,40.0,-20.0,Cylindrical,2.0,,Lithium Cobalt Oxide
+B668,High capacity lithium-ion cell for EVs,1000.0,,40.0,0.0,Pouch,1.0,Graphite,Lithium Iron Phosphate
+B669,Compact LiFePO4 battery for solar storage,5000.0,12.0,50.0,-10.0,Cylindrical,100.0,Graphite,Lithium Cobalt Oxide
+B670,High capacity lithium-ion cell for EVs,3000.0,3.7,50.0,0.0,,2.0,Graphite,
+B671,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.7,,-20.0,,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B672,High capacity lithium-ion cell for EVs,1000.0,3.2,,0.0,Prismatic,5.0,Graphite,Lithium Iron Phosphate
+B673,Solid-state battery prototype for aerospace,,3.2,50.0,,Pouch,5.0,Lithium Metal,Lithium Cobalt Oxide
+B674,Lead-acid deep cycle battery for UPS,,12.0,40.0,-10.0,Pouch,5.0,Lead,Lead Dioxide
+B675,High capacity lithium-ion cell for EVs,2000.0,12.0,40.0,-20.0,Prismatic,,,
+B676,Solid-state battery prototype for aerospace,,3.2,60.0,0.0,Prismatic,2.0,Lithium Metal,Lithium Cobalt Oxide
+B677,Solid-state battery prototype for aerospace,3000.0,,,0.0,Pouch,50.0,Lithium Metal,Lithium Cobalt Oxide
+B678,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,70.0,0.0,Pouch,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B679,Solid-state battery prototype for aerospace,2000.0,3.6,70.0,-10.0,Prismatic,2.0,Lithium Metal,Lithium Cobalt Oxide
+B680,Solid-state battery prototype for aerospace,2000.0,,70.0,-20.0,Cylindrical,1.0,Lithium Metal,Lithium Cobalt Oxide
+B681,Solid-state battery prototype for aerospace,3000.0,3.6,60.0,0.0,Prismatic,50.0,Lithium Metal,Lithium Cobalt Oxide
+B682,Solid-state battery prototype for aerospace,10000.0,24.0,40.0,-10.0,Pouch,50.0,,Lithium Cobalt Oxide
+B683,Compact LiFePO4 battery for solar storage,1000.0,12.0,70.0,-10.0,Prismatic,100.0,Graphite,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,5000.0,12.0,40.0,-10.0,,50.0,Graphite,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.2,60.0,0.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B686,High capacity lithium-ion cell for EVs,5000.0,3.7,50.0,0.0,Pouch,,Graphite,Lithium Iron Phosphate
+B687,Solid-state battery prototype for aerospace,2000.0,3.2,50.0,0.0,Prismatic,5.0,Lithium Metal,Lithium Cobalt Oxide
+B688,High capacity lithium-ion cell for EVs,5000.0,3.6,,0.0,Pouch,1.0,Graphite,Lithium Iron Phosphate
+B689,High capacity lithium-ion cell for EVs,2500.0,3.7,70.0,0.0,Pouch,10.0,Graphite,Lithium Iron Phosphate
+B690,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.6,50.0,0.0,Prismatic,100.0,Hydrogen-absorbing Alloy,
+B691,Solid-state battery prototype for aerospace,5000.0,24.0,70.0,0.0,,100.0,Lithium Metal,Lithium Cobalt Oxide
+B692,Solid-state battery prototype for aerospace,1000.0,,60.0,0.0,Pouch,2.0,Lithium Metal,Lithium Cobalt Oxide
+B693,Lead-acid deep cycle battery for UPS,2500.0,24.0,60.0,0.0,Cylindrical,1.0,Lead,Lead Dioxide
+B694,High capacity lithium-ion cell for EVs,,,70.0,-10.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+B695,High capacity lithium-ion cell for EVs,1000.0,3.6,,0.0,Cylindrical,50.0,Graphite,Lithium Iron Phosphate
+,Compact LiFePO4 battery for solar storage,5000.0,3.6,50.0,,Cylindrical,100.0,Graphite,Lithium Cobalt Oxide
+B697,Lead-acid deep cycle battery for UPS,3000.0,24.0,50.0,-10.0,,100.0,,Lead Dioxide
+B698,Compact LiFePO4 battery for solar storage,1000.0,3.7,50.0,0.0,,100.0,Graphite,Lithium Cobalt Oxide
+B699,Compact LiFePO4 battery for solar storage,5000.0,24.0,70.0,-20.0,Pouch,100.0,Graphite,Lithium Cobalt Oxide
+B700,Compact LiFePO4 battery for solar storage,1000.0,,60.0,,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B701,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,24.0,50.0,-20.0,Pouch,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B702,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.7,60.0,-20.0,Prismatic,2.0,,
+B703,Compact LiFePO4 battery for solar storage,5000.0,12.0,50.0,-20.0,Cylindrical,100.0,Graphite,Lithium Cobalt Oxide
+B704,Lead-acid deep cycle battery for UPS,3000.0,3.2,50.0,,Pouch,1.0,Lead,Lead Dioxide
+B705,High capacity lithium-ion cell for EVs,2000.0,,70.0,-10.0,Pouch,10.0,,Lithium Iron Phosphate
+B706,Lead-acid deep cycle battery for UPS,1000.0,3.7,40.0,-10.0,Cylindrical,2.0,Lead,
+B707,Solid-state battery prototype for aerospace,10000.0,24.0,,-20.0,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,,,0.0,Prismatic,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B709,High capacity lithium-ion cell for EVs,1000.0,3.7,50.0,-20.0,Pouch,,Graphite,Lithium Iron Phosphate
+B710,High capacity lithium-ion cell for EVs,5000.0,12.0,40.0,,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B711,Solid-state battery prototype for aerospace,5000.0,12.0,60.0,0.0,,5.0,Lithium Metal,Lithium Cobalt Oxide
+B712,Solid-state battery prototype for aerospace,2000.0,3.2,60.0,-10.0,Pouch,10.0,Lithium Metal,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,,12.0,50.0,,Pouch,50.0,,Lithium Cobalt Oxide
+B714,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,,60.0,0.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B715,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,50.0,-20.0,,50.0,,Nickel Oxyhydroxide
+B716,Lead-acid deep cycle battery for UPS,1000.0,3.7,40.0,-20.0,Cylindrical,10.0,Lead,
+,Compact LiFePO4 battery for solar storage,,3.6,,-20.0,Prismatic,5.0,,
+B718,Compact LiFePO4 battery for solar storage,1000.0,3.2,50.0,,Pouch,50.0,Graphite,Lithium Cobalt Oxide
+B719,Compact LiFePO4 battery for solar storage,1000.0,12.0,40.0,0.0,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+B720,Compact LiFePO4 battery for solar storage,2000.0,3.7,70.0,,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B721,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,,70.0,0.0,,2.0,Hydrogen-absorbing Alloy,
+B722,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.2,40.0,-10.0,Pouch,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B723,Compact LiFePO4 battery for solar storage,10000.0,3.6,50.0,0.0,Cylindrical,,Graphite,Lithium Cobalt Oxide
+B724,Lead-acid deep cycle battery for UPS,2000.0,3.7,50.0,-20.0,Pouch,100.0,,Lead Dioxide
+B725,High capacity lithium-ion cell for EVs,1000.0,3.6,40.0,-10.0,Cylindrical,10.0,,Lithium Iron Phosphate
+B726,High capacity lithium-ion cell for EVs,2000.0,,60.0,-20.0,Pouch,1.0,Graphite,Lithium Iron Phosphate
+B727,Lead-acid deep cycle battery for UPS,5000.0,,,-20.0,Pouch,10.0,Lead,Lead Dioxide
+B728,Compact LiFePO4 battery for solar storage,5000.0,12.0,,0.0,Prismatic,100.0,,Lithium Cobalt Oxide
+B729,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,50.0,0.0,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,High capacity lithium-ion cell for EVs,10000.0,,50.0,-20.0,Prismatic,10.0,Graphite,Lithium Iron Phosphate
+B731,Solid-state battery prototype for aerospace,1000.0,3.7,,-20.0,,100.0,Lithium Metal,
+B732,Solid-state battery prototype for aerospace,2000.0,24.0,40.0,-10.0,Cylindrical,10.0,Lithium Metal,
+B733,Lead-acid deep cycle battery for UPS,2000.0,3.6,60.0,0.0,Cylindrical,100.0,Lead,Lead Dioxide
+,Compact LiFePO4 battery for solar storage,2000.0,3.2,60.0,-10.0,,2.0,Graphite,Lithium Cobalt Oxide
+B735,High capacity lithium-ion cell for EVs,,3.7,70.0,-10.0,,100.0,Graphite,Lithium Iron Phosphate
+B736,Compact LiFePO4 battery for solar storage,5000.0,3.7,,,Cylindrical,50.0,,Lithium Cobalt Oxide
+B737,High capacity lithium-ion cell for EVs,10000.0,,,-20.0,Pouch,20.0,Graphite,Lithium Iron Phosphate
+B738,Lead-acid deep cycle battery for UPS,3000.0,3.6,60.0,,Prismatic,,Lead,Lead Dioxide
+B739,Lead-acid deep cycle battery for UPS,10000.0,3.6,50.0,-10.0,Prismatic,100.0,Lead,
+,Solid-state battery prototype for aerospace,,,70.0,-20.0,Prismatic,100.0,Lithium Metal,Lithium Cobalt Oxide
+B741,Compact LiFePO4 battery for solar storage,2500.0,,70.0,0.0,Prismatic,10.0,Graphite,
+B742,Solid-state battery prototype for aerospace,2000.0,12.0,50.0,0.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B743,Compact LiFePO4 battery for solar storage,2500.0,,40.0,-10.0,Pouch,,Graphite,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,2500.0,3.7,70.0,-20.0,Pouch,100.0,,Lithium Cobalt Oxide
+B745,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.2,70.0,0.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B746,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.7,40.0,-10.0,,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B747,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,,-10.0,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B748,Nickel-metal hydride battery pack for hybrid vehicles,,3.6,70.0,-20.0,Prismatic,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B749,High capacity lithium-ion cell for EVs,,24.0,40.0,-10.0,,5.0,Graphite,
+B750,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,,40.0,0.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Lead-acid deep cycle battery for UPS,3000.0,3.2,60.0,-20.0,,20.0,Lead,Lead Dioxide
+B752,Lead-acid deep cycle battery for UPS,10000.0,24.0,50.0,0.0,Prismatic,2.0,Lead,Lead Dioxide
+B753,High capacity lithium-ion cell for EVs,5000.0,3.6,50.0,0.0,Pouch,50.0,,Lithium Iron Phosphate
+B754,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,12.0,40.0,0.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B755,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,24.0,,-10.0,,10.0,Hydrogen-absorbing Alloy,
+B756,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,,-10.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B757,Solid-state battery prototype for aerospace,10000.0,12.0,60.0,0.0,Cylindrical,10.0,Lithium Metal,Lithium Cobalt Oxide
+B758,Compact LiFePO4 battery for solar storage,2500.0,3.6,60.0,0.0,Prismatic,10.0,,Lithium Cobalt Oxide
+B759,Solid-state battery prototype for aerospace,5000.0,3.7,40.0,-20.0,Cylindrical,5.0,Lithium Metal,
+B760,Compact LiFePO4 battery for solar storage,1000.0,24.0,,-20.0,Cylindrical,20.0,Graphite,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,,,70.0,,Cylindrical,10.0,Hydrogen-absorbing Alloy,
+B762,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,50.0,-10.0,Prismatic,100.0,Hydrogen-absorbing Alloy,
+B763,Solid-state battery prototype for aerospace,2000.0,3.6,50.0,-20.0,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+B764,Solid-state battery prototype for aerospace,1000.0,,70.0,0.0,Pouch,10.0,Lithium Metal,Lithium Cobalt Oxide
+B765,Compact LiFePO4 battery for solar storage,2000.0,24.0,50.0,-10.0,Prismatic,20.0,Graphite,Lithium Cobalt Oxide
+B766,Lead-acid deep cycle battery for UPS,1000.0,3.7,40.0,0.0,Cylindrical,10.0,,Lead Dioxide
+,Compact LiFePO4 battery for solar storage,10000.0,,70.0,,Cylindrical,5.0,Graphite,Lithium Cobalt Oxide
+B768,Solid-state battery prototype for aerospace,2500.0,24.0,50.0,-10.0,Prismatic,2.0,Lithium Metal,
+,Solid-state battery prototype for aerospace,3000.0,3.7,60.0,,,,Lithium Metal,
+B770,High capacity lithium-ion cell for EVs,1000.0,12.0,70.0,-20.0,Prismatic,20.0,Graphite,Lithium Iron Phosphate
+B771,Solid-state battery prototype for aerospace,2000.0,24.0,70.0,-10.0,Pouch,100.0,Lithium Metal,Lithium Cobalt Oxide
+,High capacity lithium-ion cell for EVs,,24.0,60.0,-20.0,Cylindrical,2.0,,Lithium Iron Phosphate
+B773,Lead-acid deep cycle battery for UPS,2500.0,3.6,40.0,-10.0,Pouch,2.0,Lead,Lead Dioxide
+B774,Compact LiFePO4 battery for solar storage,10000.0,12.0,60.0,,Pouch,,Graphite,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,3000.0,3.2,70.0,-10.0,Cylindrical,20.0,Graphite,Lithium Cobalt Oxide
+B776,High capacity lithium-ion cell for EVs,,3.7,40.0,0.0,Cylindrical,100.0,Graphite,
+,Compact LiFePO4 battery for solar storage,2500.0,3.6,50.0,0.0,Prismatic,20.0,,
+B778,Solid-state battery prototype for aerospace,,,50.0,0.0,Prismatic,,Lithium Metal,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.2,,-10.0,Pouch,2.0,,Nickel Oxyhydroxide
+B780,High capacity lithium-ion cell for EVs,2500.0,3.2,70.0,-10.0,Prismatic,2.0,,Lithium Iron Phosphate
+,Compact LiFePO4 battery for solar storage,5000.0,,,0.0,Prismatic,50.0,Graphite,Lithium Cobalt Oxide
+B782,High capacity lithium-ion cell for EVs,2500.0,,40.0,0.0,Cylindrical,5.0,Graphite,
+B783,High capacity lithium-ion cell for EVs,2500.0,3.7,50.0,-20.0,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B784,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,40.0,-20.0,Prismatic,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B785,Solid-state battery prototype for aerospace,2000.0,,70.0,-20.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+B786,High capacity lithium-ion cell for EVs,3000.0,24.0,50.0,,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B787,Compact LiFePO4 battery for solar storage,3000.0,3.7,,0.0,Cylindrical,10.0,Graphite,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,1000.0,3.7,60.0,0.0,Cylindrical,1.0,,Lead Dioxide
+B789,High capacity lithium-ion cell for EVs,3000.0,3.2,70.0,-20.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+B790,High capacity lithium-ion cell for EVs,5000.0,,70.0,-10.0,Cylindrical,50.0,Graphite,Lithium Iron Phosphate
+B791,Nickel-metal hydride battery pack for hybrid vehicles,,,60.0,0.0,Prismatic,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B792,Solid-state battery prototype for aerospace,1000.0,3.2,40.0,-10.0,Pouch,,Lithium Metal,Lithium Cobalt Oxide
+B793,Lead-acid deep cycle battery for UPS,10000.0,3.6,60.0,-10.0,Cylindrical,20.0,Lead,Lead Dioxide
+B794,Compact LiFePO4 battery for solar storage,2000.0,24.0,60.0,-10.0,Prismatic,1.0,,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,2000.0,12.0,70.0,,Prismatic,1.0,Lead,Lead Dioxide
+B796,Compact LiFePO4 battery for solar storage,3000.0,24.0,40.0,-10.0,Cylindrical,1.0,Graphite,Lithium Cobalt Oxide
+B797,Solid-state battery prototype for aerospace,,12.0,50.0,0.0,Pouch,20.0,Lithium Metal,Lithium Cobalt Oxide
+B798,Compact LiFePO4 battery for solar storage,10000.0,24.0,60.0,-20.0,Cylindrical,2.0,Graphite,
+B799,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,40.0,0.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B800,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.6,60.0,0.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,60.0,-20.0,,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B802,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.2,60.0,0.0,,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B803,Lead-acid deep cycle battery for UPS,,3.6,60.0,,Pouch,20.0,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,2500.0,3.2,70.0,-20.0,Prismatic,50.0,Lithium Metal,
+B805,Compact LiFePO4 battery for solar storage,2000.0,3.6,40.0,,,5.0,Graphite,Lithium Cobalt Oxide
+B806,Compact LiFePO4 battery for solar storage,2500.0,,40.0,,,100.0,Graphite,Lithium Cobalt Oxide
+B807,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,,0.0,Cylindrical,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B808,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,12.0,,-10.0,Pouch,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B809,High capacity lithium-ion cell for EVs,3000.0,12.0,70.0,0.0,Cylindrical,,,Lithium Iron Phosphate
+B810,Solid-state battery prototype for aerospace,1000.0,3.6,60.0,-20.0,Cylindrical,1.0,,Lithium Cobalt Oxide
+B811,Lead-acid deep cycle battery for UPS,5000.0,3.7,60.0,-20.0,Cylindrical,20.0,Lead,Lead Dioxide
+B812,Compact LiFePO4 battery for solar storage,3000.0,3.7,40.0,0.0,Pouch,50.0,Graphite,Lithium Cobalt Oxide
+B813,High capacity lithium-ion cell for EVs,2500.0,3.2,,-20.0,Cylindrical,1.0,Graphite,Lithium Iron Phosphate
+B814,High capacity lithium-ion cell for EVs,5000.0,3.2,50.0,,Cylindrical,50.0,Graphite,Lithium Iron Phosphate
+B815,Compact LiFePO4 battery for solar storage,,24.0,60.0,-20.0,Cylindrical,20.0,Graphite,Lithium Cobalt Oxide
+B816,Lead-acid deep cycle battery for UPS,10000.0,3.6,50.0,-10.0,,5.0,Lead,Lead Dioxide
+B817,High capacity lithium-ion cell for EVs,10000.0,3.2,60.0,0.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B818,High capacity lithium-ion cell for EVs,10000.0,3.2,70.0,-10.0,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B819,Solid-state battery prototype for aerospace,10000.0,3.6,70.0,-10.0,,,,Lithium Cobalt Oxide
+B820,Lead-acid deep cycle battery for UPS,,24.0,40.0,0.0,,10.0,Lead,Lead Dioxide
+B821,High capacity lithium-ion cell for EVs,1000.0,,60.0,-10.0,Pouch,2.0,Graphite,Lithium Iron Phosphate
+,Lead-acid deep cycle battery for UPS,3000.0,24.0,50.0,0.0,Prismatic,100.0,Lead,Lead Dioxide
+B823,Compact LiFePO4 battery for solar storage,2500.0,12.0,50.0,-10.0,Prismatic,50.0,Graphite,Lithium Cobalt Oxide
+B824,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,60.0,0.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B825,High capacity lithium-ion cell for EVs,,3.7,50.0,0.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+B826,Solid-state battery prototype for aerospace,5000.0,3.7,70.0,,Pouch,100.0,Lithium Metal,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,5000.0,,50.0,0.0,Cylindrical,2.0,Graphite,Lithium Cobalt Oxide
+B828,Lead-acid deep cycle battery for UPS,5000.0,3.7,40.0,0.0,Prismatic,5.0,Lead,Lead Dioxide
+B829,Compact LiFePO4 battery for solar storage,10000.0,12.0,70.0,-10.0,Pouch,20.0,Graphite,Lithium Cobalt Oxide
+B830,High capacity lithium-ion cell for EVs,5000.0,3.6,70.0,0.0,Prismatic,10.0,Graphite,Lithium Iron Phosphate
+B831,Lead-acid deep cycle battery for UPS,2000.0,3.7,70.0,-20.0,Cylindrical,,Lead,Lead Dioxide
+B832,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,60.0,-10.0,Prismatic,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B833,Compact LiFePO4 battery for solar storage,3000.0,24.0,,-10.0,Pouch,100.0,Graphite,
+,High capacity lithium-ion cell for EVs,10000.0,12.0,70.0,,,10.0,,Lithium Iron Phosphate
+B835,Solid-state battery prototype for aerospace,2000.0,,60.0,-10.0,,10.0,Lithium Metal,Lithium Cobalt Oxide
+,Lead-acid deep cycle battery for UPS,2500.0,24.0,50.0,-10.0,Cylindrical,50.0,Lead,Lead Dioxide
+B837,Compact LiFePO4 battery for solar storage,2500.0,24.0,60.0,-10.0,,,Graphite,Lithium Cobalt Oxide
+B838,Compact LiFePO4 battery for solar storage,5000.0,12.0,60.0,-10.0,Cylindrical,1.0,,Lithium Cobalt Oxide
+B839,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.6,70.0,,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B840,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,40.0,-20.0,Pouch,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Solid-state battery prototype for aerospace,1000.0,3.6,40.0,-10.0,Pouch,20.0,,Lithium Cobalt Oxide
+B842,Solid-state battery prototype for aerospace,3000.0,12.0,40.0,-10.0,,,,Lithium Cobalt Oxide
+B843,High capacity lithium-ion cell for EVs,1000.0,24.0,50.0,-20.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B844,High capacity lithium-ion cell for EVs,,24.0,60.0,-20.0,,,Graphite,Lithium Iron Phosphate
+B845,Solid-state battery prototype for aerospace,2000.0,3.2,40.0,-20.0,Cylindrical,,Lithium Metal,
+B846,Solid-state battery prototype for aerospace,,3.7,70.0,-10.0,Pouch,20.0,,Lithium Cobalt Oxide
+B847,Lead-acid deep cycle battery for UPS,10000.0,12.0,40.0,-10.0,,5.0,,Lead Dioxide
+B848,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.2,40.0,0.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B849,High capacity lithium-ion cell for EVs,,3.7,60.0,,,,Graphite,Lithium Iron Phosphate
+B850,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,60.0,-10.0,Pouch,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B851,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.6,60.0,-20.0,,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B852,Solid-state battery prototype for aerospace,3000.0,3.7,50.0,,Prismatic,2.0,,Lithium Cobalt Oxide
+B853,Lead-acid deep cycle battery for UPS,5000.0,24.0,50.0,-20.0,Cylindrical,20.0,Lead,Lead Dioxide
+B854,Compact LiFePO4 battery for solar storage,1000.0,3.2,40.0,-10.0,Cylindrical,5.0,Graphite,Lithium Cobalt Oxide
+B855,Lead-acid deep cycle battery for UPS,3000.0,3.7,60.0,0.0,Prismatic,1.0,Lead,Lead Dioxide
+,Lead-acid deep cycle battery for UPS,10000.0,3.7,,0.0,Prismatic,5.0,Lead,Lead Dioxide
+B857,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,24.0,70.0,-20.0,Cylindrical,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Lead-acid deep cycle battery for UPS,10000.0,12.0,,-10.0,,100.0,Lead,
+B859,High capacity lithium-ion cell for EVs,2500.0,3.6,60.0,,,20.0,,Lithium Iron Phosphate
+B860,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,24.0,,,Pouch,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B861,High capacity lithium-ion cell for EVs,3000.0,3.6,70.0,-10.0,Pouch,20.0,,
+B862,Compact LiFePO4 battery for solar storage,1000.0,12.0,60.0,-20.0,Cylindrical,100.0,Graphite,Lithium Cobalt Oxide
+B863,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,50.0,,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B864,Compact LiFePO4 battery for solar storage,2000.0,,50.0,-20.0,Cylindrical,10.0,Graphite,
+B865,Nickel-metal hydride battery pack for hybrid vehicles,,3.2,60.0,,,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B866,Solid-state battery prototype for aerospace,3000.0,,70.0,,,20.0,Lithium Metal,Lithium Cobalt Oxide
+B867,Lead-acid deep cycle battery for UPS,1000.0,24.0,40.0,-10.0,Pouch,2.0,Lead,Lead Dioxide
+,Solid-state battery prototype for aerospace,5000.0,,60.0,0.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B869,Compact LiFePO4 battery for solar storage,2000.0,,60.0,-10.0,Pouch,,Graphite,Lithium Cobalt Oxide
+B870,Lead-acid deep cycle battery for UPS,10000.0,24.0,40.0,,Prismatic,100.0,Lead,
+B871,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,24.0,60.0,0.0,Prismatic,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B872,Lead-acid deep cycle battery for UPS,3000.0,,40.0,-10.0,Prismatic,5.0,Lead,Lead Dioxide
+,High capacity lithium-ion cell for EVs,3000.0,3.2,70.0,0.0,Prismatic,20.0,Graphite,
+B874,Lead-acid deep cycle battery for UPS,10000.0,24.0,50.0,-10.0,Pouch,20.0,Lead,Lead Dioxide
+B875,High capacity lithium-ion cell for EVs,,3.2,70.0,0.0,Pouch,,Graphite,
+B876,Lead-acid deep cycle battery for UPS,5000.0,12.0,50.0,-20.0,Prismatic,,Lead,
+B877,High capacity lithium-ion cell for EVs,3000.0,24.0,40.0,-10.0,,1.0,Graphite,Lithium Iron Phosphate
+B878,Compact LiFePO4 battery for solar storage,,3.2,50.0,-10.0,Pouch,1.0,Graphite,
+B879,Solid-state battery prototype for aerospace,10000.0,3.6,70.0,-20.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B880,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,24.0,50.0,0.0,Prismatic,2.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B881,Lead-acid deep cycle battery for UPS,5000.0,24.0,40.0,,Prismatic,5.0,Lead,Lead Dioxide
+B882,Solid-state battery prototype for aerospace,2500.0,12.0,50.0,-20.0,,5.0,,Lithium Cobalt Oxide
+B883,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,60.0,0.0,Prismatic,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B884,Nickel-metal hydride battery pack for hybrid vehicles,,3.7,70.0,,Cylindrical,50.0,Hydrogen-absorbing Alloy,
+B885,High capacity lithium-ion cell for EVs,1000.0,,60.0,-10.0,Prismatic,100.0,Graphite,Lithium Iron Phosphate
+B886,Compact LiFePO4 battery for solar storage,2500.0,12.0,40.0,-10.0,Pouch,2.0,Graphite,Lithium Cobalt Oxide
+B887,Compact LiFePO4 battery for solar storage,,12.0,50.0,-10.0,Cylindrical,,Graphite,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,,3.7,60.0,-20.0,Cylindrical,5.0,Lithium Metal,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,2500.0,12.0,60.0,-10.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+B890,Lead-acid deep cycle battery for UPS,1000.0,,50.0,,Prismatic,1.0,Lead,Lead Dioxide
+B891,Compact LiFePO4 battery for solar storage,10000.0,24.0,50.0,-10.0,Cylindrical,1.0,,
+B892,Solid-state battery prototype for aerospace,1000.0,,,-10.0,Pouch,5.0,Lithium Metal,
+B893,Compact LiFePO4 battery for solar storage,5000.0,3.6,60.0,-10.0,Pouch,100.0,Graphite,Lithium Cobalt Oxide
+B894,Lead-acid deep cycle battery for UPS,3000.0,3.6,,-10.0,Prismatic,2.0,Lead,
+B895,High capacity lithium-ion cell for EVs,2500.0,,40.0,,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B896,Solid-state battery prototype for aerospace,10000.0,3.2,,-10.0,Pouch,,Lithium Metal,
+B897,High capacity lithium-ion cell for EVs,2500.0,3.7,40.0,,,,Graphite,Lithium Iron Phosphate
+B898,High capacity lithium-ion cell for EVs,2500.0,3.7,60.0,0.0,,5.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,1000.0,3.2,,-20.0,Prismatic,1.0,Graphite,
+,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,60.0,,Cylindrical,20.0,Hydrogen-absorbing Alloy,
+B901,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,12.0,,-20.0,Prismatic,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B902,High capacity lithium-ion cell for EVs,2000.0,24.0,,-20.0,Cylindrical,2.0,Graphite,Lithium Iron Phosphate
+B903,Solid-state battery prototype for aerospace,2000.0,24.0,40.0,-10.0,Cylindrical,20.0,,Lithium Cobalt Oxide
+B904,Lead-acid deep cycle battery for UPS,2500.0,3.2,50.0,,Pouch,50.0,Lead,Lead Dioxide
+B905,Lead-acid deep cycle battery for UPS,3000.0,,50.0,,Pouch,5.0,Lead,Lead Dioxide
+B906,Compact LiFePO4 battery for solar storage,10000.0,,50.0,0.0,Pouch,100.0,Graphite,Lithium Cobalt Oxide
+B907,Solid-state battery prototype for aerospace,1000.0,3.6,60.0,-20.0,Prismatic,1.0,Lithium Metal,Lithium Cobalt Oxide
+B908,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,,40.0,0.0,Pouch,100.0,,Nickel Oxyhydroxide
+B909,High capacity lithium-ion cell for EVs,3000.0,3.6,70.0,0.0,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B910,Compact LiFePO4 battery for solar storage,1000.0,3.2,60.0,,,20.0,Graphite,Lithium Cobalt Oxide
+B911,Lead-acid deep cycle battery for UPS,2500.0,3.2,,-20.0,,10.0,Lead,
+B912,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,40.0,0.0,Prismatic,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Nickel-metal hydride battery pack for hybrid vehicles,2000.0,3.6,60.0,-10.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B914,High capacity lithium-ion cell for EVs,1000.0,3.2,70.0,0.0,Cylindrical,20.0,Graphite,Lithium Iron Phosphate
+B915,Lead-acid deep cycle battery for UPS,10000.0,3.2,70.0,0.0,Prismatic,50.0,,Lead Dioxide
+B916,Solid-state battery prototype for aerospace,5000.0,,50.0,-10.0,,10.0,Lithium Metal,Lithium Cobalt Oxide
+B917,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,12.0,50.0,-10.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B918,High capacity lithium-ion cell for EVs,1000.0,3.2,50.0,,Cylindrical,20.0,,Lithium Iron Phosphate
+B919,Solid-state battery prototype for aerospace,5000.0,3.7,60.0,-20.0,Pouch,1.0,Lithium Metal,
+B920,Lead-acid deep cycle battery for UPS,5000.0,,40.0,0.0,Cylindrical,10.0,Lead,Lead Dioxide
+B921,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,24.0,40.0,-10.0,Prismatic,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B922,Solid-state battery prototype for aerospace,3000.0,3.2,50.0,-20.0,,50.0,Lithium Metal,Lithium Cobalt Oxide
+B923,Solid-state battery prototype for aerospace,10000.0,3.2,50.0,0.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+,Solid-state battery prototype for aerospace,3000.0,3.2,50.0,,Pouch,2.0,,Lithium Cobalt Oxide
+B925,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,3.7,70.0,0.0,,2.0,,Nickel Oxyhydroxide
+,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,12.0,50.0,-20.0,Prismatic,1.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B927,Compact LiFePO4 battery for solar storage,1000.0,,,,Pouch,5.0,Graphite,Lithium Cobalt Oxide
+B928,Lead-acid deep cycle battery for UPS,,3.2,40.0,-10.0,Prismatic,10.0,Lead,Lead Dioxide
+,High capacity lithium-ion cell for EVs,3000.0,3.6,,,,,Graphite,Lithium Iron Phosphate
+B930,Solid-state battery prototype for aerospace,5000.0,,60.0,-10.0,Prismatic,1.0,Lithium Metal,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,2000.0,3.2,60.0,-20.0,Prismatic,50.0,Graphite,Lithium Cobalt Oxide
+B932,High capacity lithium-ion cell for EVs,2500.0,3.6,,-20.0,Pouch,5.0,Graphite,Lithium Iron Phosphate
+B933,Compact LiFePO4 battery for solar storage,1000.0,24.0,,0.0,Cylindrical,,,Lithium Cobalt Oxide
+B934,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,3.2,70.0,,,100.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Solid-state battery prototype for aerospace,2500.0,3.2,50.0,0.0,Prismatic,1.0,Lithium Metal,
+B936,High capacity lithium-ion cell for EVs,,3.6,70.0,-10.0,Prismatic,1.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,,3.7,50.0,0.0,Pouch,100.0,Graphite,Lithium Iron Phosphate
+B938,High capacity lithium-ion cell for EVs,2500.0,3.2,50.0,0.0,Pouch,10.0,Graphite,Lithium Iron Phosphate
+,High capacity lithium-ion cell for EVs,2000.0,24.0,,-20.0,Pouch,1.0,Graphite,Lithium Iron Phosphate
+B940,High capacity lithium-ion cell for EVs,10000.0,3.2,70.0,-20.0,Cylindrical,100.0,Graphite,Lithium Iron Phosphate
+B941,Compact LiFePO4 battery for solar storage,,,70.0,0.0,Prismatic,10.0,Graphite,Lithium Cobalt Oxide
+B942,Solid-state battery prototype for aerospace,10000.0,12.0,50.0,0.0,Pouch,10.0,Lithium Metal,Lithium Cobalt Oxide
+B943,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,,-20.0,Prismatic,20.0,,Nickel Oxyhydroxide
+B944,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,24.0,,0.0,Cylindrical,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B945,Nickel-metal hydride battery pack for hybrid vehicles,10000.0,,40.0,-10.0,Cylindrical,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B946,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,,50.0,-10.0,Cylindrical,5.0,Hydrogen-absorbing Alloy,
+B947,Compact LiFePO4 battery for solar storage,2500.0,3.2,40.0,-10.0,,5.0,,
+B948,Lead-acid deep cycle battery for UPS,10000.0,12.0,40.0,0.0,Prismatic,20.0,Lead,Lead Dioxide
+B949,Solid-state battery prototype for aerospace,10000.0,24.0,50.0,,Cylindrical,10.0,Lithium Metal,
+B950,High capacity lithium-ion cell for EVs,2500.0,3.2,50.0,,Cylindrical,10.0,Graphite,Lithium Iron Phosphate
+B951,Lead-acid deep cycle battery for UPS,3000.0,3.2,,0.0,Pouch,,Lead,
+B952,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.7,50.0,-20.0,Cylindrical,20.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B953,Lead-acid deep cycle battery for UPS,1000.0,3.6,50.0,-20.0,Pouch,1.0,Lead,Lead Dioxide
+B954,Solid-state battery prototype for aerospace,10000.0,,60.0,-20.0,Cylindrical,20.0,Lithium Metal,Lithium Cobalt Oxide
+B955,High capacity lithium-ion cell for EVs,2000.0,12.0,,-10.0,Cylindrical,1.0,Graphite,Lithium Iron Phosphate
+B956,High capacity lithium-ion cell for EVs,10000.0,3.6,70.0,0.0,Pouch,2.0,Graphite,Lithium Iron Phosphate
+,Solid-state battery prototype for aerospace,10000.0,3.2,70.0,-20.0,,100.0,,Lithium Cobalt Oxide
+B958,Solid-state battery prototype for aerospace,1000.0,3.7,60.0,0.0,Prismatic,5.0,,Lithium Cobalt Oxide
+B959,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.7,50.0,,Prismatic,,Hydrogen-absorbing Alloy,
+B960,High capacity lithium-ion cell for EVs,10000.0,12.0,70.0,-10.0,Cylindrical,,Graphite,Lithium Iron Phosphate
+B961,Lead-acid deep cycle battery for UPS,2500.0,3.7,70.0,-20.0,Prismatic,100.0,Lead,Lead Dioxide
+,Compact LiFePO4 battery for solar storage,2500.0,3.6,,-20.0,Pouch,,Graphite,
+,Compact LiFePO4 battery for solar storage,2000.0,3.2,70.0,0.0,Cylindrical,50.0,Graphite,Lithium Cobalt Oxide
+B964,Solid-state battery prototype for aerospace,2500.0,3.6,50.0,,Cylindrical,,Lithium Metal,Lithium Cobalt Oxide
+B965,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,24.0,50.0,0.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B966,Compact LiFePO4 battery for solar storage,3000.0,12.0,40.0,-20.0,,5.0,Graphite,Lithium Cobalt Oxide
+B967,High capacity lithium-ion cell for EVs,3000.0,,,0.0,Pouch,10.0,,
+B968,Solid-state battery prototype for aerospace,5000.0,,70.0,0.0,Cylindrical,2.0,Lithium Metal,
+,Lead-acid deep cycle battery for UPS,10000.0,3.7,70.0,0.0,Pouch,5.0,Lead,Lead Dioxide
+B970,Solid-state battery prototype for aerospace,1000.0,3.2,60.0,0.0,Pouch,100.0,Lithium Metal,Lithium Cobalt Oxide
+B971,Lead-acid deep cycle battery for UPS,2500.0,3.2,70.0,-10.0,Prismatic,1.0,Lead,
+B972,Solid-state battery prototype for aerospace,3000.0,3.2,50.0,0.0,Prismatic,20.0,Lithium Metal,Lithium Cobalt Oxide
+B973,Solid-state battery prototype for aerospace,1000.0,3.7,,-20.0,Cylindrical,,Lithium Metal,
+B974,Solid-state battery prototype for aerospace,3000.0,,60.0,-10.0,,10.0,Lithium Metal,Lithium Cobalt Oxide
+B975,Lead-acid deep cycle battery for UPS,,3.2,60.0,-10.0,Prismatic,50.0,Lead,Lead Dioxide
+B976,Lead-acid deep cycle battery for UPS,3000.0,,70.0,0.0,Pouch,100.0,Lead,Lead Dioxide
+B977,Solid-state battery prototype for aerospace,10000.0,3.7,40.0,-10.0,Pouch,50.0,,Lithium Cobalt Oxide
+B978,Compact LiFePO4 battery for solar storage,10000.0,24.0,,0.0,Prismatic,2.0,,Lithium Cobalt Oxide
+,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.7,60.0,-20.0,Prismatic,100.0,Hydrogen-absorbing Alloy,
+B980,Nickel-metal hydride battery pack for hybrid vehicles,5000.0,3.7,70.0,0.0,Prismatic,10.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,70.0,-10.0,,,Hydrogen-absorbing Alloy,
+B982,Lead-acid deep cycle battery for UPS,,3.7,60.0,-20.0,Cylindrical,,,
+B983,Lead-acid deep cycle battery for UPS,10000.0,3.7,40.0,0.0,,50.0,Lead,Lead Dioxide
+B984,Compact LiFePO4 battery for solar storage,1000.0,,60.0,-20.0,Prismatic,5.0,Graphite,Lithium Cobalt Oxide
+B985,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,3.2,70.0,-20.0,,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B986,Nickel-metal hydride battery pack for hybrid vehicles,3000.0,12.0,,-10.0,Cylindrical,,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B987,Solid-state battery prototype for aerospace,1000.0,12.0,60.0,-20.0,Cylindrical,5.0,Lithium Metal,Lithium Cobalt Oxide
+B988,Lead-acid deep cycle battery for UPS,10000.0,12.0,40.0,-10.0,Prismatic,1.0,Lead,Lead Dioxide
+B989,Nickel-metal hydride battery pack for hybrid vehicles,2500.0,3.6,60.0,-20.0,Pouch,50.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+,Compact LiFePO4 battery for solar storage,5000.0,3.7,60.0,0.0,Cylindrical,,,Lithium Cobalt Oxide
+,Compact LiFePO4 battery for solar storage,2500.0,3.2,70.0,-20.0,Prismatic,5.0,Graphite,Lithium Cobalt Oxide
+B992,Nickel-metal hydride battery pack for hybrid vehicles,1000.0,24.0,40.0,0.0,Prismatic,5.0,Hydrogen-absorbing Alloy,Nickel Oxyhydroxide
+B993,Lead-acid deep cycle battery for UPS,2500.0,,50.0,0.0,Pouch,2.0,Lead,Lead Dioxide
+B994,Compact LiFePO4 battery for solar storage,10000.0,3.6,40.0,-20.0,Prismatic,20.0,Graphite,Lithium Cobalt Oxide
+B995,Solid-state battery prototype for aerospace,,3.7,60.0,0.0,Prismatic,50.0,,Lithium Cobalt Oxide
+B996,Compact LiFePO4 battery for solar storage,1000.0,3.7,60.0,,Cylindrical,10.0,Graphite,Lithium Cobalt Oxide
+B997,High capacity lithium-ion cell for EVs,3000.0,3.6,60.0,-20.0,,50.0,Graphite,
+,High capacity lithium-ion cell for EVs,2500.0,12.0,40.0,,Pouch,10.0,Graphite,Lithium Iron Phosphate
