@@ -59,6 +59,8 @@ The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddin
    - Cosine similarity is calculated across all pairs of material vectors in the `material_matrix`.  
    - A high similarity score indicates that two materials share similar descriptive language in `PART_DESCRIPTION`.
 
+Figure 2 depicts the TF-IDF approach for identifying alternative battery electrode materials. 
+
 ### Output
 
 - The code prints the **top 5 most similar materials** for each material in the terminal.
