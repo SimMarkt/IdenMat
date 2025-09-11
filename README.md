@@ -1,12 +1,3 @@
-IN PROGRESS ...
-
-
-
-Note: The battery data set is synthetic, since the original data set is confidential.
-
-
-
-
 # IdenMat: Identifying alternative materials
 
 This project focuses on identifying alternative electrode materials based on textual patterns in `PART_DESCRIPTION` using natural language processing (NLP) techniques. It leverages **TF-IDF vectorization** and **cosine similarity** to measure the relationship between materials and surrounding descriptive terms, with optional visualization and preprocessing strategies to improve data quality and interpretability.
@@ -61,10 +52,28 @@ The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddin
 
 Figure 2 depicts the TF-IDF approach for identifying alternative battery electrode materials. 
 
+![TF-IDF_Det](plots/TF-IDF_Details.png)
+
+*Figure 2: TF-IDF vectorization into the TF-IDF matrix with averaged material vectors.*
+
 ### Output
 
-- The code prints the **top 5 most similar materials** for each material in the terminal.
-- A **heatmap of cosine similarity scores** is saved to the `plots/` directory to visualize material relationships.
+The code prints the **top 5 most similar materials** for each material in the terminal.
+In addition, a **heatmap of cosine similarity scores** is saved to the `plots/` directory to visualize material relationships (Fig. 3). The similarity results are in a good agreement with electrochemical properties for the following combinations:
+
+- *Lead dioxide* ↔ *manganese dioxide*: Both are transition-metal oxides used in aqueous systems (lead–acid vs alkaline zinc–MnO₂). They’re not identical, but clustering them together is not unreasonable.
+- *Lithium cobalt oxide* ↔ *nickel manganese cobalt / nickel cobalt aluminum oxide*: These are all layered Li-ion oxides.
+- *Lithium iron phosphate* ↔ *sodium iron phosphate*: Both are olivine phosphates → logical similarity.
+- *Lithium manganese oxide* ↔ *lithium cobalt oxide / nickel manganese cobalt*: All Li-ion cathodes, often blended in practice.
+- *Sodium layered oxide* ↔ *sodium iron phosphate*: Reasonable — both are Na-ion families, often discussed together.
+- *Sulfur* ↔ *oxygen*: Both are conversion-type cathodes (Li–S, Li–air).
+- *Vanadium(V)* ↔ *vanadium redox*: Both are the same redox couple family.
+
+Others suffer from discprepancies, likely due to the limitations of relying solely on textual co-occurrence patterns without structured attributes.
+
+![Sim](plots/similarity_heat_map.png)
+
+*Figure 3: Similarity heat map of the battery cathode materials.*
 
 ### Key Considerations
 

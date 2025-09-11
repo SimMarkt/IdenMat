@@ -12,7 +12,7 @@ B10,"Lithium Iron Phosphate-based battery with 4617 mAh, 3.3 V, Prismatic form f
 B11,"Manganese Dioxide-based battery with 574 mAh, 1.5 V, Prismatic form factor",Zinc,Manganese Dioxide,,,50.0,-10.0,Prismatic,42.0
 B12,"Lithium Cobalt Oxide-based battery with 3747 mAh, 3.7 V, Pouch form factor",Hard Carbon,Lithium Cobalt Oxide,3747.0,3.7,,-20.0,Pouch,80.0
 B13,"Nickel Cobalt Aluminum Oxide-based battery with 1189 mAh, 3.6 V, Pouch form factor",Lithium Metal,Nickel Cobalt Aluminum Oxide,1189.0,3.6,60.0,,Pouch,62.0
-B14,"Lithium Iron Phosphate-based battery with 3505 mAh, 3.2 V, Prismatic form factor",Graphite,Lithium Iron Phosphate,3505.0,3.2,60.0,-20.0,Prismatic,51.0
+B14,"Solid-state battery with 3505 mAh, 3.2 V, Prismatic form factor",Graphite,Lithium Iron Phosphate,3505.0,3.2,60.0,-20.0,Prismatic,51.0
 B15,"Nickel Cobalt Aluminum Oxide-based battery with 8734 mAh, 3.7 V, Pouch form factor",Zinc,Nickel Cobalt Aluminum Oxide,8734.0,3.7,60.0,-20.0,,
 B16,"Vanadium(V)-based battery with 2528 mAh, 1.6 V, Flow cell form factor",Lithium Metal,Vanadium(V),2528.0,1.6,,0.0,Flow cell,140.0
 B17,"Lead Dioxide-based battery with 4056 mAh, 12.0 V, Prismatic form factor",Hard Carbon,,4056.0,12.0,60.0,-10.0,Prismatic,60.0
@@ -48,7 +48,7 @@ B46,"Manganese Dioxide-based battery with 3745 mAh, 1.5 V, Cylindrical form fact
 B47,"Nickel Cobalt Aluminum Oxide-based battery with 3731 mAh, 3.6 V, Cylindrical form factor",Hydrogen storage alloy,Nickel Cobalt Aluminum Oxide,3731.0,3.6,60.0,-20.0,,86.0
 B48,"Lithium Manganese Oxide-based battery with 2070 mAh, 3.2 V, Pouch form factor",Hard Carbon,Lithium Manganese Oxide,2070.0,3.2,60.0,-20.0,Pouch,
 B49,"Nickel Cobalt Aluminum Oxide-based battery with 9110 mAh, 3.6 V, Prismatic form factor",Lead,Nickel Cobalt Aluminum Oxide,9110.0,3.6,60.0,,Prismatic,78.0
-B50,"Lithium Cobalt Oxide-based battery with 4840 mAh, 3.6 V, Prismatic form factor",Graphite,Lithium Cobalt Oxide,4840.0,3.6,60.0,-20.0,Prismatic,
+B50,"Compact Lithium Cobalt Oxide-based battery with 4840 mAh, 3.6 V, Prismatic form factor",Graphite,Lithium Cobalt Oxide,4840.0,3.6,60.0,-20.0,Prismatic,
 B51,"Lithium Manganese Oxide-based battery with 1002 mAh, 3.3 V, Pouch form factor",Cadmium,Lithium Manganese Oxide,1002.0,3.3,,-20.0,Pouch,14.0
 B52,"Sodium Layered Oxide-based battery with 1370 mAh, 3.0 V, Cylindrical form factor",Graphite,Sodium Layered Oxide,,,,-20.0,Cylindrical,27.0
 B53,"Sodium Iron Phosphate-based battery with 4988 mAh, 3.0 V, Cylindrical form factor",Lithium Metal,Sodium Iron Phosphate,,3.0,50.0,-20.0,Cylindrical,15.0
@@ -103,7 +103,7 @@ B100,"Lithium Iron Phosphate-based battery with 7116 mAh, 3.2 V, Pouch form fact
 B101,"Sulfur-based battery with 2698 mAh, 2.5 V, Pouch form factor",Zinc,Sulfur,2698.0,2.5,50.0,-20.0,Pouch,31.0
 B102,"Nickel Manganese Cobalt-based battery with 1262 mAh, 3.7 V, Prismatic form factor",Zinc,Nickel Manganese Cobalt,1262.0,3.7,60.0,-20.0,,16.0
 B103,"Lithium Manganese Oxide-based battery with 1123 mAh, 3.3 V, Prismatic form factor",Cadmium,Lithium Manganese Oxide,1123.0,3.3,60.0,,Prismatic,60.0
-B104,"Lithium Iron Phosphate-based battery with 2549 mAh, 3.2 V, Prismatic form factor",Hydrogen storage alloy,Lithium Iron Phosphate,2549.0,3.2,60.0,-20.0,,1.0
+B104,"Solid-state battery with 2549 mAh, 3.2 V, Prismatic form factor",Hydrogen storage alloy,Lithium Iron Phosphate,2549.0,3.2,60.0,-20.0,,1.0
 B105,"Nickel Cobalt Aluminum Oxide-based battery with 5548 mAh, 3.7 V, Cylindrical form factor",Hydrogen storage alloy,Nickel Cobalt Aluminum Oxide,5548.0,3.7,60.0,,Cylindrical,37.0
 B106,"Lead Dioxide-based battery with 7658 mAh, 12.0 V, Cylindrical form factor",Lead,Lead Dioxide,7658.0,12.0,60.0,,Cylindrical,18.0
 B107,"Lead Dioxide-based battery with 7900 mAh, 12.0 V, Cylindrical form factor",Cadmium,Lead Dioxide,7900.0,,60.0,-10.0,Cylindrical,108.0
@@ -182,7 +182,7 @@ B176,"Nickel Cobalt Aluminum Oxide-based battery with 2664 mAh, 3.6 V, Prismatic
 B177,"Lithium Iron Phosphate-based battery with 1012 mAh, 3.3 V, Pouch form factor",Hard Carbon,Lithium Iron Phosphate,1012.0,3.3,60.0,-20.0,Pouch,
 B178,"Vanadium Redox-based battery with 8805 mAh, 1.6 V, Flow cell form factor",Zinc,Vanadium Redox,8805.0,1.6,40.0,0.0,,127.0
 B179,"Nickel Manganese Cobalt-based battery with 4672 mAh, 3.7 V, Cylindrical form factor",Cadmium,Nickel Manganese Cobalt,4672.0,3.7,60.0,-20.0,Cylindrical,1.0
-B180,"Lithium Cobalt Oxide-based battery with 5070 mAh, 3.7 V, Cylindrical form factor",Zinc,Lithium Cobalt Oxide,5070.0,,60.0,-20.0,Cylindrical,64.0
+B180,"Compact Lithium Cobalt Oxide-based battery with 5070 mAh, 3.7 V, Cylindrical form factor",Zinc,Lithium Cobalt Oxide,5070.0,,60.0,-20.0,Cylindrical,64.0
 B181,"Lead Dioxide-based battery with 1080 mAh, 12.0 V, Prismatic form factor",Cadmium,Lead Dioxide,,12.0,60.0,-10.0,Prismatic,31.0
 B182,"Nickel Manganese Cobalt-based battery with 9130 mAh, 3.6 V, Prismatic form factor",Lead,Nickel Manganese Cobalt,9130.0,3.6,60.0,-20.0,Prismatic,76.0
 B183,"Nickel Cobalt Aluminum Oxide-based battery with 2679 mAh, 3.7 V, Pouch form factor",Graphite,Nickel Cobalt Aluminum Oxide,2679.0,3.7,60.0,-20.0,Pouch,
@@ -278,7 +278,7 @@ B272,"Nickel Manganese Cobalt-based battery with 5964 mAh, 3.7 V, Pouch form fac
 B273,"Lead Dioxide-based battery with 5335 mAh, 12.0 V, Cylindrical form factor",Hard Carbon,Lead Dioxide,5335.0,12.0,60.0,-10.0,Cylindrical,164.0
 B274,"Lithium Cobalt Oxide-based battery with 8102 mAh, 3.7 V, Prismatic form factor",Cadmium,Lithium Cobalt Oxide,,3.7,,-20.0,Prismatic,
 B275,"Lead Dioxide-based battery with 5820 mAh, 12.0 V, Prismatic form factor",Lead,Lead Dioxide,5820.0,12.0,60.0,-10.0,,170.0
-B276,"Lithium Iron Phosphate-based battery with 3008 mAh, 3.2 V, Pouch form factor",Lithium Metal,Lithium Iron Phosphate,3008.0,3.2,60.0,-20.0,Pouch,92.0
+B276,"Solid-state battery with 3008 mAh, 3.2 V, Pouch form factor",Lithium Metal,Lithium Iron Phosphate,3008.0,3.2,60.0,-20.0,Pouch,92.0
 B277,"Lithium Manganese Oxide-based battery with 1424 mAh, 3.3 V, Pouch form factor",Graphite,,1424.0,3.3,60.0,,,13.0
 B278,"Lithium Cobalt Oxide-based battery with 8714 mAh, 3.7 V, Prismatic form factor",Zinc,Lithium Cobalt Oxide,8714.0,3.7,60.0,-20.0,Prismatic,6.0
 B279,"Lithium Manganese Oxide-based battery with 7526 mAh, 3.3 V, Prismatic form factor",Graphite,Lithium Manganese Oxide,7526.0,3.3,60.0,-20.0,Prismatic,69.0
@@ -356,7 +356,7 @@ B349,"Lithium Manganese Oxide-based battery with 5069 mAh, 3.3 V, Pouch form fac
 B350,"Nickel Manganese Cobalt-based battery with 3125 mAh, 3.6 V, Cylindrical form factor",Lead,Nickel Manganese Cobalt,3125.0,3.6,60.0,-20.0,,88.0
 B351,"Nickel Cobalt Aluminum Oxide-based battery with 1364 mAh, 3.7 V, Prismatic form factor",Hard Carbon,Nickel Cobalt Aluminum Oxide,1364.0,3.7,60.0,-20.0,,26.0
 B352,"Lead Dioxide-based battery with 5121 mAh, 12.0 V, Cylindrical form factor",Zinc,Lead Dioxide,5121.0,12.0,60.0,-10.0,Cylindrical,196.0
-B353,"Lithium Manganese Oxide-based battery with 5478 mAh, 3.3 V, Pouch form factor",Lead,Lithium Manganese Oxide,5478.0,,,-20.0,,7.0
+B353,"Lead-acid deep cycle battery with 5478 mAh, 3.3 V, Pouch form factor",Lead,Lithium Manganese Oxide,5478.0,,,-20.0,,7.0
 B354,"Lithium Manganese Oxide-based battery with 2146 mAh, 3.2 V, Pouch form factor",Hydrogen storage alloy,Lithium Manganese Oxide,2146.0,3.2,60.0,,Pouch,
 B355,"Lithium Manganese Oxide-based battery with 7006 mAh, 3.3 V, Prismatic form factor",Lead,Lithium Manganese Oxide,7006.0,3.3,60.0,-20.0,Prismatic,18.0
 B356,"Manganese Dioxide-based battery with 2006 mAh, 1.5 V, Cylindrical form factor",Graphite,Manganese Dioxide,2006.0,1.5,50.0,-10.0,Cylindrical,15.0
@@ -494,7 +494,7 @@ B486,"Lithium Cobalt Oxide-based battery with 7645 mAh, 3.6 V, Cylindrical form 
 B487,"Lead Dioxide-based battery with 5732 mAh, 12.0 V, Prismatic form factor",Hydrogen storage alloy,Lead Dioxide,5732.0,,60.0,,Prismatic,123.0
 B488,"Lithium Manganese Oxide-based battery with 6297 mAh, 3.3 V, Prismatic form factor",Lead,Lithium Manganese Oxide,6297.0,3.3,60.0,,Prismatic,51.0
 B489,"Lithium Cobalt Oxide-based battery with 7016 mAh, 3.6 V, Prismatic form factor",Cadmium,Lithium Cobalt Oxide,7016.0,3.6,60.0,,Prismatic,8.0
-B490,"Nickel Manganese Cobalt-based battery with 9038 mAh, 3.6 V, Pouch form factor",Hard Carbon,Nickel Manganese Cobalt,9038.0,3.6,60.0,-20.0,Pouch,3.0
+B490,"Lead-acid deep cycle battery with 9038 mAh, 3.6 V, Pouch form factor",Hard Carbon,Nickel Manganese Cobalt,9038.0,3.6,60.0,-20.0,Pouch,3.0
 B491,"Lithium Manganese Oxide-based battery with 5373 mAh, 3.3 V, Pouch form factor",Hydrogen storage alloy,Lithium Manganese Oxide,5373.0,3.3,,-20.0,,
 B492,"Nickel Cobalt Aluminum Oxide-based battery with 7305 mAh, 3.6 V, Prismatic form factor",Hard Carbon,Nickel Cobalt Aluminum Oxide,7305.0,3.6,,,Prismatic,97.0
 B493,"Vanadium Redox-based battery with 1054 mAh, 1.6 V, Flow cell form factor",Graphite,Vanadium Redox,1054.0,1.6,40.0,0.0,,41.0
@@ -618,7 +618,7 @@ B609,"Lithium Manganese Oxide-based battery with 5929 mAh, 3.3 V, Pouch form fac
 B610,"Vanadium Redox-based battery with 8274 mAh, 1.6 V, Flow cell form factor",Cadmium,Vanadium Redox,8274.0,1.6,40.0,0.0,Flow cell,66.0
 B611,"Lead Dioxide-based battery with 2765 mAh, 12.0 V, Cylindrical form factor",Lithium Metal,Lead Dioxide,2765.0,,60.0,-10.0,Cylindrical,178.0
 B612,"Lithium Iron Phosphate-based battery with 3053 mAh, 3.2 V, Prismatic form factor",Hard Carbon,Lithium Iron Phosphate,3053.0,3.2,60.0,-20.0,Prismatic,3.0
-B613,"Lithium Cobalt Oxide-based battery with 4845 mAh, 3.7 V, Pouch form factor",Lead,Lithium Cobalt Oxide,4845.0,3.7,,-20.0,,5.0
+B613,"Lead-acid deep battery with 4845 mAh, 3.7 V, Pouch form factor",Lead,Lithium Cobalt Oxide,4845.0,3.7,,-20.0,,5.0
 B614,"Lithium Iron Phosphate-based battery with 553 mAh, 3.2 V, Pouch form factor",Graphite,Lithium Iron Phosphate,,3.2,,-20.0,Pouch,47.0
 B615,"Nickel Cobalt Aluminum Oxide-based battery with 3736 mAh, 3.6 V, Pouch form factor",Graphite,Nickel Cobalt Aluminum Oxide,3736.0,3.6,,,,9.0
 B616,"Lithium Manganese Oxide-based battery with 5639 mAh, 3.2 V, Prismatic form factor",Zinc,Lithium Manganese Oxide,5639.0,3.2,60.0,-20.0,Prismatic,
@@ -934,7 +934,7 @@ B921,"Lithium Iron Phosphate-based battery with 4537 mAh, 3.3 V, Prismatic form 
 B922,"Lead Dioxide-based battery with 7621 mAh, 12.0 V, Prismatic form factor",Graphite,Lead Dioxide,7621.0,12.0,60.0,-10.0,Prismatic,
 B923,"Nickel Cobalt Aluminum Oxide-based battery with 2012 mAh, 3.6 V, Pouch form factor",Graphite,Nickel Cobalt Aluminum Oxide,2012.0,3.6,,-20.0,,16.0
 B924,"Lead Dioxide-based battery with 3285 mAh, 12.0 V, Cylindrical form factor",Cadmium,Lead Dioxide,3285.0,12.0,60.0,-10.0,Cylindrical,151.0
-B925,"Lithium Iron Phosphate-based battery with 5076 mAh, 3.3 V, Pouch form factor",Lead,Lithium Iron Phosphate,,3.3,60.0,,Pouch,23.0
+B925,"Compact Lithium Iron Phosphate-based battery with 5076 mAh, 3.3 V, Pouch form factor",Lead,Lithium Iron Phosphate,,3.3,60.0,,Pouch,23.0
 B926,"Vanadium Redox-based battery with 7257 mAh, 1.6 V, Flow cell form factor",Graphite,Vanadium Redox,7257.0,1.6,40.0,,,75.0
 B927,"Nickel Cobalt Aluminum Oxide-based battery with 1340 mAh, 3.6 V, Cylindrical form factor",Lead,Nickel Cobalt Aluminum Oxide,1340.0,3.6,60.0,-20.0,,2.0
 B928,"Nickel Cobalt Aluminum Oxide-based battery with 3496 mAh, 3.6 V, Pouch form factor",Hydrogen storage alloy,Nickel Cobalt Aluminum Oxide,3496.0,3.6,60.0,,,75.0

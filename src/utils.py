@@ -45,7 +45,6 @@ def plot_histogram(df, path, title="CATHODE_MATERIAL Counts Histogram"):
     """
     # Count values including NaN
     value_counts = df.value_counts(dropna=False)
-    print(value_counts)
     # Create the plot
     plt.figure(figsize=(8, 5))
     value_counts.plot(kind='bar', color="darkblue", edgecolor='black')
