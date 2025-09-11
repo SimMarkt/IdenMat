@@ -36,7 +36,7 @@ class Configuration:
         print("ItenMat: Identifying alternative battery electrode materials")
         print("-----------------------------------------------------------------------------\n")
 
-def plot_histogram(df, path, title="ELECTRODE_MATERIAL Counts Histogram"):
+def plot_histogram(df, path, title="CATHODE_MATERIAL Counts Histogram"):
     """
     Plot a histogram of the counts of unique values in a DataFrame column.
     :param df: DataFrame column (Series) to plot.

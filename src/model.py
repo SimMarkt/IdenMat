@@ -39,14 +39,14 @@ class SimilarityModel:
         Create TF-IDF matrix for part descriptions.
         :param df_data: DataFrame containing the cleaned data.
         :param bat_material_list: List of all electrode materials in
-                                  the 'ELECTRODE_MATERIAL' column.
+                                  the 'CATHODE_MATERIAL' column.
         :return tfidf_matrix: TF-IDF matrix.
         """
 
         self.df_data = df_data
         self.bat_material_list = bat_material_list
-        # Drop all samples without Part description which includes a ELECTRODE_MATERIAL
-        # mask: True if PART_DESCRIPTION contains any ELECTRODE_MATERIAL
+        # Drop all samples without Part description which includes a CATHODE_MATERIAL
+        # mask: True if PART_DESCRIPTION contains any CATHODE_MATERIAL
         mask = self.df_data.apply(self.contains_material, axis=1)
         self.df_data = self.df_data[mask].reset_index(drop=True)          # Drop the samples
 
@@ -71,9 +71,9 @@ class SimilarityModel:
 
     def contains_material(self, row) -> bool:
         """        
-        Check if PART_DESCRIPTION contains any ELECTRODE_MATERIAL.
+        Check if PART_DESCRIPTION contains any CATHODE_MATERIAL.
         :param row: DataFrame row.
-        :return: True if PART_DESCRIPTION contains any ELECTRODE_MATERIAL, else False.
+        :return: True if PART_DESCRIPTION contains any CATHODE_MATERIAL, else False.
         """
         description = row['PART_DESCRIPTION']
         if pd.isna(description) or str(description).strip() == '':
@@ -91,7 +91,7 @@ class SimilarityModel:
         """
         print("...Group dataframe by materials")
         # Group rows by material
-        df_grouped = self.df_data.groupby('ELECTRODE_MATERIAL')
+        df_grouped = self.df_data.groupby('CATHODE_MATERIAL')
 
         # Obtain a single vector that represents each material
         # (e.g., "Nickel Manganese Cobalt", "Lithium Iron Phosphate")
