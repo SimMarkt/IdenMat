@@ -13,7 +13,7 @@ This project focuses on identifying alternative electrode materials based on tex
 
 **Note:** The battery data set is synthetic, since the original data set is confidential.
 
-![TF-IDF_Bat]()
+![TF-IDF_Bat](TF-IDF_Battery.png)
 
 *Figure 1: TF-IDF vectorization and cosine similarity for identifying alternative battery electrode materials.*
 
