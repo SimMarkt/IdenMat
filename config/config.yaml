@@ -7,7 +7,7 @@
 # > Contains the configuration of the project.
 # -------------------------------------------------------------------------------------------------
 
-data_path_bat : /data/Battery.csv        # Data path to battery data set
+data_path_bat : /data/Battery_modified.csv        # Data path to battery data set
 
 # Data path to Fuse material histogram plot
 data_path_plot : /plots/bat_material_histogram.png
