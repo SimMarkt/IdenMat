@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # Load data set
     df_data = Preproc.load_data()
 
-    # Match 'ELECTRODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
+    # Match 'CATHODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
     df_data, bat_material_list = Preproc.matching(df_data)
 
     # Model for similarity analysis

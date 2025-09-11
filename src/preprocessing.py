@@ -28,7 +28,7 @@ class Preprocessing:
         self.path_cor =self.config.path + self.config.data_path_cor
         self.path_plot = self.config.path + self.config.data_path_plot
 
-        # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
+        # List with all electrode materials in the 'CATHODE_MATERIAL' column
         self.bat_material_list = None
 
         print("Start data preprocessing...")
@@ -60,36 +60,36 @@ class Preprocessing:
 
     def matching(self, df_data: pd.DataFrame):
         """
-        Match 'ELECTRODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
+        Match 'CATHODE_MATERIAL' with 'PART_DESCRIPTION' and infer missing values.
         :param df_data: DataFrame containing the cleaned data.
         :return df_data: DataFrame with matched and inferred values.
         :return bat_material_list: List of all electrode materials in 
-                                   the 'ELECTRODE_MATERIAL' column.
+                                   the 'CATHODE_MATERIAL' column.
         """
 
-        print("...Matching 'ELECTRODE_MATERIALs' with 'PART_DESCRIPTION'")
+        print("...Matching 'CATHODE_MATERIALs' with 'PART_DESCRIPTION'")
 
         # Harmonize text data
-        df_data['ELECTRODE_MATERIAL'] = df_data['ELECTRODE_MATERIAL'].str.lower()
+        df_data['CATHODE_MATERIAL'] = df_data['CATHODE_MATERIAL'].str.lower()
         df_data['PART_DESCRIPTION'] = df_data['PART_DESCRIPTION'].str.lower()
 
-        # List with all electrode materials in the 'ELECTRODE_MATERIAL' column
-        self.bat_material_list = df_data['ELECTRODE_MATERIAL'].dropna().unique()
+        # List with all CATHODE materials in the 'CATHODE_MATERIAL' column
+        self.bat_material_list = df_data['CATHODE_MATERIAL'].dropna().unique()
 
         # Identify Indexes with missing electrode materials where 'PART_DESCRIPTION' contains
         # material information
-        # Add these materials to the 'ELECTRODE_MATERIAL' column
-        df_data['ELECTRODE_MATERIAL'] = df_data.apply(self.infer_bat_material, axis=1)
+        # Add these materials to the 'CATHODE_MATERIAL' column
+        df_data['CATHODE_MATERIAL'] = df_data.apply(self.infer_bat_material, axis=1)
         # Preliminary investigations also analyzed the 'PART_DESCRIPTION' column for materials
         # not present in the bat_material_list using an LLM.
         # This was done to ensure that all relevant materials are captured, even if they are not
-        # explicitly listed in the 'ELECTRODE_MATERIAL' column.
+        # explicitly listed in the 'CATHODE_MATERIAL' column.
 
         # Visualize the distribution of inferred electrode materials
-        plot_histogram(df_data['ELECTRODE_MATERIAL'], self.path_plot)
+        plot_histogram(df_data['CATHODE_MATERIAL'], self.path_plot)
 
         # If 'PART_DESCRIPTION' is missing material details, supplement it using the inferred
-        # 'ELECTRODE_MATERIAL' values
+        # 'CATHODE_MATERIAL' values
         df_data['PART_DESCRIPTION'] = df_data.apply(self.add_material_if_missing, axis=1)
 
         # Identify Indexes with missing Part Descriptions
@@ -98,9 +98,9 @@ class Preprocessing:
             (df_data['PART_DESCRIPTION'].str.strip() == '')
         )
 
-        condition = missing_mask & df_data['ELECTRODE_MATERIAL'].notna()
+        condition = missing_mask & df_data['CATHODE_MATERIAL'].notna()
         print("...Number of missing PART_DESCRIPTION values with non-missing"
-              f" ELECTRODE_MATERIAL: {condition.sum()}")
+              f" CATHODE_MATERIAL: {condition.sum()}")
 
         # Optional: If PART_DESCRIPTION is missing, generate a pseudo-description based on other
         # fields (e.g. by a rule-based approach and concetation of relevant fields)
@@ -113,31 +113,29 @@ class Preprocessing:
 
     def infer_bat_material(self, row):
         """
-        Infer missing 'ELECTRODE_MATERIAL' based on 'PART_DESCRIPTION'.
+        Infer missing 'CATHODE_MATERIAL' based on 'PART_DESCRIPTION'.
         :param row: DataFrame row.
-        :return: Inferred or original 'ELECTRODE_MATERIAL'.
+        :return: Inferred or original 'CATHODE_MATERIAL'.
         """
-        # Check if the Part Description contains a ELECTRODE_MATERIAL of the ELECTRODE_MATERIAL
-        # list in the text of the missing material values -> Add it to ELECTRODE_MATERIALs
-        if pd.isna(row['ELECTRODE_MATERIAL']):
+        # Check if the Part Description contains a CATHODE_MATERIAL of the CATHODE_MATERIAL
+        # list in the text of the missing material values -> Add it to CATHODE_MATERIALs
+        if pd.isna(row['CATHODE_MATERIAL']):
             description = str(row['PART_DESCRIPTION'])
             for material in self.bat_material_list:
                 if material in description:
-                    print(f"     Missing 'ELECTRODE_MATERIAL' in PART_ID:{row['PART_ID']} ->"
-                          " Filled with information from 'PART_DESCRIPTION': 'ELECTRODE_MATERIAL'"
+                    print(f"     Missing 'CATHODE_MATERIAL' in PART_ID:{row['PART_ID']} ->"
+                          " Filled with information from 'PART_DESCRIPTION': 'CATHODE_MATERIAL'"
                           f" = {material}")
                     return material
             return np.nan  # Still missing if no match found
         else:
-            return row['ELECTRODE_MATERIAL']  # Already filled
-
-            # Function to add ELECTRODE_MATERIAL if missing
+            return row['CATHODE_MATERIAL']  # Already filled
 
     def add_material_if_missing(self, row):
         """
-        Add ELECTRODE_MATERIAL to PART_DESCRIPTION if missing.
+        Add CATHODE_MATERIAL to PART_DESCRIPTION if missing.
         """
-        material = row['ELECTRODE_MATERIAL']
+        material = row['CATHODE_MATERIAL']
         description = row['PART_DESCRIPTION']
         if material in self.bat_material_list:
             if not pd.isna(description) or str(description).strip() == '':
@@ -146,7 +144,7 @@ class Preprocessing:
                     # Append the material if none found
                     new_description = description + ', ' + material
                     print("     Missing material information in 'PART_DESCRIPTION' in"
-                          f" PART_ID:{row['PART_ID']} -> Added information from 'ELECTRODE_MATERIAL"
+                          f" PART_ID:{row['PART_ID']} -> Added information from 'CATHODE_MATERIAL"
                           f"' = {material}")
                     return new_description
                 return description
@@ -169,7 +167,7 @@ class Preprocessing:
             voltage = str(row.get('Rated Voltage (V)', '') or row.get('Maximum AC Voltage Rating', '')).replace('V', '').strip()
             mounting = str(row.get('Mounting', '')).strip()
             bat_size = str(row.get('bat Size', '')).strip()
-            material = str(row.get('ELECTRODE_MATERIAL', '')).strip()
+            material = str(row.get('CATHODE_MATERIAL', '')).strip()
 
             # Ensure values are not empty
             current = current + 'A' if current else ''

@@ -11,11 +11,15 @@ Note: The battery data set is synthetic, since the original data set is confiden
 
 
 
-This project focuses on identifying alternative fuse materials based on textual patterns in `PART_DESCRIPTION` using natural language processing (NLP) techniques. It leverages **TF-IDF vectorization** and **cosine similarity** to measure the relationship between materials and surrounding descriptive terms, with optional visualization and preprocessing strategies to improve data quality and interpretability.
+This project focuses on identifying alternative electrode materials based on textual patterns in `PART_DESCRIPTION` using natural language processing (NLP) techniques. It leverages **TF-IDF vectorization** and **cosine similarity** to measure the relationship between materials and surrounding descriptive terms, with optional visualization and preprocessing strategies to improve data quality and interpretability.
+
+**Note:** The battery data set is synthetic, since the original data set is confidential.
 
 ---
 
 ## Project Structure
+
+The project is organized as follows:
 
 ```plaintext
 IdenMat/
@@ -24,7 +28,7 @@ IdenMat/
 │   └── config.yaml                 # Configuration file with paths and model parameters
 │
 ├── data/
-│   └── Battery.csv                    # Battery data set
+│   └── Battery.csv                 # Battery data set
 │
 ├── plots/                          # Visualizations (battery material histogram, similarity heat map)
 │
@@ -40,19 +44,21 @@ IdenMat/
 
 ## Overview
 
-The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddings for each material (e.g., "Nickel Manganese Cobalt", "Lithium Iron Phosphate") based on textual co-occurrence patterns. TF-IDF and cosine similarity are used to construct a similarity matrix, allowing the user to identify materials that are most closely associated with one another in practice.
+The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddings for each material (e.g., "Lithium Cobalt Oxide") based on textual co-occurrence patterns. TF-IDF and cosine similarity are used to construct a similarity matrix, allowing the user to identify materials that are most closely associated with one another in practice.
 
 ---
 
 ## Approach
+
+The approach consists of two main stages: **Preprocessing** and **Modeling**.
 
 ### Preprocessing
 
 1. **Drop Duplicates**  
    Duplicate rows are removed to ensure that the dataset contains only unique entries.
 
-2. **Impute `PART_DESCRIPTION` using `Fuse Material`**  
-   For entries where `PART_DESCRIPTION` misses a material but `Fuse Material` is available, the value from `Fuse Material` is added to `PART_DESCRIPTION`.  
+2. **Impute `PART_DESCRIPTION` using `CATHODE_MATERIAL`**  
+   For entries where `PART_DESCRIPTION` misses a material but `CATHODE_MATERIAL` is available, the value from `CATHODE_MATERIAL` is added to `PART_DESCRIPTION`.  
    More complex rule-based imputation is intentionally avoided to prevent introducing bias or noise into the TF-IDF representation.
 
 ---
@@ -64,7 +70,7 @@ The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddin
    - This results in a matrix of shape: `(number of samples × number of unique terms)`.
 
 2. **Averaging by Material**  
-   - For each unique material (e.g., "glass", "ceramic"), all TF-IDF vectors from entries associated with that material are averaged.  
+   - For each unique material (e.g., "Lithium Cobalt Oxide"), all TF-IDF vectors from entries associated with that material are averaged.  
    - This produces a single vector that represents the typical term distribution for that material.
 
 3. **Material Matrix Construction**  
@@ -92,17 +98,22 @@ The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddin
 
 ## Installation & Usage
 
+To set up the environment and run the project, follow these steps:
+
 ```bash
-# 1. Set up a virtual environment
+# 1. Clone the repository
+git clone https://github.com/SimMarkt/IdenMat.git
+
+# 2. Set up a virtual environment
 python -m venv venv
 
-# 2. Activate the virtual environment
+# 3. Activate the virtual environment
 # Windows:
 .\venv\Scripts\activate
 
-# 3. Install dependencies
+# 4. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the project
+# 5. Run the project
 python main.py
 ```
