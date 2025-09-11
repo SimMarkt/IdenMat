@@ -52,7 +52,7 @@ The pipeline uses the `PART_DESCRIPTION` field of the dataset to derive embeddin
 
 Figure 2 depicts the TF-IDF approach for identifying alternative battery electrode materials. 
 
-![TF-IDF_Det](plots/TF-IDF_Details.png)
+![TF-IDF_Det](plots/TF-IDF_Detail.png)
 
 *Figure 2: TF-IDF vectorization into the TF-IDF matrix with averaged material vectors.*
 
