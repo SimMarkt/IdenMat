@@ -48,7 +48,7 @@ class Preprocessing:
         plot_missing_value_count(df_data, self.path_nan)
 
         # Drop duplicates from the list
-        df_data = df_data.drop_duplicates(subset=df_data.columns.difference(['PART_ID']))
+        df_data = df_data.drop_duplicates(subset=df_data.columns.difference(['ID']))
         print(f'...Data shape without duplicates: {df_data.shape}')
 
         # Compute and plot the correlation.
@@ -123,7 +123,7 @@ class Preprocessing:
             description = str(row['PART_DESCRIPTION'])
             for material in self.bat_material_list:
                 if material in description:
-                    print(f"     Missing 'CATHODE_MATERIAL' in PART_ID:{row['PART_ID']} ->"
+                    print(f"     Missing 'CATHODE_MATERIAL' in ID:{row['ID']} ->"
                           " Filled with information from 'PART_DESCRIPTION': 'CATHODE_MATERIAL'"
                           f" = {material}")
                     return material
@@ -144,7 +144,7 @@ class Preprocessing:
                     # Append the material if none found
                     new_description = description + ', ' + material
                     print("     Missing material information in 'PART_DESCRIPTION' in"
-                          f" PART_ID:{row['PART_ID']} -> Added information from 'CATHODE_MATERIAL"
+                          f" ID:{row['ID']} -> Added information from 'CATHODE_MATERIAL"
                           f"' = {material}")
                     return new_description
                 return description
@@ -227,7 +227,7 @@ class Preprocessing:
         df_copy = df_data.copy()
 
         # Exclude certain columns
-        excluded_columns = ['PART_ID', 'PART_DESCRIPTION']
+        excluded_columns = ['ID', 'PART_DESCRIPTION']
         df_categorical = df_copy.drop(columns=excluded_columns)
 
         # Ensure all columns are treated as categorical
